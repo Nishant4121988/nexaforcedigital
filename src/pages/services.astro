@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout
+  title="Services — Salesforce, n8n & Agentic AI"
+  description="NexaForce Digital services: Salesforce Cloud implementation, n8n workflow automation, and full-stack agentic AI engineering for enterprises."
+>
+  <Navbar />
+  <div class="pt-32 max-w-7xl mx-auto px-6 pb-24">
+
+    <!-- Salesforce -->
+    <section id="salesforce" class="mb-24">
+      <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">Pillar 1</span>
+      <h2 class="text-4xl font-bold mb-6">Salesforce Enterprise Cloud</h2>
+      <p class="text-brand-steel text-lg max-w-2xl mb-10">We design, implement, and optimize mission-critical Salesforce environments across five specialized domain clouds.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { name: 'Sales Cloud', desc: 'Lead-to-Cash optimization, automated pipeline execution, custom Apex/LWR architecture, and CPQ integration.' },
+          { name: 'Commerce Cloud', desc: 'Scalable headless storefronts, unified cart workflows, and multi-channel B2B2C customer journeys.' },
+          { name: 'Data Cloud', desc: 'Real-time customer profile resolution, zero-copy Snowflake/BigQuery architecture, and actionable insights at scale.' },
+          { name: 'Health Cloud', desc: 'HIPAA-compliant patient care coordination, operational workflows, and EHR/EMR interoperability.' },
+          { name: 'Financial Services Cloud', desc: 'Wealth management, banking lifecycle automation, unified Financial 360 view, and regulatory compliance.' },
+        ].map(s => (
+          <div class="bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 transition-all">
+            <h3 class="font-bold text-lg mb-2">{s.name}</h3>
+            <p class="text-brand-steel text-sm leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- n8n -->
+    <section id="n8n" class="mb-24">
+      <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">Pillar 2</span>
+      <h2 class="text-4xl font-bold mb-6">n8n Workflow Automation</h2>
+      <p class="text-brand-steel text-lg max-w-2xl mb-10">Self-hosted, cost-predictable workflow automation replacing high-metering SaaS platforms with client-owned infrastructure.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          { name: 'Self-Hosted Deployment', desc: 'High-availability n8n on private VPS or client VPC with full data sovereignty and zero metering costs.' },
+          { name: 'Custom Node Development', desc: 'TypeScript custom nodes for proprietary legacy systems, niche databases, and internal SaaS APIs.' },
+          { name: 'Event-Driven Orchestration', desc: 'Asynchronous webhooks, message queues, payload transformation, and production-grade error handling.' },
+          { name: 'Platform Migration', desc: 'Structured migration from Zapier, Make, or Workato to predictable self-hosted n8n with full workflow parity.' },
+        ].map(s => (
+          <div class="bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 transition-all">
+            <h3 class="font-bold text-lg mb-2">{s.name}</h3>
+            <p class="text-brand-steel text-sm leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- AI -->
+    <section id="ai">
+      <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">Pillar 3</span>
+      <h2 class="text-4xl font-bold mb-6">Agentic AI Engineering</h2>
+      <p class="text-brand-steel text-lg max-w-2xl mb-10">Stateful multi-agent architectures built on LangChain + LangGraph, deployed on your infrastructure with full observability via LangSmith.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          { name: 'Orchestration Layer', desc: 'LangChain + LangGraph for stateful multi-agent graphs, conditional branching, retries, and Human-in-the-Loop checkpointing.' },
+          { name: 'RAG & Knowledge Pipelines', desc: 'pgvector on PostgreSQL for zero lock-in vector storage. Vendor-agnostic embedding abstractions via LangChain.' },
+          { name: 'API & Microservice Delivery', desc: 'FastAPI or Node.js/Express backends with LangServe, REST, or WebSocket protocols. OAuth2/JWT enterprise auth.' },
+          { name: 'Observability & Governance', desc: 'LangSmith tracing, token budgets, PII redaction, rate limiting, and full audit logs on every agent interaction.' },
+        ].map(s => (
+          <div class="bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 transition-all">
+            <h3 class="font-bold text-lg mb-2">{s.name}</h3>
+            <p class="text-brand-steel text-sm leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+  </div>
+  <Footer />
+</BaseLayout>

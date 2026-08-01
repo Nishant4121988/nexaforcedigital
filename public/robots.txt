@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nexaforcedigital.com/sitemap-index.xml

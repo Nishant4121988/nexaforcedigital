@@ -1,0 +1,37 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const base = lang === 'en' ? '' : '/de';
+---
+<footer class="bg-black/40 border-t border-white/5 mt-24">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div>
+        <p class="text-xl font-bold text-white mb-3">Nexa<span class="text-brand-blue">Force</span> <span class="text-brand-steel font-medium">Digital</span></p>
+        <p class="text-brand-steel text-sm leading-relaxed">Enterprise Salesforce · n8n Automation · Agentic AI Engineering</p>
+        <p class="text-brand-steel text-sm mt-2">Berlin, Germany</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Services</p>
+        <ul class="space-y-2 text-sm text-brand-steel">
+          <li><a href={`${base}/services#salesforce`} class="hover:text-white transition-colors">Salesforce Cloud</a></li>
+          <li><a href={`${base}/services#n8n`} class="hover:text-white transition-colors">n8n Automation</a></li>
+          <li><a href={`${base}/services#ai`} class="hover:text-white transition-colors">Agentic AI</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Legal</p>
+        <ul class="space-y-2 text-sm text-brand-steel">
+          <li><a href={`${base}/impressum`} class="hover:text-white transition-colors">{t('footer.impressum')}</a></li>
+          <li><a href={`${base}/privacy`} class="hover:text-white transition-colors">{t('footer.privacy')}</a></li>
+          <li><a href={`${base}/terms`} class="hover:text-white transition-colors">{t('footer.terms')}</a></li>
+          <li><a href={`${base}/disclaimer`} class="hover:text-white transition-colors">{t('footer.disclaimer')}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/5 mt-10 pt-6 text-center text-xs text-brand-steel">
+      {t('footer.rights')}
+    </div>
+  </div>
+</footer>

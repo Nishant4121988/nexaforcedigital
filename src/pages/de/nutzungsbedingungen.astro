@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+<BaseLayout title="Nutzungsbedingungen" description="Nutzungsbedingungen für die NexaForce Digital Website.">
+  <Navbar />
+  <div class="pt-32 max-w-3xl mx-auto px-6 pb-24">
+    <h1 class="text-4xl font-bold mb-10">Nutzungsbedingungen</h1>
+    <div class="space-y-8 text-brand-steel text-sm leading-relaxed">
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">1. Geltungsbereich</h2>
+        <p>Diese Nutzungsbedingungen regeln den Zugang zur und die Nutzung der NexaForce Digital Website unter nexaforcedigital.com.</p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">2. Geistiges Eigentum</h2>
+        <p>Alle Inhalte, Marken, Texte und der Code dieser Website sind Eigentum von Nishant Shrivastava / NexaForce Digital. Eine Vervielfältigung ohne schriftliche Genehmigung ist untersagt.</p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">3. Haftungsausschluss</h2>
+        <p>Die Website dient ausschließlich Informationszwecken. NexaForce Digital übernimmt keine Gewähr für die Vollständigkeit, Richtigkeit oder Aktualität der dargestellten Informationen.</p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">4. Anwendbares Recht</h2>
+        <p>Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist Berlin.</p>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</BaseLayout>

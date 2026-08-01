@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="Privacy Policy" description="Privacy Policy for NexaForce Digital. Zero tracking cookies. GDPR compliant. Berlin, Germany.">
+  <Navbar />
+  <div class="pt-32 max-w-3xl mx-auto px-6 pb-24">
+    <h1 class="text-4xl font-bold mb-4">Privacy Policy</h1>
+    <p class="text-brand-steel mb-10">Datenschutzerklärung — Last updated: August 2026</p>
+    <div class="space-y-8 text-brand-steel text-sm leading-relaxed">
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">1. Zero Cookie Policy</h2>
+        <p>This website uses <strong class="text-white">no tracking cookies, analytics scripts, advertising pixels, or third-party tracking technologies</strong> of any kind. No user data is collected for profiling or behavioural analysis.</p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">2. Data Controller</h2>
+        <p>Nishant Shrivastava · NexaForce Digital · Friedelstraße 23A · 12047 Berlin · nishant4121988@gmail.com</p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">3. Data Processed When You Contact Us</h2>
+        <p>When you submit the contact form, the following data is transmitted to Formspree Inc. (acting as processor) solely for email delivery: your name, email address, company name, and message content. This data is processed on the legal basis of Article 6(1)(b) GDPR (pre-contractual measures) and is not shared with any third party for marketing purposes.</p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">4. WhatsApp</h2>
+        <p>The WhatsApp button is a static HTML link. No data is transmitted to WhatsApp or Meta until you actively click the button and initiate a conversation. At that point, WhatsApp's own privacy policy applies.</p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">5. Hosting & Server Logs</h2>
+        <p>This website is hosted on GitHub Pages (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). GitHub may store standard server access logs (IP address, request timestamp, browser agent) for security purposes. These are not processed by NexaForce Digital.</p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">6. Your Rights (GDPR)</h2>
+        <p>Under GDPR you have the right to access, rectification, erasure, restriction of processing, and data portability. Contact: nishant4121988@gmail.com.</p>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</BaseLayout>

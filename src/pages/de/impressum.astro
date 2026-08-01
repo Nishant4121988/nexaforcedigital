@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+<BaseLayout title="Impressum" description="Impressum für NexaForce Digital gemäß § 5 DDG, Berlin.">
+  <Navbar />
+  <div class="pt-32 max-w-3xl mx-auto px-6 pb-24">
+    <h1 class="text-4xl font-bold mb-10">Impressum</h1>
+    <div class="space-y-8 text-brand-steel text-sm leading-relaxed">
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">Angaben gemäß § 5 DDG</h2>
+        <p>
+          <strong class="text-white">Nishant Shrivastava</strong><br />
+          NexaForce Digital<br />
+          Friedelstraße 23A<br />
+          12047 Berlin<br />
+          Deutschland
+        </p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">Kontakt</h2>
+        <p>
+          Telefon: +49 (0) 176 32246090<br />
+          E-Mail: nishant4121988@gmail.com<br />
+          Website: https://nexaforcedigital.com
+        </p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">Gewerbeanmeldung</h2>
+        <p>
+          Registriert beim Bezirksamt Berlin Neukölln<br />
+          Aktenzeichen: gew-26613-2026-Ord<br />
+          Datum der Gewerbeanmeldung: 01.08.2026
+        </p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+        <p>Nishant Shrivastava (Anschrift wie oben)</p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">Streitschlichtung</h2>
+        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: <a href="https://ec.europa.eu/consumers/odr" class="text-brand-blue hover:underline" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</BaseLayout>

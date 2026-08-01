@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="Disclaimer" description="Disclaimer for NexaForce Digital website.">
+  <Navbar />
+  <div class="pt-32 max-w-3xl mx-auto px-6 pb-24">
+    <h1 class="text-4xl font-bold mb-10">Disclaimer</h1>
+    <div class="space-y-8 text-brand-steel text-sm leading-relaxed">
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">Liability for Content</h2>
+        <p>The content of this website has been compiled with the utmost care. However, we cannot assume liability for the accuracy, completeness, or topicality of the content. As a service provider, we are responsible for our own content on these pages in accordance with § 7(1) TMG. However, according to §§ 8 to 10 TMG, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">Liability for Links</h2>
+        <p>Our website contains links to external websites over which we have no control. We therefore cannot accept any liability for these external contents. The respective provider or operator of the linked pages is always responsible for the content of the linked pages.</p>
+      </section>
+      <section>
+        <h2 class="text-white font-semibold text-lg mb-2">Copyright</h2>
+        <p>The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, or any form of commercialisation beyond the scope of copyright law requires written consent of the respective author or creator.</p>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</BaseLayout>
