@@ -2,172 +2,253 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
+
+const salesforceServices = [
+  {
+    name: 'Sales Cloud',
+    href: '/de/leistungen/sales-cloud',
+    desc: 'Lead-to-Cash-Optimierung, Pipeline-Automatisierung, Apex- und LWR-Architektur sowie CPQ-Integration.',
+    outcome: 'Vertriebszyklen verkürzen und Pipeline-Prozesse standardisieren.'
+  },
+  {
+    name: 'B2B2C Commerce Cloud',
+    href: '/de/leistungen/commerce-cloud',
+    desc: 'Skalierbare B2B-, B2C- und D2C-Storefronts mit einheitlichen Warenkörben, Bestellungen und Customer Journeys.',
+    outcome: 'Digitalen Umsatz ohne fragmentierte Prozesse skalieren.'
+  },
+  {
+    name: 'Data Cloud',
+    href: '/de/leistungen/data-cloud',
+    desc: 'Echtzeit-Profilauflösung, Zero-Copy-Anbindung an Snowflake oder BigQuery und aktivierbare Kundeneinblicke.',
+    outcome: 'Eine kontrollierte Kundendatenbasis schaffen.'
+  },
+  {
+    name: 'Health Cloud',
+    href: '/de/leistungen/health-cloud',
+    desc: 'Versorgungskoordination, operative Workflows, EHR/EMR-Interoperabilität und datenschutzorientierte Kontrollen.',
+    outcome: 'Versorgungsprozesse verbessern und Governance sichern.'
+  },
+  {
+    name: 'Financial Services Cloud',
+    href: '/de/leistungen/financial-services-cloud',
+    desc: 'Financial-360-Sicht, Onboarding-Automatisierung, Lebenszyklus-Workflows und Compliance-orientiertes Case Management.',
+    outcome: 'Regulierte Kundenprozesse skalierbar standardisieren.'
+  }
+];
+
+const automationServices = [
+  {
+    name: 'Self-Hosted Betrieb',
+    href: '/de/leistungen/n8n-automatisierung',
+    desc: 'Hochverfügbares n8n auf privater Infrastruktur oder im Kunden-VPC – mit Datensouveränität und kontrollierbaren Betriebskosten.',
+    outcome: 'Automatisierung ohne unvorhersehbare Ausführungsgebühren.'
+  },
+  {
+    name: 'Eigene Nodes und APIs',
+    href: '/de/leistungen/n8n-automatisierung',
+    desc: 'TypeScript-Nodes und API-Adapter für Legacy-Datenbanken, proprietäre Systeme und branchenspezifische SaaS-Produkte.',
+    outcome: 'Interne Systeme sauber und wiederholbar integrieren.'
+  },
+  {
+    name: 'Event-Driven Orchestration',
+    href: '/de/leistungen/n8n-automatisierung',
+    desc: 'Webhooks, Warteschlangen, Payload-Transformation, Fehlerbehandlung und wiederholbare Ausführungslogik.',
+    outcome: 'Robuste Abläufe statt fragiler Punkt-zu-Punkt-Automatisierung.'
+  },
+  {
+    name: 'Migration von Zapier, Make oder Workato',
+    href: '/de/leistungen/n8n-automatisierung',
+    desc: 'Strukturierte Überführung bestehender Automatisierungen in nachvollziehbare, selbst kontrollierte n8n-Workflows.',
+    outcome: 'Toolkosten reduzieren und die Integrationslandschaft zurückgewinnen.'
+  }
+];
+
+const aiServices = [
+  {
+    name: 'Stateful Agent Orchestration',
+    href: '/de/leistungen/enterprise-ai',
+    desc: 'LangChain und LangGraph für Zustandsmanagement, bedingte Verzweigungen, Retries, Checkpoints und Human-in-the-Loop-Freigaben.',
+    outcome: 'Mehrstufige KI-Prozesse kontrollierbar automatisieren.'
+  },
+  {
+    name: 'RAG und Wissenssysteme',
+    href: '/de/leistungen/enterprise-ai',
+    desc: 'PostgreSQL mit pgvector als Standard für portable, clientkontrollierte Vektorsuche und Knowledge Retrieval.',
+    outcome: 'Unternehmenswissen sicher und kontextbezogen nutzbar machen.'
+  },
+  {
+    name: 'API- und Microservice-Delivery',
+    href: '/de/leistungen/enterprise-ai',
+    desc: 'FastAPI oder Node.js/Express, REST- und WebSocket-Schnittstellen, OAuth2, JWT und Enterprise-SSO.',
+    outcome: 'KI-Funktionen sauber in den bestehenden Stack integrieren.'
+  },
+  {
+    name: 'Governance und Betrieb',
+    href: '/de/leistungen/enterprise-ai',
+    desc: 'Tracing mit LangSmith oder selbst gehostetem LangFuse, PII-Redaktion, Rate Limits, Tokenbudgets und Audit-Protokolle.',
+    outcome: 'KI-Nutzung nachvollziehbar, sicher und budgetiert betreiben.'
+  }
+];
 ---
 
 <BaseLayout
   title="Leistungen — Salesforce, n8n & Agentische KI"
-  description="NexaForce Digital Leistungen: Salesforce Cloud Beratung, n8n Workflow-Automatisierung und Full-Stack Agentic AI Engineering für Unternehmen."
+  description="NexaForce Digital Leistungen: Salesforce Cloud Beratung, selbst gehostete n8n Workflow-Automatisierung und Full-Stack Agentic AI Engineering für Unternehmen."
 >
   <Navbar />
 
-  <main class="pt-32 max-w-7xl mx-auto px-6 pb-24">
-    <header class="max-w-3xl mb-20">
-      <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">
-        NexaForce Digital
-      </span>
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">
-        Enterprise-Architektur für skalierbare digitale Systeme
-      </h1>
-      <p class="text-brand-steel text-lg leading-relaxed">
-        Salesforce Cloud, selbst gehostete n8n-Workflow-Automatisierung und
-        zustandsbehaftete KI-Agenten — für Datensouveränität, nachvollziehbare
-        Prozesse und verlässlichen Betrieb.
-      </p>
+  <main class="pt-32 pb-24">
+    <header class="mx-auto mb-20 max-w-7xl px-6">
+      <div class="max-w-3xl">
+        <span class="mb-4 block text-xs font-semibold uppercase tracking-widest text-brand-blue">
+          NexaForce Digital
+        </span>
+
+        <h1 class="mb-6 text-4xl font-bold leading-tight md:text-5xl">
+          Enterprise-Architektur für skalierbare digitale Systeme
+        </h1>
+
+        <p class="text-lg leading-relaxed text-brand-steel">
+          Salesforce Cloud, selbst gehostete n8n-Workflow-Automatisierung und
+          zustandsbehaftete KI-Agenten – für Datensouveränität, nachvollziehbare
+          Prozesse und verlässlichen Betrieb.
+        </p>
+      </div>
     </header>
 
-    <section id="salesforce" class="mb-24 scroll-mt-28">
-      <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">
-        Kernbereich 1
-      </span>
-      <h2 class="text-4xl font-bold mb-6">Salesforce Enterprise Cloud</h2>
-      <p class="text-brand-steel text-lg max-w-3xl mb-10">
-        Konzeption, Implementierung und Optimierung geschäftskritischer
-        Salesforce-Umgebungen für Vertrieb, Commerce, Datenplattformen und
-        regulierte Branchen.
-      </p>
+    <!-- Salesforce -->
+    <section id="salesforce" class="scroll-mt-28 border-y border-white/8 bg-white/[0.02] py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <span class="mb-4 block text-xs font-semibold uppercase tracking-widest text-brand-blue">
+          Kernbereich 1
+        </span>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[
-          {
-            name: 'Sales Cloud',
-            href: '/de/leistungen/sales-cloud',
-            desc: 'Lead-to-Cash-Optimierung, Pipeline-Automatisierung, Apex- und LWR-Architektur sowie CPQ-Integration.',
-            outcome: 'Vertriebszyklen verkürzen und Pipeline-Prozesse standardisieren.'
-          },
-          {
-            name: 'B2B2C Commerce Cloud',
-            href: '/de/leistungen/commerce-cloud',
-            desc: 'Skalierbare B2B-, B2C- und D2C-Storefronts mit einheitlichen Warenkörben, Bestellungen und Customer Journeys.',
-            outcome: 'Digitalen Umsatz ohne fragmentierte Prozesse skalieren.'
-          },
-          {
-            name: 'Data Cloud',
-            href: '/de/leistungen/data-cloud',
-            desc: 'Echtzeit-Profilauflösung, Zero-Copy-Anbindung an Snowflake/BigQuery und aktivierbare Kundeneinblicke.',
-            outcome: 'Eine kontrollierte Kundendatenbasis schaffen.'
-          },
-          {
-            name: 'Health Cloud',
-            href: '/de/leistungen/health-cloud',
-            desc: 'Versorgungskoordination, operative Workflows, EHR/EMR-Interoperabilität und datenschutzorientierte Kontrollen.',
-            outcome: 'Versorgungsprozesse verbessern und Governance sichern.'
-          },
-          {
-            name: 'Financial Services Cloud',
-            href: '/de/leistungen/financial-services-cloud',
-            desc: 'Financial-360-Sicht, Onboarding-Automatisierung, Lebenszyklus-Workflows und Compliance-orientiertes Case Management.',
-            outcome: 'Regulierte Kundenprozesse skalierbar standardisieren.'
-          }
-        ].map((service) => (
-          <a
-            href={service.href}
-            class="group relative flex min-h-[260px] flex-col rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/70 hover:bg-white/[0.065] hover:shadow-xl hover:shadow-brand-blue/10 focus:outline-none focus:ring-2 focus:ring-brand-blue"
-            aria-label={`${service.name} Leistungen ansehen`}
-          >
-            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-brand-blue/30 bg-brand-blue/10 text-brand-blue">
-              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-              </svg>
-            </div>
-      
-            <h3 class="mb-3 text-xl font-bold text-white">{service.name}</h3>
-            <p class="text-sm leading-relaxed text-brand-steel">{service.desc}</p>
-      
-            <div class="mt-auto pt-6">
-              <p class="mb-4 text-xs font-medium uppercase tracking-wider text-slate-400">
-                {service.outcome}
+        <h2 class="mb-6 text-4xl font-bold">Salesforce Enterprise Cloud</h2>
+
+        <p class="mb-10 max-w-3xl text-lg leading-relaxed text-brand-steel">
+          Konzeption, Implementierung und Optimierung geschäftskritischer
+          Salesforce-Umgebungen für Vertrieb, Commerce, Datenplattformen,
+          Gesundheitswesen und regulierte Finanzdienstleistungen.
+        </p>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {salesforceServices.map((service) => (
+            <a
+              href={service.href}
+              class="group relative flex min-h-[290px] flex-col rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/70 hover:bg-white/[0.065] hover:shadow-xl hover:shadow-brand-blue/10 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+              aria-label={`${service.name} Leistungen ansehen`}
+            >
+              <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-brand-blue/30 bg-brand-blue/10">
+                <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
+
+              <h3 class="mb-3 text-xl font-bold text-white">{service.name}</h3>
+
+              <p class="text-sm leading-relaxed text-brand-steel">
+                {service.desc}
               </p>
-              <span class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue">
-                Leistung ansehen
-                <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </span>
-            </div>
-          </a>
-        ))}
+
+              <div class="mt-auto pt-6">
+                <p class="mb-4 text-xs font-medium uppercase tracking-wider text-slate-400">
+                  {service.outcome}
+                </p>
+
+                <span class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue">
+                  Leistung ansehen
+                  <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
 
-    <section id="n8n" class="mb-24 scroll-mt-28">
-      <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">
-        Kernbereich 2
-      </span>
-      <h2 class="text-4xl font-bold mb-6">n8n Workflow-Automatisierung</h2>
-      <p class="text-brand-steel text-lg max-w-3xl mb-10">
-        Ereignisgesteuerte Workflow-Engines auf clientkontrollierter Infrastruktur
-        statt unvorhersehbarer nutzungsbasierter Automatisierungsgebühren.
-      </p>
+    <!-- n8n -->
+    <section id="n8n" class="scroll-mt-28 py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <span class="mb-4 block text-xs font-semibold uppercase tracking-widest text-brand-blue">
+          Kernbereich 2
+        </span>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {[
-          {
-            name: 'Self-Hosted Betrieb',
-            desc: 'Hochverfügbares n8n auf privater Infrastruktur oder im Kunden-VPC, inklusive Datensouveränität und kontrollierbarer Betriebskosten.'
-          },
-          {
-            name: 'Eigene Nodes und APIs',
-            desc: 'TypeScript-Nodes und API-Adapter für Legacy-Datenbanken, proprietäre Systeme und branchenspezifische SaaS-Produkte.'
-          },
-          {
-            name: 'Event-Driven Orchestration',
-            desc: 'Webhooks, Warteschlangen, Payload-Transformation, Fehlerbehandlung und wiederholbare Ausführungslogik.'
-          },
-          {
-            name: 'Migration von Zapier, Make oder Workato',
-            desc: 'Strukturierte Überführung bestehender Automatisierungen in nachvollziehbare, selbst kontrollierte n8n-Workflows.'
-          }
-        ].map((service) => (
-          <article class="bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 transition-all">
-            <h3 class="font-bold text-lg mb-2">{service.name}</h3>
-            <p class="text-brand-steel text-sm leading-relaxed">{service.desc}</p>
-          </article>
-        ))}
+        <h2 class="mb-6 text-4xl font-bold">n8n Workflow-Automatisierung</h2>
+
+        <p class="mb-10 max-w-3xl text-lg leading-relaxed text-brand-steel">
+          Ereignisgesteuerte Workflow-Engines auf clientkontrollierter Infrastruktur
+          statt unvorhersehbarer nutzungsbasierter Automatisierungsgebühren.
+        </p>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {automationServices.map((service) => (
+            <a
+              href={service.href}
+              class="group relative flex min-h-[260px] flex-col rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/70 hover:bg-white/[0.065] hover:shadow-xl hover:shadow-brand-blue/10 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+              aria-label={`${service.name} ansehen`}
+            >
+              <h3 class="mb-3 text-xl font-bold text-white">{service.name}</h3>
+
+              <p class="text-sm leading-relaxed text-brand-steel">
+                {service.desc}
+              </p>
+
+              <div class="mt-auto pt-6">
+                <p class="mb-4 text-xs font-medium uppercase tracking-wider text-slate-400">
+                  {service.outcome}
+                </p>
+
+                <span class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue">
+                  Automatisierung ansehen
+                  <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
 
-    <section id="ai" class="scroll-mt-28">
-      <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">
-        Kernbereich 3
-      </span>
-      <h2 class="text-4xl font-bold mb-6">Agentisches KI-Engineering</h2>
-      <p class="text-brand-steel text-lg max-w-3xl mb-10">
-        Zustandsbehaftete KI-Microservices mit LangChain und LangGraph,
-        kontrollierter Datenhaltung und vollständiger Observability.
-      </p>
+    <!-- AI -->
+    <section id="ai" class="scroll-mt-28 border-y border-white/8 bg-white/[0.02] py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <span class="mb-4 block text-xs font-semibold uppercase tracking-widest text-brand-blue">
+          Kernbereich 3
+        </span>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {[
-          {
-            name: 'Stateful Agent Orchestration',
-            desc: 'LangChain und LangGraph für Zustandsmanagement, bedingte Verzweigungen, Retries, Checkpoints und Human-in-the-Loop-Freigaben.'
-          },
-          {
-            name: 'RAG und Wissenssysteme',
-            desc: 'PostgreSQL mit pgvector als Standard für portable, clientkontrollierte Vektorsuche und Knowledge Retrieval.'
-          },
-          {
-            name: 'API- und Microservice-Delivery',
-            desc: 'FastAPI oder Node.js/Express, REST- und WebSocket-Schnittstellen, OAuth2, JWT und Enterprise-SSO.'
-          },
-          {
-            name: 'Governance und Betrieb',
-            desc: 'Tracing mit LangSmith oder selbst gehostetem LangFuse, PII-Redaktion, Rate Limits, Tokenbudgets und Audit-Protokolle.'
-          }
-        ].map((service) => (
-          <article class="bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 transition-all">
-            <h3 class="font-bold text-lg mb-2">{service.name}</h3>
-            <p class="text-brand-steel text-sm leading-relaxed">{service.desc}</p>
-          </article>
-        ))}
+        <h2 class="mb-6 text-4xl font-bold">Agentisches KI-Engineering</h2>
+
+        <p class="mb-10 max-w-3xl text-lg leading-relaxed text-brand-steel">
+          Zustandsbehaftete KI-Microservices mit LangChain und LangGraph,
+          kontrollierter Datenhaltung und vollständiger Observability.
+        </p>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {aiServices.map((service) => (
+            <a
+              href={service.href}
+              class="group relative flex min-h-[260px] flex-col rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/70 hover:bg-white/[0.065] hover:shadow-xl hover:shadow-brand-blue/10 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+              aria-label={`${service.name} ansehen`}
+            >
+              <h3 class="mb-3 text-xl font-bold text-white">{service.name}</h3>
+
+              <p class="text-sm leading-relaxed text-brand-steel">
+                {service.desc}
+              </p>
+
+              <div class="mt-auto pt-6">
+                <p class="mb-4 text-xs font-medium uppercase tracking-wider text-slate-400">
+                  {service.outcome}
+                </p>
+
+                <span class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue">
+                  KI-Engineering ansehen
+                  <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   </main>
