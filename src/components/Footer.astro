@@ -40,17 +40,28 @@ const legalLinks = lang === 'de'
         </p>
         <ul class="space-y-2 text-sm text-brand-steel">
           <li>
-            <a href={`${base}/services#salesforce`} class="hover:text-white transition-colors">
+            <a
+              href={lang === 'de' ? '/de/leistungen#salesforce' : '/services#salesforce'}
+              class="hover:text-white transition-colors"
+            >
               Salesforce Cloud
             </a>
           </li>
+          
           <li>
-            <a href={`${base}/services#n8n`} class="hover:text-white transition-colors">
+            <a
+              href={lang === 'de' ? '/de/leistungen#n8n' : '/services#n8n'}
+              class="hover:text-white transition-colors"
+            >
               n8n Automation
             </a>
           </li>
+          
           <li>
-            <a href={`${base}/services#ai`} class="hover:text-white transition-colors">
+            <a
+              href={lang === 'de' ? '/de/leistungen#ai' : '/services#ai'}
+              class="hover:text-white transition-colors"
+            >
               Agentic AI
             </a>
           </li>
