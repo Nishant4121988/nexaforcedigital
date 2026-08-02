@@ -1,1 +1,37 @@
+---
+import SalesforceServiceDetail from '../../components/SalesforceServiceDetail.astro';
 
+const standardPrinciples = [
+  { title: 'Discovery', text: 'Map revenue processes, data quality, integration dependencies, and operating constraints.' },
+  { title: 'Architecture', text: 'Define object model, security model, automation boundaries, and API contracts.' },
+  { title: 'Delivery', text: 'Build with tested Flow, Apex, LWR, CI/CD, and controlled release practices.' },
+  { title: 'Operations', text: 'Document ownership, monitoring, deployment, and continuous improvement procedures.' }
+];
+---
+
+<SalesforceServiceDetail
+  title="Salesforce Sales Cloud Consulting"
+  eyebrow="Salesforce Enterprise Cloud"
+  heroTitle="Sales Cloud architecture that turns pipeline activity into controlled revenue execution."
+  description="We design Sales Cloud environments that standardize lead-to-cash processes, automate operational work, and provide leadership with reliable pipeline visibility."
+  suitableFor={[
+    'B2B sales organizations with fragmented pipeline processes',
+    'Teams scaling from spreadsheets or heavily customized legacy CRM',
+    'Revenue operations teams requiring forecast and data governance',
+    'Businesses integrating CPQ, ERP, marketing, and customer service platforms'
+  ]}
+  scope={[
+    'Lead, account, contact, opportunity, forecast, territory, and activity data-model design',
+    'Sales process automation with Salesforce Flow, Apex where required, and approval controls',
+    'Pipeline quality rules, forecasting structure, dashboard design, and operational reporting',
+    'CPQ, billing, ERP, marketing, and customer-service integration architecture',
+    'Role hierarchy, sharing rules, permission sets, auditability, and release governance'
+  ]}
+  outcomes={[
+    { title: 'Standardized', text: 'A consistent revenue process across teams, regions, and sales motions.' },
+    { title: 'Visible', text: 'Reliable pipeline, forecast, and activity signals for operational decision-making.' },
+    { title: 'Automated', text: 'Less manual administration and more time for customer-facing work.' }
+  ]}
+  principles={standardPrinciples}
+  whatsappMessage="Hello NexaForce Digital, I would like to discuss a Salesforce Sales Cloud project."
+/>
