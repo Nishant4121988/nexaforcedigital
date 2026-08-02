@@ -1,1 +1,37 @@
+---
+import SalesforceServiceDetailDE from '../../../components/SalesforceServiceDetailDE.astro';
 
+const principles = [
+  { title: 'Datenanalyse', text: 'Quellsysteme, Datenqualität, Identitätsschlüssel, Governance und Aktivierungsziele erfassen.' },
+  { title: 'Identity Design', text: 'Matching-, Reconciliation-, Consent- und Profilauflösungsregeln fachlich passend konfigurieren.' },
+  { title: 'Aktivierung', text: 'Calculated Insights und Segmente mit Sales, Service, Marketing und externen Endpunkten verbinden.' },
+  { title: 'Governance', text: 'Datenverantwortung, Aufbewahrung, Zugriffskontrollen und operatives Monitoring dokumentieren.' }
+];
+---
+
+<SalesforceServiceDetailDE
+  title="Salesforce Data Cloud Beratung"
+  eyebrow="Salesforce Enterprise Cloud"
+  heroTitle="Data Cloud für kontrollierte Customer Intelligence und Echtzeit-Aktivierung."
+  description="Wir implementieren Salesforce Data Cloud als kontrollierte Intelligenzschicht, die Kundensignale zusammenführt und vertrauenswürdige Erkenntnisse im CRM-Ökosystem aktiviert."
+  suitableFor={[
+    'Unternehmen mit Kundendaten in CRM, Web, Commerce, Support und Data Warehouse',
+    'Teams mit Bedarf an Echtzeit-Segmentierung und Profilauflösung',
+    'Organisationen mit Snowflake oder BigQuery und Anforderungen an kontrollierte Aktivierung',
+    'Sales-, Service- und Marketing-Teams mit unvollständigem Kundenkontext'
+  ]}
+  scope={[
+    'Echtzeit- und Batch-Ingestion aus Salesforce, Web, Commerce und externen Geschäftssystemen',
+    'Identity Resolution, Profilvereinheitlichung, Consent-orientierte Verarbeitung und Datenmodell-Mapping',
+    'Zero-Copy- oder kontrollierte Anbindung an Snowflake und BigQuery',
+    'Calculated Insights, Segmentierung, Flow Trigger und Cross-Cloud-Aktivierung',
+    'Datenqualitäts-Monitoring, Zugriffskontrollen, Retention und operative Verantwortlichkeiten'
+  ]}
+  outcomes={[
+    { title: 'Vereinheitlicht', text: 'Ein vollständigerer und kontrollierterer Blick auf Kundenaktivitäten.' },
+    { title: 'Aktivierbar', text: 'Segmente und Insights lösen relevante operative oder kundenbezogene Aktionen aus.' },
+    { title: 'Kontrolliert', text: 'Klare Datenverantwortung und dokumentierte Integrationsgrenzen.' }
+  ]}
+  principles={principles}
+  whatsappMessage="Hallo NexaForce Digital, ich möchte ein Salesforce Data Cloud Projekt besprechen."
+/>
