@@ -1,0 +1,587 @@
+---
+// src/components/CoreCapabilities.astro
+// NexaForce Digital — Core Capabilities Multi-Tab Section
+---
+
+<section id="core-capabilities" class="bg-[#0F172A] py-24 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="text-center mb-14">
+      <p class="text-sm font-semibold tracking-widest text-violet-400 uppercase mb-3">
+        What We Build
+      </p>
+      <h2 class="text-4xl sm:text-5xl font-bold text-[#F8FAFC] leading-tight">
+        Core Capabilities
+      </h2>
+      <p class="mt-4 max-w-2xl mx-auto text-slate-400 text-base leading-relaxed">
+        Three integrated engineering disciplines. One unified delivery standard.
+        Every engagement is architected for scale, sovereignty, and measurable return.
+      </p>
+    </div>
+
+    <!-- ===================== TOP-LEVEL TAB BUTTONS ===================== -->
+    <div class="flex flex-wrap justify-center gap-2 mb-10" role="tablist" aria-label="Core Service Pillars">
+      <button
+        data-tab="salesforce"
+        role="tab"
+        aria-selected="true"
+        aria-controls="panel-salesforce"
+        class="top-tab-btn active-top-tab px-5 py-3 rounded-lg text-sm font-semibold transition-all duration-200 border border-slate-700 flex items-center gap-2"
+      >
+        <img src="/assets/logos/crm/data-cloud.svg" alt="" class="h-5 w-5" aria-hidden="true" />
+        Enterprise Salesforce CRM
+      </button>
+      <button
+        data-tab="n8n"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-n8n"
+        class="top-tab-btn px-5 py-3 rounded-lg text-sm font-semibold transition-all duration-200 border border-slate-700 flex items-center gap-2"
+      >
+        <img src="/assets/logos/n8n/n8n-logo.svg" alt="" class="h-5 w-5" aria-hidden="true" />
+        Intelligent n8n Automation
+      </button>
+      <button
+        data-tab="ai"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-ai"
+        class="top-tab-btn px-5 py-3 rounded-lg text-sm font-semibold transition-all duration-200 border border-slate-700 flex items-center gap-2"
+      >
+        <img src="/assets/logos/ai/langgraph.svg" alt="" class="h-5 w-5" aria-hidden="true" />
+        Enterprise AI & Multi-Agent
+      </button>
+    </div>
+
+    <!-- ===================== TAB PANELS WRAPPER ===================== -->
+    <div class="relative">
+
+      <!-- ============================================================ -->
+      <!-- TAB 1: ENTERPRISE SALESFORCE CRM                             -->
+      <!-- ============================================================ -->
+      <div
+        id="panel-salesforce"
+        role="tabpanel"
+        data-panel="salesforce"
+        class="tab-panel bg-[#0F1929] border border-slate-800 rounded-2xl p-6 sm:p-8"
+      >
+        <!-- Nested Sub-Tab Buttons -->
+        <div class="flex flex-wrap gap-2 mb-8 border-b border-slate-800 pb-5" role="tablist" aria-label="Salesforce Domains">
+          <button data-subtab="revenue-cloud" data-group="sf" role="tab" aria-selected="true"
+            class="sub-tab-btn sf-sub active-sub-tab px-4 py-2 rounded-md text-xs font-semibold transition-all duration-150 border border-slate-700 flex items-center gap-2">
+            <img src="/assets/logos/crm/revenue-cloud.svg" alt="" class="h-4 w-4" aria-hidden="true" />
+            Revenue Cloud (CPQ & Billing)
+          </button>
+          <button data-subtab="clm" data-group="sf" role="tab" aria-selected="false"
+            class="sub-tab-btn sf-sub px-4 py-2 rounded-md text-xs font-semibold transition-all duration-150 border border-slate-700 flex items-center gap-2">
+            <img src="/assets/logos/crm/clm.svg" alt="" class="h-4 w-4" aria-hidden="true" />
+            Contract Lifecycle (CLM)
+          </button>
+          <button data-subtab="commerce-cloud" data-group="sf" role="tab" aria-selected="false"
+            class="sub-tab-btn sf-sub px-4 py-2 rounded-md text-xs font-semibold transition-all duration-150 border border-slate-700 flex items-center gap-2">
+            <img src="/assets/logos/crm/commerce-cloud.svg" alt="" class="h-4 w-4" aria-hidden="true" />
+            Commerce Cloud
+          </button>
+          <button data-subtab="data-cloud" data-group="sf" role="tab" aria-selected="false"
+            class="sub-tab-btn sf-sub px-4 py-2 rounded-md text-xs font-semibold transition-all duration-150 border border-slate-700 flex items-center gap-2">
+            <img src="/assets/logos/crm/data-cloud.svg" alt="" class="h-4 w-4" aria-hidden="true" />
+            Data Cloud & Core Platform
+          </button>
+        </div>
+
+        <!-- Sub-Panel: Revenue Cloud -->
+        <div id="sub-revenue-cloud" data-subpanel="revenue-cloud" data-group="sf" class="sub-panel">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-shrink-0 flex items-start justify-center lg:justify-start pt-1">
+              <img src="/assets/logos/crm/revenue-cloud.svg" alt="Salesforce Revenue Cloud" class="h-14 w-14 object-contain" />
+            </div>
+            <div class="flex-1 space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-[#F8FAFC] mb-2">Revenue Cloud — CPQ & Automated Billing</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                  We architect end-to-end Quote-to-Cash pipelines engineered to handle enterprise-grade complexity:
+                  multi-tier product catalogs, bundle configuration rules, dynamic price books, optional/required feature
+                  switches, and tier-based discount governance — all governed within Salesforce governor limits.
+                </p>
+              </div>
+              <div>
+                <h4 class="text-xs font-semibold tracking-widest uppercase text-violet-400 mb-3">Core Deliverables</h4>
+                <ul class="grid sm:grid-cols-2 gap-2 text-sm text-slate-300">
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Advanced Apex Price Rules & Custom Quote Calculator Plugins (QCP)</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Guided Selling flows with dependency-driven conditional logic</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Native ERP/billing integration (NetSuite, SAP, Zuora) — zero data duplication</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Subscription lifecycle management & automated renewal processing</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Revenue recognition compliance (ASC 606 / IFRS 15)</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Multi-currency, multi-region price book orchestration</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-xs font-semibold tracking-widest uppercase text-violet-400 mb-3">Engineering Credentials</h4>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                  10+ years architecting enterprise Q2C flows. Our engagements span ISVs, SaaS platforms, and manufacturing
+                  enterprises with product catalogs exceeding 50,000 SKUs. We have shipped zero governor limit violations
+                  in production deployments to date.
+                </p>
+              </div>
+              <!-- ROI Metrics -->
+              <div class="grid grid-cols-3 gap-4 pt-2">
+                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                  <p class="text-2xl font-extrabold text-blue-400">40%</p>
+                  <p class="text-xs text-slate-400 mt-1">Faster Quote Generation</p>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                  <p class="text-2xl font-extrabold text-violet-400">100%</p>
+                  <p class="text-xs text-slate-400 mt-1">Pricing Error Elimination</p>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                  <p class="text-2xl font-extrabold text-blue-400">Zero</p>
+                  <p class="text-xs text-slate-400 mt-1">CPQ→ERP Revenue Leakage</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub-Panel: CLM -->
+        <div id="sub-clm" data-subpanel="clm" data-group="sf" class="sub-panel hidden">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-shrink-0 flex items-start justify-center lg:justify-start pt-1">
+              <img src="/assets/logos/crm/clm.svg" alt="Salesforce CLM" class="h-14 w-14 object-contain" />
+            </div>
+            <div class="flex-1 space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-[#F8FAFC] mb-2">Contract Lifecycle Management (CLM)</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                  We eliminate the operational gap between a closed-won Salesforce opportunity and a legally binding,
+                  fully executed contract. Our CLM implementations enforce governance across every contract touchpoint —
+                  from auto-generation to e-signature to renewal triggers.
+                </p>
+              </div>
+              <div>
+                <h4 class="text-xs font-semibold tracking-widest uppercase text-violet-400 mb-3">Core Deliverables</h4>
+                <ul class="grid sm:grid-cols-2 gap-2 text-sm text-slate-300">
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Automated contract generation directly from CPQ Quote records</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Governed clause library with risk-tiered template selection</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Dynamic redlining workflows with legal/sales co-authoring controls</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>DocuSign / Adobe Sign e-signature integration & audit trail</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Automated renewal alerts & obligation tracking via Flow/Apex</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Contract intelligence: obligation extraction & milestone alerting</li>
+                </ul>
+              </div>
+              <div class="grid grid-cols-3 gap-4 pt-2">
+                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                  <p class="text-2xl font-extrabold text-blue-400">60%</p>
+                  <p class="text-xs text-slate-400 mt-1">Reduction in Legal Review Time</p>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                  <p class="text-2xl font-extrabold text-violet-400">100%</p>
+                  <p class="text-xs text-slate-400 mt-1">Manual Re-Entry Eliminated</p>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                  <p class="text-2xl font-extrabold text-blue-400">Auto</p>
+                  <p class="text-xs text-slate-400 mt-1">Renewal Tracking & Alerts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub-Panel: Commerce Cloud -->
+        <div id="sub-commerce-cloud" data-subpanel="commerce-cloud" data-group="sf" class="sub-panel hidden">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-shrink-0 flex items-start justify-center lg:justify-start pt-1">
+              <img src="/assets/logos/crm/commerce-cloud.svg" alt="Salesforce Commerce Cloud" class="h-14 w-14 object-contain" />
+            </div>
+            <div class="flex-1 space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-[#F8FAFC] mb-2">Commerce Cloud — B2B, B2C & D2C</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                  We deliver commerce architectures across all three go-to-market models. Whether you're enabling
+                  enterprise procurement, running high-volume consumer storefronts, or building direct subscription
+                  businesses, we engineer unified, headless-ready commerce that scales.
+                </p>
+              </div>
+              <!-- Three model cards -->
+              <div class="grid sm:grid-cols-3 gap-4">
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-4 space-y-2">
+                  <p class="text-sm font-bold text-blue-400">B2B Commerce</p>
+                  <ul class="text-xs text-slate-400 space-y-1">
+                    <li>▹ Account hierarchy & role-based access</li>
+                    <li>▹ Negotiated contract pricing catalogs</li>
+                    <li>▹ PO checkout flows & approval routing</li>
+                    <li>▹ Quick-order forms & reorder automation</li>
+                    <li>▹ Real-time ERP inventory sync</li>
+                  </ul>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-4 space-y-2">
+                  <p class="text-sm font-bold text-violet-400">B2C Commerce</p>
+                  <ul class="text-xs text-slate-400 space-y-1">
+                    <li>▹ Headlessly-coupled PWA storefronts</li>
+                    <li>▹ AI-driven personalized recommendations</li>
+                    <li>▹ Frictionless payment gateway orchestration</li>
+                    <li>▹ Sub-second API response architecture</li>
+                    <li>▹ A/B-testable experience layers</li>
+                  </ul>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-4 space-y-2">
+                  <p class="text-sm font-bold text-blue-400">D2C</p>
+                  <ul class="text-xs text-slate-400 space-y-1">
+                    <li>▹ Unified inventory & fulfillment routing</li>
+                    <li>▹ Subscription & recurring billing management</li>
+                    <li>▹ Customer self-service portals</li>
+                    <li>▹ Hyper-targeted loyalty programs</li>
+                    <li>▹ First-party data capture at checkout</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-4 pt-2">
+                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                  <p class="text-2xl font-extrabold text-blue-400">35%</p>
+                  <p class="text-xs text-slate-400 mt-1">Higher Checkout Conversion</p>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                  <p class="text-2xl font-extrabold text-violet-400">&lt;1s</p>
+                  <p class="text-xs text-slate-400 mt-1">API Response Time</p>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                  <p class="text-2xl font-extrabold text-blue-400">Unified</p>
+                  <p class="text-xs text-slate-400 mt-1">Cross-Channel Order Management</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub-Panel: Data Cloud -->
+        <div id="sub-data-cloud" data-subpanel="data-cloud" data-group="sf" class="sub-panel hidden">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-shrink-0 flex items-start justify-center lg:justify-start pt-1">
+              <img src="/assets/logos/crm/data-cloud.svg" alt="Salesforce Data Cloud" class="h-14 w-14 object-contain" />
+            </div>
+            <div class="flex-1 space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-[#F8FAFC] mb-2">Data Cloud & Core Platform</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                  We implement Salesforce Data Cloud as the unified intelligence layer across your entire CRM estate.
+                  Real-time data ingestion, probabilistic identity resolution, and unified customer profiles that
+                  trigger automated business actions — without compromising data sovereignty.
+                </p>
+              </div>
+              <div>
+                <h4 class="text-xs font-semibold tracking-widest uppercase text-violet-400 mb-3">Core Deliverables</h4>
+                <ul class="grid sm:grid-cols-2 gap-2 text-sm text-slate-300">
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Real-time streaming ingestion from web, mobile, and third-party sources</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Identity resolution & unified customer profile assembly</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Zero-copy integration with Snowflake & BigQuery</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Segment-triggered Salesforce Flow & Marketing Cloud activations</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Calculated Insights for real-time KPI exposure in Sales & Service Cloud</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Einstein AI model binding for propensity scoring & next-best-action</li>
+                </ul>
+              </div>
+              <div class="grid grid-cols-2 gap-4 pt-2">
+                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                  <p class="text-2xl font-extrabold text-blue-400">Single</p>
+                  <p class="text-xs text-slate-400 mt-1">Source of Truth Across All Business Units</p>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                  <p class="text-2xl font-extrabold text-violet-400">Real-Time</p>
+                  <p class="text-xs text-slate-400 mt-1">Automated Action on Customer Behavior</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- TAB 2: INTELLIGENT N8N WORKFLOW AUTOMATION                   -->
+      <!-- ============================================================ -->
+      <div
+        id="panel-n8n"
+        role="tabpanel"
+        data-panel="n8n"
+        class="tab-panel hidden bg-[#0F1929] border border-slate-800 rounded-2xl p-6 sm:p-8"
+      >
+        <div class="flex flex-col lg:flex-row gap-8">
+          <div class="flex-shrink-0 flex items-start justify-center lg:justify-start pt-1">
+            <img src="/assets/logos/n8n/n8n-logo.svg" alt="n8n Workflow Automation" class="h-14 w-14 object-contain" />
+          </div>
+          <div class="flex-1 space-y-8">
+            <div>
+              <h3 class="text-xl font-bold text-[#F8FAFC] mb-2">Intelligent n8n Workflow Automation</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                We architect, deploy, and maintain enterprise-grade n8n instances — self-hosted on your private
+                infrastructure or cloud VPC — replacing fragile, expensive middleware platforms with resilient,
+                fully auditable, and visually transparent automation workflows.
+              </p>
+            </div>
+
+            <!-- Two column breakdown -->
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <h4 class="text-xs font-semibold tracking-widest uppercase text-violet-400">Engineering Capabilities</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Custom TypeScript node development for proprietary APIs & legacy systems</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Event-driven Webhook architecture with async queue processing</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Complex multi-step API orchestration & payload transformation</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Automated retry logic, dead-letter queues, and error escalation</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Rate-limit management & adaptive throttling per external API</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>End-to-end payload encryption & secrets isolation (Vault/Doppler)</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Voice-to-PDF, document parsing, and file processing pipelines</li>
+                </ul>
+              </div>
+              <div class="space-y-4">
+                <h4 class="text-xs font-semibold tracking-widest uppercase text-violet-400">Operational Architecture</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>High-availability self-hosted deployment (Docker / Kubernetes)</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Data sovereignty compliance — all workflow data stays within your VPC</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Full workflow versioning, rollback capability, and execution audit logs</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>CRM ↔ Database ↔ Custom Backend seamless integration mesh</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Zapier / Make / Workato migration with full feature parity</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Predictable licensing cost: no per-operation metering fees</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Use Case Chips -->
+            <div>
+              <h4 class="text-xs font-semibold tracking-widest uppercase text-violet-400 mb-3">Common Automation Patterns</h4>
+              <div class="flex flex-wrap gap-2">
+                {["Salesforce → ERP Sync", "Lead Enrichment Pipelines", "Invoice Auto-Generation", "AI Agent Webhook Triggers",
+                  "Slack / Teams Alerts", "Multi-CRM Data Harmonisation", "Billing Reconciliation", "Document OCR & Routing",
+                  "SLA Monitoring & Escalation", "nightly ETL Orchestration"].map(label => (
+                  <span class="px-3 py-1 text-xs font-medium bg-slate-800 border border-slate-700 text-slate-300 rounded-full">{label}</span>
+                ))}
+              </div>
+            </div>
+
+            <!-- ROI -->
+            <div class="grid grid-cols-3 gap-4 pt-2">
+              <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                <p class="text-2xl font-extrabold text-blue-400">70%</p>
+                <p class="text-xs text-slate-400 mt-1">SaaS Middleware Cost Reduction</p>
+              </div>
+              <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                <p class="text-2xl font-extrabold text-violet-400">100s</p>
+                <p class="text-xs text-slate-400 mt-1">Engineering Hours Saved per Quarter</p>
+              </div>
+              <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                <p class="text-2xl font-extrabold text-blue-400">ms</p>
+                <p class="text-xs text-slate-400 mt-1">Multi-Step Workflow Execution</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- TAB 3: ENTERPRISE AI & MULTI-AGENT SYSTEMS                   -->
+      <!-- ============================================================ -->
+      <div
+        id="panel-ai"
+        role="tabpanel"
+        data-panel="ai"
+        class="tab-panel hidden bg-[#0F1929] border border-slate-800 rounded-2xl p-6 sm:p-8"
+      >
+        <div class="flex flex-col lg:flex-row gap-8">
+          <div class="flex-shrink-0 flex items-start justify-center lg:justify-start pt-1">
+            <img src="/assets/logos/ai/langgraph.svg" alt="LangGraph Multi-Agent AI" class="h-14 w-14 object-contain" />
+          </div>
+          <div class="flex-1 space-y-8">
+            <div>
+              <h3 class="text-xl font-bold text-[#F8FAFC] mb-2">Enterprise AI & Multi-Agent Systems</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                We engineer production-ready, stateful AI systems built on
+                <span class="text-blue-400 font-semibold">LangChain + LangGraph</span> —
+                not prompt wrappers. Every agent is designed for deterministic, auditable, and
+                Human-in-the-Loop-governed execution inside your private infrastructure with 100% data ownership.
+              </p>
+            </div>
+
+            <!-- Stack Architecture Table -->
+            <div>
+              <h4 class="text-xs font-semibold tracking-widest uppercase text-violet-400 mb-4">Production Architecture Stack</h4>
+              <div class="overflow-x-auto rounded-xl border border-slate-700">
+                <table class="w-full text-sm">
+                  <thead class="bg-slate-800/80">
+                    <tr>
+                      <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Layer</th>
+                      <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Technology</th>
+                      <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Purpose</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-800">
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td class="px-4 py-3 font-medium text-slate-300">Orchestration</td>
+                      <td class="px-4 py-3 text-blue-400">LangGraph + LangChain</td>
+                      <td class="px-4 py-3 text-slate-400">Stateful multi-agent graphs, loops, HITL, checkpointing</td>
+                    </tr>
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td class="px-4 py-3 font-medium text-slate-300">Observability</td>
+                      <td class="px-4 py-3 text-blue-400">LangSmith / LangFuse</td>
+                      <td class="px-4 py-3 text-slate-400">Full trace, eval, token cost tracking & PII audit logs</td>
+                    </tr>
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td class="px-4 py-3 font-medium text-slate-300">Vector Storage</td>
+                      <td class="px-4 py-3 text-blue-400">pgvector (Postgres)</td>
+                      <td class="px-4 py-3 text-slate-400">Default: client-owned, zero vendor lock-in; Qdrant / Pinecone at scale</td>
+                    </tr>
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td class="px-4 py-3 font-medium text-slate-300">Database</td>
+                      <td class="px-4 py-3 text-blue-400">PostgreSQL + MongoDB + Redis</td>
+                      <td class="px-4 py-3 text-slate-400">Relational, document, cache & agent short-term memory</td>
+                    </tr>
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td class="px-4 py-3 font-medium text-slate-300">API Layer</td>
+                      <td class="px-4 py-3 text-blue-400">FastAPI / Express + LangServe</td>
+                      <td class="px-4 py-3 text-slate-400">REST / WebSocket endpoints consumed by n8n and front-ends</td>
+                    </tr>
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td class="px-4 py-3 font-medium text-slate-300">Infrastructure</td>
+                      <td class="px-4 py-3 text-blue-400">Docker → Kubernetes</td>
+                      <td class="px-4 py-3 text-slate-400">Cloud-agnostic, client VPC deployment with GitHub Actions CI/CD</td>
+                    </tr>
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td class="px-4 py-3 font-medium text-slate-300">Model Layer</td>
+                      <td class="px-4 py-3 text-blue-400">LangChain Abstractions</td>
+                      <td class="px-4 py-3 text-slate-400">Swap OpenAI / Anthropic / Azure / local OSS without agent rewrites</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Capabilities List -->
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <h4 class="text-xs font-semibold tracking-widest uppercase text-violet-400 mb-3">Agent Capabilities</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>RAG over proprietary enterprise knowledge bases</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Multi-step reasoning with tool-use & external API calling</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>LLM fine-tuning on client-specific domain corpora</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Persistent memory & cross-session context continuity</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Automated decision engines with deterministic fallbacks</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-xs font-semibold tracking-widest uppercase text-violet-400 mb-3">Governance & Safety</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Strict output validation & guardrail layers per agent role</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Human-in-the-Loop (HITL) gates on all destructive operations</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Automated PII redaction pipeline before LLM submission</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Rate limiting, token budget caps, and cost circuit breakers</li>
+                  <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">▹</span>Full audit trail via LangSmith / LangFuse observability</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ROI -->
+            <div class="grid grid-cols-3 gap-4 pt-2">
+              <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                <p class="text-2xl font-extrabold text-blue-400">80%</p>
+                <p class="text-xs text-slate-400 mt-1">Reduction in Manual Data Processing</p>
+              </div>
+              <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                <p class="text-2xl font-extrabold text-violet-400">24/7</p>
+                <p class="text-xs text-slate-400 mt-1">Intelligent Autonomous Inquiry Response</p>
+              </div>
+              <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-center">
+                <p class="text-2xl font-extrabold text-blue-400">Zero</p>
+                <p class="text-xs text-slate-400 mt-1">Cloud Vendor Lock-In</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- End Tab Panels Wrapper -->
+  </div>
+</section>
+
+<!-- ===================== STYLES ===================== -->
+<style>
+  .top-tab-btn {
+    background-color: transparent;
+    color: #94a3b8;
+  }
+  .top-tab-btn:hover {
+    background-color: #1e293b;
+    color: #f8fafc;
+  }
+  .active-top-tab {
+    background: linear-gradient(135deg, #1e40af22, #7c3aed22);
+    border-color: #6366f1 !important;
+    color: #f8fafc;
+  }
+
+  .sub-tab-btn {
+    background-color: transparent;
+    color: #94a3b8;
+  }
+  .sub-tab-btn:hover {
+    background-color: #1e293b;
+    color: #f8fafc;
+  }
+  .active-sub-tab {
+    background-color: #1e293b;
+    border-color: #3b82f6 !important;
+    color: #f8fafc;
+  }
+</style>
+
+<!-- ===================== CLIENT-SIDE TAB LOGIC ===================== -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    // ── TOP-LEVEL TABS ──────────────────────────────────────────────
+    const topBtns = document.querySelectorAll('.top-tab-btn');
+    const topPanels = document.querySelectorAll('.tab-panel');
+
+    topBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const target = btn.getAttribute('data-tab');
+
+        topBtns.forEach(function (b) {
+          b.classList.remove('active-top-tab');
+          b.setAttribute('aria-selected', 'false');
+        });
+        topPanels.forEach(function (p) { p.classList.add('hidden'); });
+
+        btn.classList.add('active-top-tab');
+        btn.setAttribute('aria-selected', 'true');
+        var panel = document.getElementById('panel-' + target);
+        if (panel) panel.classList.remove('hidden');
+      });
+    });
+
+    // ── SUB-TABS (SALESFORCE) ────────────────────────────────────────
+    const subBtns = document.querySelectorAll('.sub-tab-btn');
+
+    subBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const targetSub = btn.getAttribute('data-subtab');
+        const group = btn.getAttribute('data-group');
+
+        // Deactivate all buttons in this group
+        document.querySelectorAll('.sub-tab-btn[data-group="' + group + '"]').forEach(function (b) {
+          b.classList.remove('active-sub-tab');
+          b.setAttribute('aria-selected', 'false');
+        });
+
+        // Hide all sub-panels in this group
+        document.querySelectorAll('.sub-panel[data-group="' + group + '"]').forEach(function (p) {
+          p.classList.add('hidden');
+        });
+
+        // Activate clicked
+        btn.classList.add('active-sub-tab');
+        btn.setAttribute('aria-selected', 'true');
+        var subPanel = document.getElementById('sub-' + targetSub);
+        if (subPanel) subPanel.classList.remove('hidden');
+      });
+    });
+
+  });
+</script>
