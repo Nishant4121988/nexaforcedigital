@@ -4,492 +4,492 @@ interface Props {
 }
 
 const { lang = 'en' } = Astro.props;
-
 const isDe = lang === 'de';
 
-const copy = isDe
+const labels = isDe
   ? {
       eyebrow: 'WAS WIR ENTWICKELN',
-      heading: 'Kernkompetenzen',
+      title: 'Kernkompetenzen',
       intro:
         'Drei integrierte Engineering-Disziplinen. Ein einheitlicher Lieferstandard. Jedes Projekt wird für Skalierbarkeit, Datensouveränität und messbaren Nutzen entwickelt.',
       salesforce: 'Enterprise Salesforce CRM',
       n8n: 'Intelligente n8n-Automatisierung',
       ai: 'Enterprise KI & Multi-Agenten',
-      revenue: 'Revenue Cloud (CPQ & Billing)',
-      clm: 'Contract Lifecycle (CLM)',
-      commerce: 'Commerce Cloud',
-      data: 'Data Cloud & Core Platform',
-      health: 'Health Cloud',
-      financial: 'Financial Services Cloud',
+      core: 'KERNLEISTUNGEN',
       explore: 'Leistung ansehen',
-      healthHref: '/de/leistungen/health-cloud',
-      financialHref: '/de/leistungen/financial-services-cloud'
+      healthHref: '/de/leistungen/health-cloud/',
+      financialHref: '/de/leistungen/financial-services-cloud/'
     }
   : {
       eyebrow: 'WHAT WE BUILD',
-      heading: 'Core Capabilities',
+      title: 'Core Capabilities',
       intro:
         'Three integrated engineering disciplines. One unified delivery standard. Every engagement is architected for scale, sovereignty, and measurable return.',
       salesforce: 'Enterprise Salesforce CRM',
       n8n: 'Intelligent n8n Automation',
       ai: 'Enterprise AI & Multi-Agent',
-      revenue: 'Revenue Cloud (CPQ & Billing)',
-      clm: 'Contract Lifecycle (CLM)',
-      commerce: 'Commerce Cloud',
-      data: 'Data Cloud & Core Platform',
-      health: 'Health Cloud',
-      financial: 'Financial Services Cloud',
+      core: 'CORE DELIVERABLES',
       explore: 'Explore service',
-      healthHref: '/services/health-cloud',
-      financialHref: '/services/financial-services-cloud'
+      healthHref: '/services/health-cloud/',
+      financialHref: '/services/financial-services-cloud/'
     };
+
+const clouds = [
+  {
+    id: 'revenue',
+    tab: isDe ? 'Revenue Cloud (CPQ & Billing)' : 'Revenue Cloud (CPQ & Billing)',
+    image: '/assets/logos/crm/revenue-cloud.svg',
+    alt: 'Salesforce Revenue Cloud',
+    title: isDe
+      ? 'Revenue Cloud — CPQ & automatisierte Abrechnung'
+      : 'Revenue Cloud — CPQ & Automated Billing',
+    description: isDe
+      ? 'End-to-End Quote-to-Cash-Architektur für komplexe Produktkataloge, Bundles, Preisregeln, Guided Selling, Subscriptions und kontrollierte ERP-Integration.'
+      : 'End-to-end Quote-to-Cash architecture for complex product catalogs, bundles, pricing rules, guided selling, subscriptions, and governed ERP integration.',
+    deliverables: isDe
+      ? [
+          'Apex Price Rules und Custom Quote Calculator Plugins',
+          'Guided Selling mit abhängigen Entscheidungslogiken',
+          'ERP- und Billing-Integration mit kontrollierter Datensynchronisation',
+          'Subscription Lifecycle und automatisierte Verlängerungen',
+          'Unterstützung für Revenue-Recognition-Prozesse',
+          'Multi-Währung- und Multi-Region-Preisarchitektur'
+        ]
+      : [
+          'Apex Price Rules and Custom Quote Calculator Plugins',
+          'Guided selling with dependency-driven conditional logic',
+          'ERP and billing integration with governed synchronization',
+          'Subscription lifecycle and automated renewals',
+          'Revenue-recognition workflow support',
+          'Multi-currency and multi-region pricing architecture'
+        ],
+    metrics: isDe
+      ? [
+          { value: '40%', label: 'schnellere Angebotserstellung' },
+          { value: '100%', label: 'Ziel: keine Preisfehler' },
+          { value: 'Zero', label: 'unkontrollierte CPQ-zu-ERP-Abweichungen' }
+        ]
+      : [
+          { value: '40%', label: 'faster quote generation' },
+          { value: '100%', label: 'pricing-error prevention target' },
+          { value: 'Zero', label: 'uncontrolled CPQ-to-ERP leakage' }
+        ]
+  },
+  {
+    id: 'clm',
+    tab: 'Contract Lifecycle (CLM)',
+    image: '/assets/logos/crm/clm.svg',
+    alt: 'Salesforce Contract Lifecycle Management',
+    title: isDe ? 'Contract Lifecycle Management' : 'Contract Lifecycle Management',
+    description: isDe
+      ? 'Kontrollierte Prozesse für Vertragserstellung, Klauselbibliotheken, Verhandlungen, E-Signaturen, Verpflichtungen und Verlängerungen.'
+      : 'Controlled contract generation, clause libraries, negotiation, e-signature, obligations, and renewal operations connected to commercial data.',
+    deliverables: isDe
+      ? [
+          'Vertragserstellung aus CPQ- und Opportunity-Daten',
+          'Klauselbibliotheken und kontrollierte Vorlagen',
+          'Freigaben und Redlining für Legal und Sales',
+          'DocuSign- und Adobe-Sign-Integration',
+          'Renewal Alerts und Obligation Tracking',
+          'Lifecycle Reporting und Auditierbarkeit'
+        ]
+      : [
+          'Contract generation from CPQ and opportunity data',
+          'Governed clause libraries and templates',
+          'Approval and redlining workflows for legal and sales',
+          'DocuSign and Adobe Sign integrations',
+          'Renewal alerts and obligation tracking',
+          'Lifecycle reporting and auditability'
+        ]
+  },
+  {
+    id: 'commerce',
+    tab: 'Commerce Cloud',
+    image: '/assets/logos/crm/commerce-cloud.svg',
+    alt: 'Salesforce Commerce Cloud',
+    title: isDe ? 'Salesforce Commerce Cloud' : 'Salesforce Commerce Cloud',
+    description: isDe
+      ? 'B2B-, B2C- und D2C-Commerce-Architektur für Storefronts, Preisgestaltung, Warenkorb, Checkout, Payments, Bestellungen, Bestand und Fulfillment.'
+      : 'B2B, B2C, and D2C commerce architecture for storefronts, pricing, cart, checkout, payments, orders, inventory, and fulfillment.',
+    deliverables: isDe
+      ? [
+          'B2B Account-Hierarchien und vertragsbasierte Preise',
+          'Headless Storefronts und leistungsfähige Commerce APIs',
+          'Checkout-, Payment- und Loyalty-Workflows',
+          'Katalog-, Promotion-, Cart- und Subscription-Design',
+          'ERP-, Inventory-, Tax- und Fulfillment-Integration',
+          'Kontrolliertes kanalübergreifendes Order Management'
+        ]
+      : [
+          'B2B account hierarchies and contract pricing',
+          'Headless storefronts and performant commerce APIs',
+          'Checkout, payment, and loyalty workflows',
+          'Catalog, promotion, cart, and subscription design',
+          'ERP, inventory, tax, and fulfillment integration',
+          'Controlled multi-channel order management'
+        ]
+  },
+  {
+    id: 'data',
+    tab: isDe ? 'Data Cloud & Core Platform' : 'Data Cloud & Core Platform',
+    image: '/assets/logos/crm/data-cloud.svg',
+    alt: 'Salesforce Data Cloud',
+    title: isDe
+      ? 'Salesforce Data Cloud & Core Platform'
+      : 'Salesforce Data Cloud & Core Platform',
+    description: isDe
+      ? 'Kontrollierte Customer-Intelligence-Schicht für Echtzeit-Ingestion, Identity Resolution, einheitliche Profile, Segmentaktivierung und CRM-Optimierung.'
+      : 'A governed customer-intelligence layer for real-time ingestion, identity resolution, unified profiles, segment activation, and CRM optimization.',
+    deliverables: isDe
+      ? [
+          'Echtzeit- und Batch-Ingestion',
+          'Identity Resolution und einheitliche Kundenprofile',
+          'Zero-Copy-Architektur mit Snowflake und BigQuery',
+          'Segment-getriggerte Flows und Cross-Cloud-Aktivierung',
+          'Calculated Insights für operative KPIs',
+          'Datenzugriff, Governance und Lifecycle Controls'
+        ]
+      : [
+          'Real-time and batch ingestion',
+          'Identity resolution and unified customer profiles',
+          'Zero-copy architecture with Snowflake and BigQuery',
+          'Segment-triggered Flows and cross-cloud activation',
+          'Calculated Insights for operational KPIs',
+          'Data access, governance, and lifecycle controls'
+        ]
+  },
+  {
+    id: 'health',
+    tab: 'Health Cloud',
+    image: '/assets/logos/crm/health-cloud.svg',
+    alt: 'Salesforce Health Cloud',
+    title: 'Salesforce Health Cloud',
+    description: isDe
+      ? 'Vernetzte Versorgungsprozesse, Patientenservice-Workflows und kontrollierte EHR/EMR-Interoperabilität für nachvollziehbare und zuverlässig betreibbare Prozesse.'
+      : 'Connected care operations, patient-service workflows, and controlled EHR/EMR interoperability for traceable and dependable processes.',
+    deliverables: isDe
+      ? [
+          'Care Plans, Cases, Referrals und Patientenservice-Workflows',
+          'REST-, FHIR-, HL7- und Middleware-Integrationsmuster',
+          'Rollenbasierte Berechtigungen und Audit Trails',
+          'Consent-orientierte Prozessgestaltung',
+          'Task Orchestration und SLA-Eskalationen',
+          'Service- und Versorgungsanalysen'
+        ]
+      : [
+          'Care plans, cases, referrals, and patient-service workflows',
+          'REST, FHIR, HL7, and middleware integration patterns',
+          'Role-based permissions and audit trails',
+          'Consent-aware process design',
+          'Task orchestration and SLA escalations',
+          'Care and service operational analytics'
+        ],
+    href: labels.healthHref
+  },
+  {
+    id: 'financial',
+    tab: 'Financial Services Cloud',
+    image: '/assets/logos/crm/financial-services-cloud.svg',
+    alt: 'Salesforce Financial Services Cloud',
+    title: 'Salesforce Financial Services Cloud',
+    description: isDe
+      ? 'Financial-360-Architektur für regulierte Kundenprozesse – von Onboarding und Relationship Management bis Service, Auditierung und Systemintegration.'
+      : 'Financial 360 architecture for regulated client operations—from onboarding and relationship management to service, audit controls, and financial-system integration.',
+    deliverables: isDe
+      ? [
+          'Financial Account-, Household- und Relationship-Datenmodelle',
+          'Client Onboarding und KYC-unterstützende Prozesse',
+          'Financial-360-Sicht und Advisor Workflow Orchestration',
+          'Core-Banking-, Portfolio- und Dokumenten-Integration',
+          'E-Signature-, Freigabe- und Auditkontrollen',
+          'Reporting für regulierte Serviceprozesse'
+        ]
+      : [
+          'Financial account, household, and relationship data models',
+          'Client onboarding and KYC-supporting workflows',
+          'Financial 360 views and advisor workflow orchestration',
+          'Core banking, portfolio, and document integration',
+          'E-signature, approvals, and audit controls',
+          'Reporting for regulated service operations'
+        ],
+    href: labels.financialHref
+  }
+];
 ---
 
-<section id="core-capabilities" class="bg-[#0F172A] px-4 py-24 sm:px-6 lg:px-8">
+<section id="core-capabilities" class="bg-[#0f172a] px-4 py-24 sm:px-6 lg:px-8">
   <div class="mx-auto max-w-7xl">
-    <div class="mb-14 text-center">
-      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-violet-400">
-        {copy.eyebrow}
+    <header class="mx-auto mb-14 max-w-3xl text-center">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-violet-400">
+        {labels.eyebrow}
       </p>
 
-      <h2 class="text-4xl font-bold leading-tight text-[#F8FAFC] sm:text-5xl">
-        {copy.heading}
+      <h2 class="text-4xl font-bold leading-tight text-white md:text-5xl">
+        {labels.title}
       </h2>
 
-      <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-400">
-        {copy.intro}
+      <p class="mt-4 text-base leading-relaxed text-slate-400 md:text-lg">
+        {labels.intro}
       </p>
-    </div>
+    </header>
 
-    <!-- Top-level tabs -->
-    <div
-      class="mb-10 flex flex-wrap justify-center gap-2"
-      role="tablist"
-      aria-label="Core capabilities"
-    >
+    <div class="mb-10 flex flex-wrap justify-center gap-3" role="tablist" aria-label="Core capabilities">
       <button
         type="button"
-        data-tab="salesforce"
+        class="top-tab active-top-tab"
+        data-top-tab="salesforce"
         role="tab"
         aria-selected="true"
-        aria-controls="panel-salesforce"
-        class="top-tab-btn active-top-tab flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-3 text-sm font-semibold transition-all duration-200"
       >
-        <img src="/assets/logos/crm/data-cloud.svg" alt="" class="h-5 w-5" aria-hidden="true" />
-        {copy.salesforce}
+        <img
+          src="/assets/logos/crm/data-cloud.svg"
+          alt=""
+          aria-hidden="true"
+          class="h-5 w-5 object-contain"
+        />
+        <span>{labels.salesforce}</span>
       </button>
 
       <button
         type="button"
-        data-tab="n8n"
+        class="top-tab"
+        data-top-tab="n8n"
         role="tab"
         aria-selected="false"
-        aria-controls="panel-n8n"
-        class="top-tab-btn flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-3 text-sm font-semibold transition-all duration-200"
       >
-        <img src="/assets/logos/n8n/n8n-logo.svg" alt="" class="h-5 w-5" aria-hidden="true" />
-        {copy.n8n}
+        <span class="text-base leading-none">⚙</span>
+        <span>{labels.n8n}</span>
       </button>
 
       <button
         type="button"
-        data-tab="ai"
+        class="top-tab"
+        data-top-tab="ai"
         role="tab"
         aria-selected="false"
-        aria-controls="panel-ai"
-        class="top-tab-btn flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-3 text-sm font-semibold transition-all duration-200"
       >
-        <img src="/assets/logos/ai/langgraph.svg" alt="" class="h-5 w-5" aria-hidden="true" />
-        {copy.ai}
+        <span class="text-base leading-none">✦</span>
+        <span>{labels.ai}</span>
       </button>
     </div>
 
-    <!-- Salesforce -->
-    <div
-      id="panel-salesforce"
-      data-panel="salesforce"
-      role="tabpanel"
-      class="tab-panel rounded-2xl border border-slate-800 bg-[#0F1929] p-6 sm:p-8"
+    <section
+      data-top-panel="salesforce"
+      class="top-panel rounded-2xl border border-slate-800 bg-[#101b2e] p-5 sm:p-8"
     >
-      <div
-        class="mb-8 flex flex-wrap gap-2 border-b border-slate-800 pb-5"
-        role="tablist"
-        aria-label="Salesforce domains"
-      >
-        <button type="button" data-subtab="revenue" data-group="sf" role="tab" aria-selected="true" class="sub-tab-btn sf-sub active-sub-tab">
-          {copy.revenue}
-        </button>
-
-        <button type="button" data-subtab="clm" data-group="sf" role="tab" aria-selected="false" class="sub-tab-btn sf-sub">
-          {copy.clm}
-        </button>
-
-        <button type="button" data-subtab="commerce" data-group="sf" role="tab" aria-selected="false" class="sub-tab-btn sf-sub">
-          {copy.commerce}
-        </button>
-
-        <button type="button" data-subtab="data" data-group="sf" role="tab" aria-selected="false" class="sub-tab-btn sf-sub">
-          {copy.data}
-        </button>
-
-        <button type="button" data-subtab="health" data-group="sf" role="tab" aria-selected="false" class="sub-tab-btn sf-sub">
-          {copy.health}
-        </button>
-
-        <button type="button" data-subtab="financial" data-group="sf" role="tab" aria-selected="false" class="sub-tab-btn sf-sub">
-          {copy.financial}
-        </button>
+      <div class="mb-8 flex flex-wrap gap-2 border-b border-slate-800 pb-5" role="tablist" aria-label="Salesforce clouds">
+        {clouds.map((cloud, index) => (
+          <button
+            type="button"
+            class:list={['cloud-tab', index === 0 && 'active-cloud-tab']}
+            data-cloud-tab={cloud.id}
+            role="tab"
+            aria-selected={index === 0 ? 'true' : 'false'}
+          >
+            <img
+              src={cloud.image}
+              alt=""
+              aria-hidden="true"
+              class="h-5 w-5 shrink-0 object-contain"
+            />
+            <span>{cloud.tab}</span>
+          </button>
+        ))}
       </div>
 
-      <!-- Revenue -->
-      <div id="sub-revenue" data-subpanel="revenue" data-group="sf" class="sub-panel">
-        <div class="space-y-6">
-          <div>
-            <h3 class="mb-2 text-xl font-bold text-[#F8FAFC]">
-              Revenue Cloud — CPQ & Automated Billing
-            </h3>
-            <p class="text-sm leading-relaxed text-slate-400">
-              We architect end-to-end Quote-to-Cash pipelines for complex product
-              catalogs, bundle rules, guided selling, pricing governance,
-              subscription billing, and ERP-connected revenue operations.
-            </p>
-          </div>
-
-          <div>
-            <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-violet-400">
-              Core Deliverables
-            </h4>
-            <ul class="grid gap-2 text-sm text-slate-300 sm:grid-cols-2">
-              <li>▹ Advanced Apex price rules and Quote Calculator Plugins</li>
-              <li>▹ Guided selling with dependency-driven conditional logic</li>
-              <li>▹ ERP and billing integration with governed data synchronization</li>
-              <li>▹ Subscription lifecycle and automated renewal processing</li>
-              <li>▹ Revenue-recognition workflow support</li>
-              <li>▹ Multi-currency and multi-region pricing architecture</li>
-            </ul>
-          </div>
-
-          <div class="grid gap-4 pt-2 sm:grid-cols-3">
-            <div class="metric-card">
-              <p class="text-2xl font-extrabold text-blue-400">40%</p>
-              <p>Faster quote generation</p>
+      {clouds.map((cloud, index) => (
+        <article
+          data-cloud-panel={cloud.id}
+          class:list={['cloud-panel', index !== 0 && 'hidden']}
+        >
+          <div class="grid gap-8 lg:grid-cols-[92px_1fr]">
+            <div class="flex h-20 w-20 items-center justify-center rounded-2xl border border-brand-blue/25 bg-brand-blue/10 p-3">
+              <img
+                src={cloud.image}
+                alt={cloud.alt}
+                class="h-full w-full object-contain"
+              />
             </div>
-            <div class="metric-card">
-              <p class="text-2xl font-extrabold text-violet-400">100%</p>
-              <p>Pricing error prevention target</p>
+
+            <div>
+              <h3 class="text-2xl font-bold text-white">
+                {cloud.title}
+              </h3>
+
+              <p class="mt-3 max-w-5xl text-sm leading-relaxed text-slate-400 md:text-base">
+                {cloud.description}
+              </p>
+
+              <h4 class="mb-4 mt-7 text-xs font-semibold uppercase tracking-[0.16em] text-violet-400">
+                {labels.core}
+              </h4>
+
+              <ul class="grid gap-x-10 gap-y-3 text-sm leading-relaxed text-slate-200 md:grid-cols-2">
+                {cloud.deliverables.map((item) => (
+                  <li class="flex gap-3">
+                    <span class="text-blue-400">▹</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {cloud.href && (
+                <a
+                  href={cloud.href}
+                  class="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-brand-blue transition-colors hover:text-blue-300"
+                >
+                  {labels.explore}
+                  <span>→</span>
+                </a>
+              )}
+
+              {cloud.metrics && (
+                <div class="mt-8 grid gap-4 sm:grid-cols-3">
+                  {cloud.metrics.map((metric) => (
+                    <div class="rounded-xl border border-slate-700 bg-slate-800/60 p-4 text-center">
+                      <p class="text-2xl font-extrabold text-blue-400">{metric.value}</p>
+                      <p class="mt-1 text-xs leading-relaxed text-slate-400">{metric.label}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-            <div class="metric-card">
-              <p class="text-2xl font-extrabold text-blue-400">Zero</p>
-              <p>Uncontrolled CPQ-to-ERP leakage</p>
-            </div>
           </div>
-        </div>
-      </div>
+        </article>
+      ))}
+    </section>
 
-      <!-- CLM -->
-      <div id="sub-clm" data-subpanel="clm" data-group="sf" class="sub-panel hidden">
-        <div class="space-y-6">
-          <div>
-            <h3 class="mb-2 text-xl font-bold text-[#F8FAFC]">
-              Salesforce Contract Lifecycle Management
-            </h3>
-            <p class="text-sm leading-relaxed text-slate-400">
-              We connect approved commercial terms to controlled contract generation,
-              negotiation, e-signature, obligations, and renewal operations.
-            </p>
-          </div>
-
-          <ul class="grid gap-2 text-sm text-slate-300 sm:grid-cols-2">
-            <li>▹ Contract generation from CPQ quote records</li>
-            <li>▹ Governed clause libraries and template management</li>
-            <li>▹ Redlining workflows with legal and sales controls</li>
-            <li>▹ DocuSign and Adobe Sign integrations</li>
-            <li>▹ Renewal alerts and obligation tracking</li>
-            <li>▹ Contract lifecycle reporting and auditability</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Commerce -->
-      <div id="sub-commerce" data-subpanel="commerce" data-group="sf" class="sub-panel hidden">
-        <div class="space-y-6">
-          <div>
-            <h3 class="mb-2 text-xl font-bold text-[#F8FAFC]">
-              Salesforce Commerce Cloud
-            </h3>
-            <p class="text-sm leading-relaxed text-slate-400">
-              B2B, B2C, and D2C commerce architecture spanning storefronts,
-              pricing, cart and checkout flows, payments, orders, inventory,
-              subscriptions, and ERP integration.
-            </p>
-          </div>
-
-          <div class="grid gap-4 sm:grid-cols-3">
-            <article class="domain-card">
-              <h4>B2B Commerce</h4>
-              <p>Account hierarchies, contract pricing, quick order, PO checkout, and ERP inventory synchronization.</p>
-            </article>
-
-            <article class="domain-card">
-              <h4>B2C Commerce</h4>
-              <p>Headless storefronts, payments, personalized journeys, performant APIs, and conversion-focused checkout.</p>
-            </article>
-
-            <article class="domain-card">
-              <h4>D2C Commerce</h4>
-              <p>Subscriptions, loyalty, direct fulfillment, unified inventory, and first-party customer data capture.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <!-- Data -->
-      <div id="sub-data" data-subpanel="data" data-group="sf" class="sub-panel hidden">
-        <div class="space-y-6">
-          <div>
-            <h3 class="mb-2 text-xl font-bold text-[#F8FAFC]">
-              Salesforce Data Cloud & Core Platform
-            </h3>
-            <p class="text-sm leading-relaxed text-slate-400">
-              We implement Data Cloud as a governed intelligence layer for
-              real-time ingestion, identity resolution, unified profiles,
-              segment activation, and CRM optimization.
-            </p>
-          </div>
-
-          <ul class="grid gap-2 text-sm text-slate-300 sm:grid-cols-2">
-            <li>▹ Real-time streaming and batch ingestion</li>
-            <li>▹ Identity resolution and unified customer profiles</li>
-            <li>▹ Zero-copy patterns with Snowflake and BigQuery</li>
-            <li>▹ Segment-triggered Flow and cross-cloud activation</li>
-            <li>▹ Calculated Insights for operational KPIs</li>
-            <li>▹ Governed data access and lifecycle controls</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Health -->
-      <div id="sub-health" data-subpanel="health" data-group="sf" class="sub-panel hidden">
-        <div class="space-y-6">
-          <div>
-            <h3 class="mb-2 text-xl font-bold text-[#F8FAFC]">
-              Salesforce Health Cloud
-            </h3>
-            <p class="text-sm leading-relaxed text-slate-400">
-              Connected care operations, patient service workflows, and controlled
-              EHR/EMR interoperability for organizations that require dependable
-              coordination, traceable access, and governed processes.
-            </p>
-          </div>
-
-          <div>
-            <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-violet-400">
-              Core Deliverables
-            </h4>
-            <ul class="grid gap-2 text-sm text-slate-300 sm:grid-cols-2">
-              <li>▹ Care plans, cases, referrals, and patient-service workflows</li>
-              <li>▹ REST, FHIR, HL7, and middleware integration patterns</li>
-              <li>▹ Role-based access, audit trails, and consent-aware processes</li>
-              <li>▹ Provider and patient communication with SLA escalation</li>
-            </ul>
-          </div>
-
-          <a href={copy.healthHref} class="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:underline">
-            {copy.explore} →
-          </a>
-        </div>
-      </div>
-
-      <!-- Financial Services: THIS MATCHES data-subtab="financial" -->
-      <div id="sub-financial" data-subpanel="financial" data-group="sf" class="sub-panel hidden">
-        <div class="space-y-6">
-          <div>
-            <h3 class="mb-2 text-xl font-bold text-[#F8FAFC]">
-              Salesforce Financial Services Cloud
-            </h3>
-            <p class="text-sm leading-relaxed text-slate-400">
-              Financial 360 architecture for regulated client operations,
-              including onboarding, relationship management, service workflows,
-              audit controls, and financial-system integration.
-            </p>
-          </div>
-
-          <div>
-            <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-violet-400">
-              Core Deliverables
-            </h4>
-            <ul class="grid gap-2 text-sm text-slate-300 sm:grid-cols-2">
-              <li>▹ Financial account, household, relationship, and interaction models</li>
-              <li>▹ Client onboarding and KYC-supporting process workflows</li>
-              <li>▹ Financial 360 views and advisor workflow orchestration</li>
-              <li>▹ Core banking, portfolio, document, and e-signature integration</li>
-              <li>▹ Role-based access, approvals, and audit controls</li>
-              <li>▹ Operational reporting for regulated service processes</li>
-            </ul>
-          </div>
-
-          <a href={copy.financialHref} class="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:underline">
-            {copy.explore} →
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- n8n -->
-    <div
-      id="panel-n8n"
-      data-panel="n8n"
-      role="tabpanel"
-      class="tab-panel hidden rounded-2xl border border-slate-800 bg-[#0F1929] p-6 sm:p-8"
+    <section
+      data-top-panel="n8n"
+      class="top-panel hidden rounded-2xl border border-slate-800 bg-[#101b2e] p-8"
     >
-      <h3 class="mb-3 text-xl font-bold text-[#F8FAFC]">Intelligent n8n Workflow Automation</h3>
-      <p class="max-w-4xl text-sm leading-relaxed text-slate-400">
-        Secure self-hosted and cloud n8n workflow architecture: custom nodes,
-        webhook orchestration, API integration, payload transformation, retries,
-        queues, rate-limit handling, secrets isolation, and execution audit trails.
+      <h3 class="text-2xl font-bold text-white">
+        {isDe ? 'Intelligente n8n-Automatisierung' : 'Intelligent n8n Workflow Automation'}
+      </h3>
+
+      <p class="mt-4 max-w-4xl text-base leading-relaxed text-slate-400">
+        {isDe
+          ? 'Sichere n8n-Workflow-Architektur für selbst gehostete und cloudbasierte Integrationen mit Custom Nodes, Webhooks, Queues, Retry-Logik, Secrets Management und Audit Trails.'
+          : 'Secure n8n workflow architecture for self-hosted and cloud integration: custom nodes, webhooks, queues, retry logic, secrets management, and execution audit trails.'}
       </p>
-    </div>
+    </section>
 
-    <!-- AI -->
-    <div
-      id="panel-ai"
-      data-panel="ai"
-      role="tabpanel"
-      class="tab-panel hidden rounded-2xl border border-slate-800 bg-[#0F1929] p-6 sm:p-8"
+    <section
+      data-top-panel="ai"
+      class="top-panel hidden rounded-2xl border border-slate-800 bg-[#101b2e] p-8"
     >
-      <h3 class="mb-3 text-xl font-bold text-[#F8FAFC]">Enterprise AI & Multi-Agent Systems</h3>
-      <p class="max-w-4xl text-sm leading-relaxed text-slate-400">
-        Production systems built with LangChain and LangGraph for stateful agent
-        orchestration, RAG, governed tool use, observability, Human-in-the-Loop
-        checkpoints, secure APIs, and client-controlled data infrastructure.
+      <h3 class="text-2xl font-bold text-white">
+        {isDe ? 'Enterprise KI & Multi-Agenten-Systeme' : 'Enterprise AI & Multi-Agent Systems'}
+      </h3>
+
+      <p class="mt-4 max-w-4xl text-base leading-relaxed text-slate-400">
+        {isDe
+          ? 'Produktionsreife KI-Systeme mit LangChain und LangGraph für zustandsbehaftete Orchestrierung, RAG, Governance, Human-in-the-Loop, sichere APIs und clientkontrollierte Datenhaltung.'
+          : 'Production AI systems built with LangChain and LangGraph for stateful orchestration, RAG, governance, Human-in-the-Loop controls, secure APIs, and client-owned data.'}
       </p>
-    </div>
+    </section>
   </div>
 </section>
 
 <style>
-  .top-tab-btn {
-    background-color: transparent;
+  .top-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    border: 1px solid #334155;
+    border-radius: 0.5rem;
+    background: transparent;
     color: #94a3b8;
+    padding: 0.75rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    transition: all 160ms ease;
   }
 
-  .top-tab-btn:hover {
-    background-color: #1e293b;
+  .top-tab:hover {
+    border-color: #64748b;
+    background: #172033;
     color: #f8fafc;
   }
 
   .active-top-tab {
-    background: linear-gradient(135deg, #1e40af22, #7c3aed22);
-    border-color: #6366f1 !important;
+    border-color: #818cf8;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.26), rgba(124, 58, 237, 0.2));
     color: #f8fafc;
   }
 
-  .sub-tab-btn {
-    background-color: transparent;
+  .cloud-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     border: 1px solid #334155;
     border-radius: 0.375rem;
+    background: transparent;
     color: #94a3b8;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1rem;
     padding: 0.5rem 0.75rem;
-    transition: all 150ms ease;
-  }
-
-  .sub-tab-btn:hover {
-    background-color: #1e293b;
-    color: #f8fafc;
-  }
-
-  .active-sub-tab {
-    background-color: #1e293b;
-    border-color: #3b82f6 !important;
-    color: #f8fafc;
-  }
-
-  .metric-card {
-    border: 1px solid #334155;
-    border-radius: 0.75rem;
-    background: rgb(30 41 59 / 0.6);
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .metric-card p:last-child {
-    margin-top: 0.25rem;
-    color: #94a3b8;
     font-size: 0.75rem;
-  }
-
-  .domain-card {
-    border: 1px solid #334155;
-    border-radius: 0.75rem;
-    background: rgb(30 41 59 / 0.35);
-    padding: 1rem;
-  }
-
-  .domain-card h4 {
-    color: #60a5fa;
-    font-size: 0.875rem;
     font-weight: 700;
+    line-height: 1rem;
+    transition: all 160ms ease;
   }
 
-  .domain-card p {
-    margin-top: 0.5rem;
-    color: #94a3b8;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
+  .cloud-tab:hover {
+    border-color: #64748b;
+    background: #172033;
+    color: #f8fafc;
+  }
+
+  .active-cloud-tab {
+    border-color: #3b82f6;
+    background: #1e293b;
+    color: #f8fafc;
   }
 </style>
 
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
-    const topButtons = document.querySelectorAll('.top-tab-btn');
-    const topPanels = document.querySelectorAll('.tab-panel');
+    const topTabs = document.querySelectorAll('[data-top-tab]');
+    const topPanels = document.querySelectorAll('[data-top-panel]');
+    const cloudTabs = document.querySelectorAll('[data-cloud-tab]');
+    const cloudPanels = document.querySelectorAll('[data-cloud-panel]');
 
-    topButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const target = button.getAttribute('data-tab');
+    topTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-top-tab');
 
-        topButtons.forEach((item) => {
+        topTabs.forEach((item) => {
           item.classList.remove('active-top-tab');
           item.setAttribute('aria-selected', 'false');
         });
 
         topPanels.forEach((panel) => panel.classList.add('hidden'));
 
-        button.classList.add('active-top-tab');
-        button.setAttribute('aria-selected', 'true');
+        tab.classList.add('active-top-tab');
+        tab.setAttribute('aria-selected', 'true');
 
-        const panel = document.getElementById(`panel-${target}`);
-        if (panel) panel.classList.remove('hidden');
+        document
+          .querySelector(`[data-top-panel="${target}"]`)
+          ?.classList.remove('hidden');
       });
     });
 
-    const subButtons = document.querySelectorAll('.sub-tab-btn');
+    cloudTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-cloud-tab');
 
-    subButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const target = button.getAttribute('data-subtab');
-        const group = button.getAttribute('data-group');
+        cloudTabs.forEach((item) => {
+          item.classList.remove('active-cloud-tab');
+          item.setAttribute('aria-selected', 'false');
+        });
+
+        cloudPanels.forEach((panel) => panel.classList.add('hidden'));
+
+        tab.classList.add('active-cloud-tab');
+        tab.setAttribute('aria-selected', 'true');
 
         document
-          .querySelectorAll(`.sub-tab-btn[data-group="${group}"]`)
-          .forEach((item) => {
-            item.classList.remove('active-sub-tab');
-            item.setAttribute('aria-selected', 'false');
-          });
-
-        document
-          .querySelectorAll(`.sub-panel[data-group="${group}"]`)
-          .forEach((panel) => panel.classList.add('hidden'));
-
-        button.classList.add('active-sub-tab');
-        button.setAttribute('aria-selected', 'true');
-
-        const panel = document.getElementById(`sub-${target}`);
-        if (panel) panel.classList.remove('hidden');
+          .querySelector(`[data-cloud-panel="${target}"]`)
+          ?.classList.remove('hidden');
       });
     });
   });
