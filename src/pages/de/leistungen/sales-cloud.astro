@@ -1,1 +1,37 @@
+---
+import SalesforceServiceDetailDE from '../../../components/SalesforceServiceDetailDE.astro';
 
+const principles = [
+  { title: 'Discovery', text: 'Analyse von Revenue-Prozessen, Datenqualität, Integrationen und Betriebsgrenzen.' },
+  { title: 'Architektur', text: 'Datenmodell, Berechtigungen, Automatisierungsgrenzen und API-Verträge definieren.' },
+  { title: 'Delivery', text: 'Testbare Umsetzung mit Flow, Apex, LWR, CI/CD und kontrollierten Releases.' },
+  { title: 'Betrieb', text: 'Klare Verantwortlichkeiten, Monitoring, Dokumentation und kontinuierliche Optimierung.' }
+];
+---
+
+<SalesforceServiceDetailDE
+  title="Salesforce Sales Cloud Beratung"
+  eyebrow="Salesforce Enterprise Cloud"
+  heroTitle="Sales Cloud Architektur für kontrollierte Revenue Operations."
+  description="Wir entwickeln Sales-Cloud-Umgebungen, die Lead-to-Cash-Prozesse standardisieren, manuelle Vertriebsarbeit reduzieren und belastbare Pipeline-Transparenz schaffen."
+  suitableFor={[
+    'B2B-Vertriebsorganisationen mit fragmentierten Pipeline-Prozessen',
+    'Unternehmen mit gewachsener oder stark angepasster CRM-Landschaft',
+    'Revenue-Operations-Teams mit Anforderungen an Forecasting und Governance',
+    'Organisationen mit CPQ-, ERP-, Marketing- oder Service-Integrationen'
+  ]}
+  scope={[
+    'Datenmodell für Leads, Accounts, Kontakte, Opportunities, Forecasts, Territorien und Aktivitäten',
+    'Vertriebsautomatisierung mit Salesforce Flow, Apex bei Bedarf und Freigabekontrollen',
+    'Pipeline-Qualitätsregeln, Forecast-Struktur, Dashboards und operatives Reporting',
+    'Architektur für CPQ-, Billing-, ERP-, Marketing- und Service-Integrationen',
+    'Rollenhierarchie, Sharing Rules, Permission Sets, Auditierbarkeit und Release Governance'
+  ]}
+  outcomes={[
+    { title: 'Standardisiert', text: 'Einheitliche Revenue-Prozesse über Teams, Regionen und Vertriebsmodelle hinweg.' },
+    { title: 'Transparent', text: 'Verlässliche Pipeline-, Forecast- und Aktivitätssignale für operative Entscheidungen.' },
+    { title: 'Automatisiert', text: 'Weniger Administration und mehr Zeit für kundenorientierte Vertriebsarbeit.' }
+  ]}
+  principles={principles}
+  whatsappMessage="Hallo NexaForce Digital, ich möchte ein Salesforce Sales Cloud Projekt besprechen."
+/>
