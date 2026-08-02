@@ -3,88 +3,193 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 ---
+
 <BaseLayout
   title="Enterprise Salesforce, n8n & Agentische KI-Beratung"
   description="NexaForce Digital — Salesforce Cloud, n8n Workflow-Automatisierung und Agentic AI Engineering für Unternehmen. Berliner Unternehmensberatung mit 100 % Dateneigentum."
 >
   <Navbar />
 
-  <section class="relative min-h-screen flex items-center pt-20">
+  <!-- Hero -->
+  <section class="relative min-h-screen overflow-hidden pt-20">
     <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-[#0d1a3a] to-brand-dark"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(30,111,255,0.08),transparent_60%)] pointer-events-none"></div>
-    <div class="relative max-w-7xl mx-auto px-6 py-24">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_45%,rgba(30,111,255,0.18),transparent_55%)]"></div>
+
+    <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-6 py-24 lg:min-h-[calc(100vh-5rem)] lg:grid-cols-2">
       <div class="max-w-3xl">
-        <span class="inline-block text-xs font-semibold text-brand-blue uppercase tracking-widest mb-6 border border-brand-blue/30 rounded-full px-4 py-1">Berlin · Enterprise Grade</span>
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+        <span class="mb-6 inline-block rounded-full border border-brand-blue/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-brand-blue">
+          Berlin · Enterprise Grade
+        </span>
+
+        <h1 class="mb-6 text-5xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
           Enterprise Salesforce.<br />
           <span class="text-brand-blue">Intelligente</span> Automatisierung.<br />
           <span class="text-brand-steel">Agentische KI.</span>
         </h1>
-        <p class="text-brand-steel text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
-          Wir entwickeln unternehmenskritische digitale Systeme — Salesforce Cloud, n8n Workflow-Engines und zustandsbehaftete KI-Agenten — konzipiert für 100 % Dateneigentum und ohne Vendor Lock-in.
+
+        <p class="mb-10 max-w-2xl text-lg leading-relaxed text-brand-steel md:text-xl">
+          Wir entwickeln unternehmenskritische digitale Systeme — Salesforce Cloud,
+          n8n Workflow-Engines und zustandsbehaftete KI-Agenten — konzipiert für
+          100 % Dateneigentum und ohne Vendor Lock-in.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="https://wa.me/4917632246090?text=Hallo%20NexaForce%20Digital%2C%20ich%20m%C3%B6chte%20einen%20Strategietermin%20vereinbaren." target="_blank" rel="noopener noreferrer" class="bg-brand-blue hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 text-center shadow-lg shadow-brand-blue/25">
+
+        <div class="flex flex-col gap-4 sm:flex-row">
+          <a
+            href="https://wa.me/4917632246090?text=Hallo%20NexaForce%20Digital%2C%20ich%20möchte%20einen%20Strategietermin%20vereinbaren."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-full bg-brand-blue px-8 py-4 text-center font-semibold text-white shadow-lg shadow-brand-blue/25 transition-all duration-300 hover:bg-blue-500"
+          >
             Strategiegespräch buchen
           </a>
-          <a href="/de/leistungen" class="border border-white/20 hover:border-brand-blue text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 text-center">
+
+          <a
+            href="/de/leistungen"
+            class="rounded-full border border-white/20 px-8 py-4 text-center font-semibold text-white transition-all duration-300 hover:border-brand-blue"
+          >
             Leistungen entdecken
           </a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="max-w-7xl mx-auto px-6 py-24">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Unsere drei Kernbereiche</h2>
-      <p class="text-brand-steel text-lg max-w-2xl mx-auto">Jedes Projekt wird auf Ihre Infrastrukturanforderungen, Datensouveränität und messbare Geschäftsergebnisse zugeschnitten.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="group bg-white/3 border border-white/8 rounded-2xl p-8 hover:border-brand-blue/40 hover:bg-white/5 transition-all duration-300">
-        <div class="w-12 h-12 bg-brand-blue/15 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Salesforce Cloud</h3>
-        <p class="text-brand-steel text-sm leading-relaxed mb-4">Sales Cloud, Commerce Cloud, Data Cloud, Health Cloud und Financial Services Cloud — Custom Apex, LWR-Architektur und CPQ-Integration.</p>
-        <a href="/de/leistungen#salesforce" class="text-brand-blue text-sm font-medium hover:underline">Mehr erfahren →</a>
-      </div>
-      <div class="group bg-white/3 border border-white/8 rounded-2xl p-8 hover:border-brand-blue/40 hover:bg-white/5 transition-all duration-300">
-        <div class="w-12 h-12 bg-brand-blue/15 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">n8n Workflow-Automatisierung</h3>
-        <p class="text-brand-steel text-sm leading-relaxed mb-4">Selbst gehostete, ereignisgesteuerte Workflow-Engines mit eigenen TypeScript-Nodes. Ersetzen Sie Zapier/Make/Workato durch vorhersehbare, clienteigene Infrastruktur.</p>
-        <a href="/de/leistungen#n8n" class="text-brand-blue text-sm font-medium hover:underline">Mehr erfahren →</a>
-      </div>
-      <div class="group bg-white/3 border border-white/8 rounded-2xl p-8 hover:border-brand-blue/40 hover:bg-white/5 transition-all duration-300">
-        <div class="w-12 h-12 bg-brand-blue/15 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Agentisches KI-Engineering</h3>
-        <p class="text-brand-steel text-sm leading-relaxed mb-4">Zustandsbehaftete Multi-Agenten-Systeme auf Basis von LangChain + LangGraph. Vollständig observierbar via LangSmith. Auf Ihrer Infrastruktur deploybar.</p>
-        <a href="/de/leistungen#ai" class="text-brand-blue text-sm font-medium hover:underline">Mehr erfahren →</a>
+      <div class="relative flex justify-center lg:justify-end">
+        <div class="absolute h-72 w-72 rounded-full bg-brand-blue/20 blur-3xl md:h-96 md:w-96"></div>
+
+        <img
+          src="/images/nexaforce-digital-logo.jpg"
+          alt="NexaForce Digital — Salesforce, KI-Automatisierung, n8n und Robotik"
+          width="730"
+          height="730"
+          loading="eager"
+          fetchpriority="high"
+          class="relative w-full max-w-[520px] rounded-3xl border border-brand-blue/20 shadow-2xl shadow-brand-blue/20"
+        />
       </div>
     </div>
   </section>
 
-  <section id="contact" class="max-w-3xl mx-auto px-6 py-24">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Projekt starten</h2>
-      <p class="text-brand-steel">Beschreiben Sie Ihr Anliegen — wir antworten innerhalb eines Werktages.</p>
+  <!-- Core pillars -->
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="mb-16 text-center">
+      <h2 class="mb-4 text-3xl font-bold md:text-4xl">Unsere drei Kernbereiche</h2>
+      <p class="mx-auto max-w-2xl text-lg text-brand-steel">
+        Jedes Projekt wird auf Ihre Infrastrukturanforderungen, Datensouveränität und messbare Geschäftsergebnisse zugeschnitten.
+      </p>
     </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
+        <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+          </svg>
+        </div>
+
+        <h3 class="mb-3 text-xl font-bold">Salesforce Cloud</h3>
+
+        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
+          Sales Cloud, Commerce Cloud, Data Cloud, Health Cloud und Financial Services Cloud —
+          Custom Apex, LWR-Architektur und CPQ-Integration.
+        </p>
+
+        <a href="/de/leistungen#salesforce" class="text-sm font-medium text-brand-blue hover:underline">
+          Mehr erfahren →
+        </a>
+      </div>
+
+      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
+        <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+
+        <h3 class="mb-3 text-xl font-bold">n8n Workflow-Automatisierung</h3>
+
+        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
+          Selbst gehostete, ereignisgesteuerte Workflow-Engines mit eigenen TypeScript-Nodes.
+          Ersetzen Sie Zapier, Make oder Workato durch vorhersehbare, clienteigene Infrastruktur.
+        </p>
+
+        <a href="/de/leistungen#n8n" class="text-sm font-medium text-brand-blue hover:underline">
+          Mehr erfahren →
+        </a>
+      </div>
+
+      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
+        <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </div>
+
+        <h3 class="mb-3 text-xl font-bold">Agentisches KI-Engineering</h3>
+
+        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
+          Zustandsbehaftete Multi-Agenten-Systeme auf Basis von LangChain und LangGraph.
+          Vollständig observierbar über LangSmith und auf Ihrer Infrastruktur betreibbar.
+        </p>
+
+        <a href="/de/leistungen#ai" class="text-sm font-medium text-brand-blue hover:underline">
+          Mehr erfahren →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="mx-auto max-w-3xl px-6 py-24">
+    <div class="mb-12 text-center">
+      <h2 class="mb-4 text-3xl font-bold md:text-4xl">Projekt starten</h2>
+      <p class="text-brand-steel">
+        Beschreiben Sie Ihr Anliegen — wir antworten innerhalb eines Werktages.
+      </p>
+    </div>
+
     <form
       action="https://formspree.io/f/xvgrolqd"
       method="POST"
-      class="space-y-5 bg-white/3 border border-white/8 rounded-2xl p-8"
+      class="space-y-5 rounded-2xl border border-white/8 bg-white/3 p-8"
     >
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <input type="text" name="name" placeholder="Vollständiger Name" required class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-brand-steel text-sm focus:outline-none focus:border-brand-blue w-full" />
-        <input type="email" name="email" placeholder="Geschäftliche E-Mail" required class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-brand-steel text-sm focus:outline-none focus:border-brand-blue w-full" />
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <input
+          type="text"
+          name="name"
+          placeholder="Vollständiger Name"
+          required
+          class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-brand-steel focus:border-brand-blue focus:outline-none"
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Geschäftliche E-Mail"
+          required
+          class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-brand-steel focus:border-brand-blue focus:outline-none"
+        />
       </div>
-      <input type="text" name="company" placeholder="Unternehmen" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-brand-steel text-sm focus:outline-none focus:border-brand-blue w-full" />
-      <textarea name="message" rows="5" placeholder="Beschreiben Sie Ihr Anliegen" required class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-brand-steel text-sm focus:outline-none focus:border-brand-blue w-full resize-none"></textarea>
-      <button type="submit" class="w-full bg-brand-blue hover:bg-blue-500 text-white font-semibold py-4 rounded-xl transition-colors duration-300">Nachricht senden</button>
+
+      <input
+        type="text"
+        name="company"
+        placeholder="Unternehmen"
+        class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-brand-steel focus:border-brand-blue focus:outline-none"
+      />
+
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Beschreiben Sie Ihr Anliegen"
+        required
+        class="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-brand-steel focus:border-brand-blue focus:outline-none"
+      ></textarea>
+
+      <button
+        type="submit"
+        class="w-full rounded-xl bg-brand-blue py-4 font-semibold text-white transition-colors duration-300 hover:bg-blue-500"
+      >
+        Nachricht senden
+      </button>
     </form>
   </section>
 
