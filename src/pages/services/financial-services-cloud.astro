@@ -1,1 +1,37 @@
+---
+import SalesforceServiceDetail from '../../components/SalesforceServiceDetail.astro';
 
+const principles = [
+  { title: 'Process mapping', text: 'Map onboarding, servicing, advisory, case, and compliance workflows before configuration begins.' },
+  { title: 'Financial 360', text: 'Design a reliable customer, household, relationship, and service data model.' },
+  { title: 'Controlled integration', text: 'Connect core banking, portfolio, document, and compliance systems through governed APIs.' },
+  { title: 'Operational governance', text: 'Establish controlled access, auditability, release discipline, and measurable process ownership.' }
+];
+---
+
+<SalesforceServiceDetail
+  title="Salesforce Financial Services Cloud Consulting"
+  eyebrow="Salesforce Enterprise Cloud"
+  heroTitle="Financial Services Cloud architecture for controlled client lifecycle operations."
+  description="We design Financial Services Cloud environments for wealth management, banking, insurance, and regulated client-service models requiring unified context and dependable process control."
+  suitableFor={[
+    'Wealth-management and advisory organizations',
+    'Banking, lending, and financial-service operations',
+    'Insurance and regulated client-service teams',
+    'Organizations modernizing onboarding, service, and compliance workflows'
+  ]}
+  scope={[
+    'Financial account, household, relationship, interaction, and service data-model architecture',
+    'Client onboarding, KYC-supporting process flows, case management, and service request automation',
+    'Financial 360 views, relationship insights, task orchestration, and advisor workflow design',
+    'Core banking, portfolio, document-management, e-signature, and compliance-system integration',
+    'Role-based access, audit controls, process approval, and operational reporting architecture'
+  ]}
+  outcomes={[
+    { title: 'Unified', text: 'A clearer client and relationship view across advisory, service, and operations teams.' },
+    { title: 'Controlled', text: 'Lifecycle processes designed for traceability, approvals, and predictable execution.' },
+    { title: 'Efficient', text: 'Less manual re-entry and more consistent service delivery across regulated operations.' }
+  ]}
+  principles={principles}
+  whatsappMessage="Hello NexaForce Digital, I would like to discuss a Salesforce Financial Services Cloud project."
+/>
