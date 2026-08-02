@@ -1,1 +1,37 @@
+---
+import SalesforceServiceDetailDE from '../../../components/SalesforceServiceDetailDE.astro';
 
+const principles = [
+  { title: 'Commerce-Modell', text: 'B2B-, B2C- und D2C-Anforderungen, Account-Strukturen, Produktdaten und Regeln definieren.' },
+  { title: 'Headless Delivery', text: 'Storefront und Commerce-APIs dort trennen, wo Flexibilität und Performance es erfordern.' },
+  { title: 'Integration', text: 'ERP, Bestand, Preise, Steuern, Payments, Fulfillment und Kundendaten kontrolliert anbinden.' },
+  { title: 'Betrieb', text: 'Release Governance, Observability, Fehlerbehandlung und supportfähige Dokumentation etablieren.' }
+];
+---
+
+<SalesforceServiceDetailDE
+  title="Salesforce Commerce Cloud Beratung"
+  eyebrow="Salesforce Enterprise Cloud"
+  heroTitle="Commerce Cloud für vernetzte B2B-, B2C- und D2C-Operationen."
+  description="Wir entwickeln skalierbare Commerce-Architekturen, die Storefronts, Kataloge, Kundenidentität, Inventar, Preise, Zahlungen und Fulfillment verbinden."
+  suitableFor={[
+    'B2B-Unternehmen mit kundenspezifischen Preisen und Purchase-Order-Prozessen',
+    'Marken mit hohen Anforderungen an schnelle Consumer Storefronts',
+    'D2C-Geschäfte mit Subscriptions, Loyalty und direktem Fulfillment',
+    'Unternehmen, die fragmentierte Commerce- und Order-Systeme konsolidieren'
+  ]}
+  scope={[
+    'B2B-Account-Hierarchien, Buyer-Rollen, Vertragskataloge, Quick Order und PO Checkout',
+    'B2C- und D2C-Storefront-Architektur, Headless APIs, Checkout, Payments und Loyalty',
+    'Katalog-, Preis-, Promotion-, Cart-, Subscription- und Order-Lifecycle-Design',
+    'ERP-, Inventar-, Fulfillment-, Steuer-, Payment-Gateway- und CRM-Integration',
+    'API-Performance, Resilienz, Observability und kanalübergreifendes Order Management'
+  ]}
+  outcomes={[
+    { title: 'Vernetzt', text: 'Kunden-, Bestell-, Preis- und Inventardaten arbeiten über eine konsistente Commerce-Landschaft.' },
+    { title: 'Skalierbar', text: 'Die Architektur unterstützt neue Kanäle, Märkte und Geschäftsmodelle.' },
+    { title: 'Conversion-orientiert', text: 'Eine fokussierte Buyer Journey passend zum jeweiligen Einkaufsmodell.' }
+  ]}
+  principles={principles}
+  whatsappMessage="Hallo NexaForce Digital, ich möchte ein Salesforce Commerce Cloud Projekt besprechen."
+/>
