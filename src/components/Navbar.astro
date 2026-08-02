@@ -12,7 +12,12 @@ const altPath = lang === 'en' ? '/de/' : '/';
     </a>
     <nav class="hidden md:flex items-center gap-8">
       <a href={`${base}/`} class="text-brand-steel hover:text-white transition-colors text-sm">{t('nav.home')}</a>
-      <a href={`${base}/services`} class="text-brand-steel hover:text-white transition-colors text-sm">{t('nav.services')}</a>
+      <a
+        href={lang === 'de' ? '/de/leistungen/' : '/services/'}
+        class="text-brand-steel hover:text-white transition-colors text-sm"
+      >
+        {t('nav.services')}
+      </a>
       <a href={`${base}/#contact`} class="text-brand-steel hover:text-white transition-colors text-sm">{t('nav.contact')}</a>
     </nav>
     <div class="flex items-center gap-4">
