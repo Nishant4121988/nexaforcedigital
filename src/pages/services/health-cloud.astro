@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Salesforce Health Cloud Consulting"
+  description="NexaForce Digital designs Salesforce Health Cloud architecture, care coordination workflows, EHR/EMR interoperability, and governed patient-service operations."
+>
+  <Navbar />
+
+  <main class="pt-32 pb-24">
+    <section class="max-w-7xl mx-auto px-6 pb-20">
+      <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+        Salesforce Enterprise Cloud
+      </p>
+
+      <h1 class="max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">
+        Health Cloud architecture for governed, connected care operations.
+      </h1>
+
+      <p class="mt-6 max-w-3xl text-lg leading-relaxed text-brand-steel">
+        We design Salesforce Health Cloud environments that connect care teams,
+        operational workflows, and EHR/EMR data flows while enforcing controlled
+        access, auditability, and dependable integration behavior.
+      </p>
+
+      <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+        <a
+          href="https://wa.me/4917632246090?text=Hello%20NexaForce%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20Salesforce%20Health%20Cloud%20project."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-full bg-brand-blue px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-blue-500"
+        >
+          Discuss Health Cloud Architecture
+        </a>
+
+        <a
+          href="/services"
+          class="rounded-full border border-white/20 px-7 py-4 text-center font-semibold text-white transition-colors hover:border-brand-blue"
+        >
+          View All Services
+        </a>
+      </div>
+    </section>
+
+    <section class="border-y border-white/8 bg-white/[0.025]">
+      <div class="max-w-7xl mx-auto grid gap-12 px-6 py-20 lg:grid-cols-2">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            Implementation scope
+          </p>
+          <h2 class="mb-6 text-3xl font-bold">Operational systems, not isolated CRM screens.</h2>
+
+          <ul class="space-y-4 text-brand-steel">
+            <li>Care-plan, case, referral, and patient-service workflow design</li>
+            <li>EHR/EMR interoperability through governed REST, FHIR, HL7, or integration middleware patterns</li>
+            <li>Role-based access controls, audit controls, consent-aware process design, and retention policies</li>
+            <li>Patient and provider communications, task orchestration, and service-level escalation</li>
+            <li>Operational analytics for care coordination, service delivery, and workload visibility</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-brand-dark p-8">
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            Expected business outcomes
+          </p>
+
+          <div class="space-y-6">
+            <div>
+              <p class="text-2xl font-bold text-white">Connected</p>
+              <p class="mt-1 text-sm text-brand-steel">Care-team workflows with fewer operational handoffs.</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-white">Governed</p>
+              <p class="mt-1 text-sm text-brand-steel">Traceable access and integration behavior for sensitive workflows.</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-white">Actionable</p>
+              <p class="mt-1 text-sm text-brand-steel">Operational visibility across referrals, cases, service levels, and patient journeys.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
