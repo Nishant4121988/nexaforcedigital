@@ -1,37 +1,37 @@
 ---
-import SalesforceServiceDetailDE from '../../../components/SalesforceServiceDetailDE.astro';
-
-const principles = [
-  { title: 'Datenanalyse', text: 'Quellsysteme, Datenqualität, Identitätsschlüssel, Governance und Aktivierungsziele erfassen.' },
-  { title: 'Identity Design', text: 'Matching-, Reconciliation-, Consent- und Profilauflösungsregeln fachlich passend konfigurieren.' },
-  { title: 'Aktivierung', text: 'Calculated Insights und Segmente mit Sales, Service, Marketing und externen Endpunkten verbinden.' },
-  { title: 'Governance', text: 'Datenverantwortung, Aufbewahrung, Zugriffskontrollen und operatives Monitoring dokumentieren.' }
-];
+import SalesforceCloudDetail from '../../../components/SalesforceCloudDetail.astro';
 ---
 
-<SalesforceServiceDetailDE
+<SalesforceCloudDetail
+  lang="de"
   title="Salesforce Data Cloud Beratung"
+  description="NexaForce Digital implementiert Salesforce Data Cloud als kontrollierte Intelligenzschicht für einheitliche Kundenprofile, Echtzeit-Insights und Cross-Cloud-Aktivierung."
   eyebrow="Salesforce Enterprise Cloud"
   heroTitle="Data Cloud für kontrollierte Customer Intelligence und Echtzeit-Aktivierung."
-  description="Wir implementieren Salesforce Data Cloud als kontrollierte Intelligenzschicht, die Kundensignale zusammenführt und vertrauenswürdige Erkenntnisse im CRM-Ökosystem aktiviert."
+  image="/assets/logos/crm/data-cloud.svg"
+  imageAlt="Salesforce Data Cloud"
   suitableFor={[
     'Unternehmen mit Kundendaten in CRM, Web, Commerce, Support und Data Warehouse',
-    'Teams mit Bedarf an Echtzeit-Segmentierung und Profilauflösung',
-    'Organisationen mit Snowflake oder BigQuery und Anforderungen an kontrollierte Aktivierung',
+    'Teams mit Bedarf an Echtzeit-Segmentierung und Identity Resolution',
+    'Organisationen mit Snowflake oder BigQuery und Aktivierungsanforderungen',
     'Sales-, Service- und Marketing-Teams mit unvollständigem Kundenkontext'
   ]}
   scope={[
-    'Echtzeit- und Batch-Ingestion aus Salesforce, Web, Commerce und externen Geschäftssystemen',
-    'Identity Resolution, Profilvereinheitlichung, Consent-orientierte Verarbeitung und Datenmodell-Mapping',
-    'Zero-Copy- oder kontrollierte Anbindung an Snowflake und BigQuery',
+    'Echtzeit- und Batch-Ingestion aus Salesforce, Web, Commerce und externen Systemen',
+    'Identity Resolution, Profilvereinheitlichung, Consent-orientierte Datenverarbeitung und Mapping',
+    'Zero-Copy- oder kontrollierte Verbindung mit Snowflake und BigQuery',
     'Calculated Insights, Segmentierung, Flow Trigger und Cross-Cloud-Aktivierung',
-    'Datenqualitäts-Monitoring, Zugriffskontrollen, Retention und operative Verantwortlichkeiten'
+    'Datenqualitäts-Monitoring, Zugriffskontrollen, Retention und operative Verantwortung'
   ]}
   outcomes={[
     { title: 'Vereinheitlicht', text: 'Ein vollständigerer und kontrollierterer Blick auf Kundenaktivitäten.' },
     { title: 'Aktivierbar', text: 'Segmente und Insights lösen relevante operative oder kundenbezogene Aktionen aus.' },
-    { title: 'Kontrolliert', text: 'Klare Datenverantwortung und dokumentierte Integrationsgrenzen.' }
+    { title: 'Kontrolliert', text: 'Datenverantwortung und Integrationsgrenzen bleiben dokumentiert und steuerbar.' }
   ]}
-  principles={principles}
-  whatsappMessage="Hallo NexaForce Digital, ich möchte ein Salesforce Data Cloud Projekt besprechen."
+  architecture={[
+    { title: 'Datenanalyse', text: 'Quellsysteme, Datenqualität, Identitätsschlüssel, Governance und Aktivierungsziele erfassen.' },
+    { title: 'Identity Design', text: 'Matching-, Reconciliation-, Consent- und Profilauflösungsregeln konfigurieren.' },
+    { title: 'Aktivierung', text: 'Segmente und Insights mit Sales, Service, Marketing und externen Endpunkten verbinden.' },
+    { title: 'Governance', text: 'Verantwortung, Retention, Berechtigungen und operatives Monitoring dokumentieren.' }
+  ]}
 />
