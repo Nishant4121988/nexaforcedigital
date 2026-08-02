@@ -1,37 +1,37 @@
 ---
-import SalesforceServiceDetail from '../../components/SalesforceServiceDetail.astro';
-
-const principles = [
-  { title: 'Data assessment', text: 'Identify source systems, data quality issues, identity keys, governance, and activation goals.' },
-  { title: 'Identity design', text: 'Configure matching, reconciliation, consent, and profile-resolution rules appropriate to the business.' },
-  { title: 'Activation', text: 'Connect calculated insights and segments to Sales, Service, Marketing, and external endpoints.' },
-  { title: 'Governance', text: 'Document data ownership, retention, access controls, and operational monitoring.' }
-];
+import SalesforceCloudDetail from '../../components/SalesforceCloudDetail.astro';
 ---
 
-<SalesforceServiceDetail
+<SalesforceCloudDetail
+  lang="en"
   title="Salesforce Data Cloud Consulting"
+  description="NexaForce Digital implements Salesforce Data Cloud as a governed intelligence layer for unified customer profiles, real-time insights, and cross-cloud activation."
   eyebrow="Salesforce Enterprise Cloud"
   heroTitle="Data Cloud implementation for governed customer intelligence and real-time action."
-  description="We implement Salesforce Data Cloud as a controlled intelligence layer that unifies customer signals and activates trusted insights across the CRM estate."
+  image="/assets/logos/crm/data-cloud.svg"
+  imageAlt="Salesforce Data Cloud"
   suitableFor={[
-    'Organizations with customer data split across CRM, web, commerce, support, and data warehouses',
-    'Teams requiring real-time segmentation and customer-profile resolution',
-    'Enterprises using Snowflake or BigQuery that require a governed activation layer',
-    'Sales, service, and marketing functions operating from incomplete customer context'
+    'Organizations with customer data across CRM, web, commerce, support, and warehouses',
+    'Teams requiring real-time segmentation and identity resolution',
+    'Enterprises using Snowflake or BigQuery with activation requirements',
+    'Sales, service, and marketing teams operating from incomplete customer context'
   ]}
   scope={[
-    'Real-time and batch data ingestion from Salesforce, web, commerce, and external business systems',
-    'Identity resolution, profile unification, consent-aware data handling, and data-model mapping',
+    'Real-time and batch ingestion from Salesforce, web, commerce, and external systems',
+    'Identity resolution, profile unification, consent-aware data handling, and mapping',
     'Zero-copy or governed connectivity patterns with Snowflake and BigQuery',
-    'Calculated Insights, segmentation, Flow triggers, and cross-cloud activation design',
-    'Data-quality monitoring, access controls, retention expectations, and operational ownership'
+    'Calculated Insights, segmentation, Flow triggers, and cross-cloud activation',
+    'Data-quality monitoring, access controls, retention, and operational ownership'
   ]}
   outcomes={[
-    { title: 'Unified', text: 'A more complete and governed view of customer activity across business functions.' },
-    { title: 'Actionable', text: 'Segments and insights that trigger relevant operational or customer-facing actions.' },
-    { title: 'Controlled', text: 'Clear data ownership and documented integration boundaries.' }
+    { title: 'Unified', text: 'A more complete and governed view of customer activity.' },
+    { title: 'Actionable', text: 'Segments and insights trigger relevant operational and customer actions.' },
+    { title: 'Controlled', text: 'Data ownership and integration boundaries remain documented and manageable.' }
   ]}
-  principles={principles}
-  whatsappMessage="Hello NexaForce Digital, I would like to discuss a Salesforce Data Cloud project."
+  architecture={[
+    { title: 'Data assessment', text: 'Identify source systems, data quality issues, identity keys, governance, and activation goals.' },
+    { title: 'Identity design', text: 'Configure matching, reconciliation, consent, and profile-resolution rules.' },
+    { title: 'Activation', text: 'Connect segments and insights to Sales, Service, Marketing, and external endpoints.' },
+    { title: 'Governance', text: 'Document ownership, retention, permissions, and operational monitoring.' }
+  ]}
 />
