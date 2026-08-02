@@ -1,0 +1,271 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const implementationScope = [
+  'Versorgungs-, Case-, Referral- und Patientenservice-Workflows',
+  'EHR/EMR-Interoperabilität über kontrollierte REST-, FHIR-, HL7- oder Middleware-Integrationsmuster',
+  'Rollenbasierte Berechtigungen, Auditierbarkeit, Consent-orientierte Prozessgestaltung und Aufbewahrungskonzepte',
+  'Kommunikation mit Patienten und Leistungserbringern, Aufgabenorchestrierung und SLA-Eskalationen',
+  'Operative Analyse für Versorgungsteams, Auslastung, Service-Level und Service Journeys'
+];
+
+const deliveryModel = [
+  {
+    title: '1. Architektur-Assessment',
+    desc: 'Analyse der bestehenden Salesforce-Org, EHR/EMR-Schnittstellen, Datenflüsse, Rollenmodelle und betrieblichen Risiken.'
+  },
+  {
+    title: '2. Zielbild und Governance',
+    desc: 'Definition von Datenmodell, Integrationsgrenzen, Berechtigungen, Audit-Anforderungen und skalierbaren Prozessstandards.'
+  },
+  {
+    title: '3. Implementierung und Integration',
+    desc: 'Konfiguration, Apex- und Flow-Entwicklung, API-Integration, Validierung sowie kontrollierte Datenmigration.'
+  },
+  {
+    title: '4. Go-live und Betriebsübergabe',
+    desc: 'Teststrategie, Release-Prozess, Monitoring, Dokumentation und strukturiertes Enablement für interne Teams.'
+  }
+];
+---
+
+<BaseLayout
+  title="Salesforce Health Cloud Beratung"
+  description="NexaForce Digital konzipiert Salesforce Health Cloud Architektur, Versorgungs-Workflows, EHR/EMR-Interoperabilität und kontrollierte Betriebsprozesse."
+>
+  <Navbar />
+
+  <main class="pt-32 pb-24">
+    <!-- Hero -->
+    <section class="mx-auto max-w-7xl px-6 pb-20">
+      <a
+        href="/de/leistungen#salesforce"
+        class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-brand-steel transition-colors hover:text-brand-blue"
+      >
+        <span>←</span>
+        Alle Salesforce-Leistungen
+      </a>
+
+      <div class="grid items-end gap-12 lg:grid-cols-[1.3fr_0.7fr]">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            Salesforce Enterprise Cloud
+          </p>
+
+          <h1 class="max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">
+            Health Cloud für kontrollierte, vernetzte Versorgungsprozesse.
+          </h1>
+
+          <p class="mt-6 max-w-3xl text-lg leading-relaxed text-brand-steel">
+            Wir entwickeln Salesforce-Health-Cloud-Architekturen, die
+            Versorgungsteams, operative Workflows und EHR/EMR-Datenflüsse
+            verbinden – mit klaren Integrationsgrenzen, nachvollziehbaren
+            Zugriffen und zuverlässig betreibbaren Prozessen.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="https://wa.me/4917632246090?text=Hallo%20NexaForce%20Digital%2C%20ich%20möchte%20ein%20Salesforce%20Health%20Cloud%20Projekt%20besprechen."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full bg-brand-blue px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-blue-500"
+            >
+              Health-Cloud-Architektur besprechen
+            </a>
+
+            <a
+              href="#leistungen"
+              class="rounded-full border border-white/20 px-7 py-4 text-center font-semibold text-white transition-colors hover:border-brand-blue"
+            >
+              Leistungsumfang ansehen
+            </a>
+          </div>
+        </div>
+
+        <aside class="rounded-2xl border border-brand-blue/25 bg-brand-blue/5 p-7">
+          <p class="mb-5 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
+            Geeignet für
+          </p>
+
+          <ul class="space-y-4 text-sm leading-relaxed text-brand-steel">
+            <li>Versorgungsorganisationen und Gesundheitsdienstleister</li>
+            <li>Patientenservice- und Case-Management-Teams</li>
+            <li>Organisationen mit EHR/EMR-Integrationsbedarf</li>
+            <li>Regulierte Betriebsmodelle mit hohen Governance-Anforderungen</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Scope -->
+    <section id="leistungen" class="border-y border-white/8 bg-white/[0.025] py-20">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            Leistungsumfang
+          </p>
+
+          <h2 class="mb-6 text-3xl font-bold">
+            Operative Systeme statt isolierter CRM-Oberflächen.
+          </h2>
+
+          <p class="mb-8 leading-relaxed text-brand-steel">
+            Health Cloud entfaltet seinen Wert, wenn Prozesse, Datenmodelle,
+            Integrationen und Governance als ein gemeinsames Betriebssystem
+            geplant werden. NexaForce Digital verbindet diese Schichten mit
+            klaren Verantwortlichkeiten und einer wartbaren Architektur.
+          </p>
+
+          <ul class="space-y-4">
+            {implementationScope.map((item) => (
+              <li class="flex gap-3 text-sm leading-relaxed text-brand-steel">
+                <span class="mt-0.5 text-brand-blue">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-brand-dark p-8">
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            Zielbild
+          </p>
+
+          <div class="space-y-8">
+            <div>
+              <p class="text-2xl font-bold text-white">Vernetzt</p>
+              <p class="mt-2 text-sm leading-relaxed text-brand-steel">
+                Teams, Fallprozesse und relevante Systemdaten werden in einem
+                nachvollziehbaren operativen Ablauf zusammengeführt.
+              </p>
+            </div>
+
+            <div>
+              <p class="text-2xl font-bold text-white">Kontrolliert</p>
+              <p class="mt-2 text-sm leading-relaxed text-brand-steel">
+                Zugriffsmodelle, Integrationen und Prozessschritte werden
+                mit Governance, Auditierbarkeit und klaren Grenzen gestaltet.
+              </p>
+            </div>
+
+            <div>
+              <p class="text-2xl font-bold text-white">Handlungsfähig</p>
+              <p class="mt-2 text-sm leading-relaxed text-brand-steel">
+                Operative Kennzahlen und Eskalationen schaffen Transparenz für
+                Versorgung, Servicequalität und Auslastung.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="mx-auto max-w-7xl px-6 py-24">
+      <div class="max-w-3xl">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+          Architekturprinzipien
+        </p>
+
+        <h2 class="mb-6 text-3xl font-bold">
+          Verlässliche Integration, kontrollierte Datenflüsse.
+        </h2>
+
+        <p class="leading-relaxed text-brand-steel">
+          Wir behandeln Health Cloud nicht als isoliertes Frontend. Die
+          Architektur verbindet Salesforce mit EHR/EMR-Systemen, Identity- und
+          Kommunikationsdiensten über dokumentierte APIs, kontrollierte
+          Berechtigungen und fehlertolerante Integrationsabläufe.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {[
+          {
+            title: 'Datenmodell',
+            desc: 'Patienten-, Fall-, Versorgungs-, Kontakt- und Serviceobjekte mit klarer fachlicher Verantwortlichkeit.'
+          },
+          {
+            title: 'Integration',
+            desc: 'API-orientierte EHR/EMR-Anbindung mit Payload-Validierung, Fehlerbehandlung und nachvollziehbaren Übergaben.'
+          },
+          {
+            title: 'Sicherheit',
+            desc: 'Rollen, Berechtigungen, Audit Trails und Datenminimierung passend zu den Anforderungen der Organisation.'
+          },
+          {
+            title: 'Betrieb',
+            desc: 'Release-Prozesse, Monitoring, Dokumentation und Support-Strukturen für einen stabilen Langzeitbetrieb.'
+          }
+        ].map((item) => (
+          <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <h3 class="mb-3 text-lg font-bold text-white">{item.title}</h3>
+            <p class="text-sm leading-relaxed text-brand-steel">{item.desc}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Delivery model -->
+    <section class="border-y border-white/8 bg-white/[0.025] py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="max-w-3xl">
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            Vorgehensmodell
+          </p>
+
+          <h2 class="mb-6 text-3xl font-bold">
+            Von der Ist-Analyse zum kontrollierten Go-live.
+          </h2>
+
+          <p class="mb-12 leading-relaxed text-brand-steel">
+            Wir reduzieren Implementierungsrisiken durch eine klare
+            Architekturphase, testbare Integrationen und eine strukturierte
+            Übergabe in den Betrieb.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {deliveryModel.map((step) => (
+            <article class="rounded-2xl border border-white/10 bg-brand-dark p-6">
+              <h3 class="mb-3 text-lg font-bold text-white">{step.title}</h3>
+              <p class="text-sm leading-relaxed text-brand-steel">{step.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mx-auto max-w-5xl px-6 pt-24">
+      <div class="rounded-3xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/15 to-violet-500/10 p-8 text-center md:p-12">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+          Nächster Schritt
+        </p>
+
+        <h2 class="mx-auto max-w-3xl text-3xl font-bold md:text-4xl">
+          Besprechen wir Ihre Health-Cloud-Zielarchitektur.
+        </h2>
+
+        <p class="mx-auto mt-5 max-w-2xl leading-relaxed text-brand-steel">
+          In einem ersten Architekturgespräch klären wir Systemlandschaft,
+          Datenflüsse, Governance-Anforderungen und die priorisierten
+          operativen Prozesse.
+        </p>
+
+        <a
+          href="https://wa.me/4917632246090?text=Hallo%20NexaForce%20Digital%2C%20ich%20möchte%20ein%20Salesforce%20Health%20Cloud%20Projekt%20besprechen."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-flex rounded-full bg-brand-blue px-8 py-4 font-semibold text-white transition-colors hover:bg-blue-500"
+        >
+          Strategiegespräch buchen
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
