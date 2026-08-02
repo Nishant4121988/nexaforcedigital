@@ -1,37 +1,37 @@
 ---
-import SalesforceServiceDetail from '../../components/SalesforceServiceDetail.astro';
-
-const standardPrinciples = [
-  { title: 'Discovery', text: 'Map revenue processes, data quality, integration dependencies, and operating constraints.' },
-  { title: 'Architecture', text: 'Define object model, security model, automation boundaries, and API contracts.' },
-  { title: 'Delivery', text: 'Build with tested Flow, Apex, LWR, CI/CD, and controlled release practices.' },
-  { title: 'Operations', text: 'Document ownership, monitoring, deployment, and continuous improvement procedures.' }
-];
+import SalesforceCloudDetail from '../../components/SalesforceCloudDetail.astro';
 ---
 
-<SalesforceServiceDetail
+<SalesforceCloudDetail
+  lang="en"
   title="Salesforce Sales Cloud Consulting"
+  description="NexaForce Digital designs Salesforce Sales Cloud architecture for controlled lead-to-cash execution, pipeline visibility, and revenue operations."
   eyebrow="Salesforce Enterprise Cloud"
-  heroTitle="Sales Cloud architecture that turns pipeline activity into controlled revenue execution."
-  description="We design Sales Cloud environments that standardize lead-to-cash processes, automate operational work, and provide leadership with reliable pipeline visibility."
+  heroTitle="Sales Cloud architecture for controlled revenue execution."
+  image="/assets/logos/crm/sales-cloud.svg"
+  imageAlt="Salesforce Sales Cloud"
   suitableFor={[
     'B2B sales organizations with fragmented pipeline processes',
-    'Teams scaling from spreadsheets or heavily customized legacy CRM',
-    'Revenue operations teams requiring forecast and data governance',
-    'Businesses integrating CPQ, ERP, marketing, and customer service platforms'
+    'Revenue operations teams requiring trustworthy forecasting',
+    'Companies integrating CPQ, ERP, marketing, and service platforms',
+    'Sales teams scaling beyond spreadsheets or legacy CRM customization'
   ]}
   scope={[
-    'Lead, account, contact, opportunity, forecast, territory, and activity data-model design',
-    'Sales process automation with Salesforce Flow, Apex where required, and approval controls',
-    'Pipeline quality rules, forecasting structure, dashboard design, and operational reporting',
-    'CPQ, billing, ERP, marketing, and customer-service integration architecture',
+    'Lead, account, contact, opportunity, territory, and forecast data-model design',
+    'Salesforce Flow automation, Apex extensions where required, and approval controls',
+    'Pipeline-quality rules, forecast structure, dashboards, and operational reporting',
+    'CPQ, billing, ERP, marketing, and service integration architecture',
     'Role hierarchy, sharing rules, permission sets, auditability, and release governance'
   ]}
   outcomes={[
-    { title: 'Standardized', text: 'A consistent revenue process across teams, regions, and sales motions.' },
-    { title: 'Visible', text: 'Reliable pipeline, forecast, and activity signals for operational decision-making.' },
-    { title: 'Automated', text: 'Less manual administration and more time for customer-facing work.' }
+    { title: 'Standardized', text: 'One consistent revenue process across teams, regions, and sales motions.' },
+    { title: 'Visible', text: 'Reliable pipeline and forecast signals for operational decisions.' },
+    { title: 'Automated', text: 'Less manual administration and more customer-facing selling time.' }
   ]}
-  principles={standardPrinciples}
-  whatsappMessage="Hello NexaForce Digital, I would like to discuss a Salesforce Sales Cloud project."
+  architecture={[
+    { title: 'Discovery', text: 'Map revenue processes, data quality, integration dependencies, and operating constraints.' },
+    { title: 'Architecture', text: 'Define data model, security, automation boundaries, and API contracts.' },
+    { title: 'Delivery', text: 'Build through tested Flow, Apex, LWR, CI/CD, and release controls.' },
+    { title: 'Operations', text: 'Document ownership, monitoring, support, and continuous improvement.' }
+  ]}
 />
