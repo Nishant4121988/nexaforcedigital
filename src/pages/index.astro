@@ -1,12 +1,12 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout
-  title="Enterprise Salesforce, n8n & Agentische KI-Beratung"
-  description="NexaForce Digital — Salesforce Cloud, n8n Workflow-Automatisierung und Agentic AI Engineering für Unternehmen. Berliner Unternehmensberatung mit 100 % Dateneigentum."
+  title="Enterprise Salesforce, n8n & Agentic AI Consultancy"
+  description="NexaForce Digital — Salesforce Cloud, n8n Workflow Automation, and Agentic AI Engineering. Berlin-based enterprise consultancy with 100% data ownership."
 >
   <Navbar />
 
@@ -16,7 +16,6 @@ import Footer from '../../components/Footer.astro';
     <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_45%,rgba(30,111,255,0.18),transparent_55%)]"></div>
 
     <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-6 py-24 lg:min-h-[calc(100vh-5rem)] lg:grid-cols-2">
-      <!-- German hero content -->
       <div class="max-w-3xl">
         <span class="mb-6 inline-block rounded-full border border-brand-blue/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-brand-blue">
           Berlin · Enterprise Grade
@@ -24,42 +23,40 @@ import Footer from '../../components/Footer.astro';
 
         <h1 class="mb-6 text-5xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
           Enterprise Salesforce.<br />
-          <span class="text-brand-blue">Intelligente</span> Automatisierung.<br />
-          <span class="text-brand-steel">Agentische KI.</span>
+          <span class="text-brand-blue">Intelligent</span> Automation.<br />
+          <span class="text-brand-steel">Agentic AI.</span>
         </h1>
 
         <p class="mb-10 max-w-2xl text-lg leading-relaxed text-brand-steel md:text-xl">
-          Wir entwickeln unternehmenskritische digitale Systeme — Salesforce Cloud,
-          n8n Workflow-Engines und zustandsbehaftete KI-Agenten — konzipiert für
-          100 % Dateneigentum und ohne Vendor Lock-in.
+          We architect mission-critical digital systems — Salesforce Cloud, n8n Workflow Engines,
+          and stateful AI agents — engineered for 100% data ownership and zero vendor lock-in.
         </p>
 
         <div class="flex flex-col gap-4 sm:flex-row">
           <a
-            href="https://wa.me/4917632246090?text=Hallo%20NexaForce%20Digital%2C%20ich%20möchte%20einen%20Strategietermin%20vereinbaren."
+            href="https://wa.me/4917632246090?text=Hello%20NexaForce%20Digital%2C%20I%20would%20like%20to%20book%20a%20strategy%20call."
             target="_blank"
             rel="noopener noreferrer"
             class="rounded-full bg-brand-blue px-8 py-4 text-center font-semibold text-white shadow-lg shadow-brand-blue/25 transition-all duration-300 hover:bg-blue-500"
           >
-            Strategiegespräch buchen
+            Book a Strategy Call
           </a>
 
           <a
-            href="/de/leistungen"
+            href="/services"
             class="rounded-full border border-white/20 px-8 py-4 text-center font-semibold text-white transition-all duration-300 hover:border-brand-blue"
           >
-            Leistungen entdecken
+            Explore Services
           </a>
         </div>
       </div>
 
-      <!-- NexaForce logo -->
       <div class="relative flex justify-center lg:justify-end">
         <div class="absolute h-72 w-72 rounded-full bg-brand-blue/20 blur-3xl md:h-96 md:w-96"></div>
 
         <img
           src="/images/nexaforce-digital-logo.jpg"
-          alt="NexaForce Digital — Salesforce, KI-Automatisierung, n8n und Robotik"
+          alt="NexaForce Digital — Salesforce, AI automation, n8n and robotics"
           width="730"
           height="730"
           loading="eager"
@@ -73,14 +70,14 @@ import Footer from '../../components/Footer.astro';
   <!-- Core pillars -->
   <section class="mx-auto max-w-7xl px-6 py-24">
     <div class="mb-16 text-center">
-      <h2 class="mb-4 text-3xl font-bold md:text-4xl">Unsere drei Kernbereiche</h2>
+      <h2 class="mb-4 text-3xl font-bold md:text-4xl">Our Three Core Pillars</h2>
       <p class="mx-auto max-w-2xl text-lg text-brand-steel">
-        Jedes Projekt wird auf Ihre Infrastrukturanforderungen, Datensouveränität und messbare Geschäftsergebnisse zugeschnitten.
+        Every engagement is scoped to your infrastructure constraints, data sovereignty requirements,
+        and measurable business outcomes.
       </p>
     </div>
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-      <!-- Salesforce -->
       <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
         <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
           <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,15 +88,15 @@ import Footer from '../../components/Footer.astro';
         <h3 class="mb-3 text-xl font-bold">Salesforce Cloud</h3>
 
         <p class="mb-4 text-sm leading-relaxed text-brand-steel">
-          Sales Cloud, Commerce Cloud, Data Cloud, Health Cloud und Financial Services Cloud — Custom Apex, LWR-Architektur und CPQ-Integration.
+          Sales Cloud, Commerce Cloud, Data Cloud, Health Cloud, and Financial Services Cloud —
+          custom Apex, LWR architecture, and CPQ integration.
         </p>
 
-        <a href="/de/leistungen#salesforce" class="text-sm font-medium text-brand-blue hover:underline">
-          Mehr erfahren →
+        <a href="/services#salesforce" class="text-sm font-medium text-brand-blue hover:underline">
+          Learn more →
         </a>
       </div>
 
-      <!-- n8n -->
       <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
         <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
           <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,18 +104,18 @@ import Footer from '../../components/Footer.astro';
           </svg>
         </div>
 
-        <h3 class="mb-3 text-xl font-bold">n8n Workflow-Automatisierung</h3>
+        <h3 class="mb-3 text-xl font-bold">n8n Workflow Automation</h3>
 
         <p class="mb-4 text-sm leading-relaxed text-brand-steel">
-          Selbst gehostete, ereignisgesteuerte Workflow-Engines mit eigenen TypeScript-Nodes. Ersetzen Sie Zapier, Make oder Workato durch vorhersehbare, clienteigene Infrastruktur.
+          Self-hosted, event-driven workflow engines with custom TypeScript nodes. Replace
+          Zapier, Make, or Workato with predictable, client-owned infrastructure.
         </p>
 
-        <a href="/de/leistungen#n8n" class="text-sm font-medium text-brand-blue hover:underline">
-          Mehr erfahren →
+        <a href="/services#n8n" class="text-sm font-medium text-brand-blue hover:underline">
+          Learn more →
         </a>
       </div>
 
-      <!-- AI -->
       <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
         <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
           <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -126,14 +123,15 @@ import Footer from '../../components/Footer.astro';
           </svg>
         </div>
 
-        <h3 class="mb-3 text-xl font-bold">Agentisches KI-Engineering</h3>
+        <h3 class="mb-3 text-xl font-bold">Agentic AI Engineering</h3>
 
         <p class="mb-4 text-sm leading-relaxed text-brand-steel">
-          Zustandsbehaftete Multi-Agenten-Systeme auf Basis von LangChain und LangGraph. Vollständig observierbar über LangSmith und auf Ihrer Infrastruktur betreibbar.
+          Stateful multi-agent systems built with LangChain and LangGraph. Fully observable through
+          LangSmith and deployed on your infrastructure without cloud lock-in.
         </p>
 
-        <a href="/de/leistungen#ai" class="text-sm font-medium text-brand-blue hover:underline">
-          Mehr erfahren →
+        <a href="/services#ai" class="text-sm font-medium text-brand-blue hover:underline">
+          Learn more →
         </a>
       </div>
     </div>
@@ -142,9 +140,9 @@ import Footer from '../../components/Footer.astro';
   <!-- Contact -->
   <section id="contact" class="mx-auto max-w-3xl px-6 py-24">
     <div class="mb-12 text-center">
-      <h2 class="mb-4 text-3xl font-bold md:text-4xl">Projekt starten</h2>
+      <h2 class="mb-4 text-3xl font-bold md:text-4xl">Start a Project</h2>
       <p class="text-brand-steel">
-        Beschreiben Sie Ihr Anliegen — wir antworten innerhalb eines Werktages.
+        Describe your requirement and we will respond within one business day.
       </p>
     </div>
 
@@ -157,7 +155,7 @@ import Footer from '../../components/Footer.astro';
         <input
           type="text"
           name="name"
-          placeholder="Vollständiger Name"
+          placeholder="Full Name"
           required
           class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-brand-steel focus:border-brand-blue focus:outline-none"
         />
@@ -165,7 +163,7 @@ import Footer from '../../components/Footer.astro';
         <input
           type="email"
           name="email"
-          placeholder="Geschäftliche E-Mail"
+          placeholder="Business Email"
           required
           class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-brand-steel focus:border-brand-blue focus:outline-none"
         />
@@ -174,14 +172,14 @@ import Footer from '../../components/Footer.astro';
       <input
         type="text"
         name="company"
-        placeholder="Unternehmen"
+        placeholder="Company"
         class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-brand-steel focus:border-brand-blue focus:outline-none"
       />
 
       <textarea
         name="message"
         rows="5"
-        placeholder="Beschreiben Sie Ihr Anliegen"
+        placeholder="Describe your requirement"
         required
         class="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-brand-steel focus:border-brand-blue focus:outline-none"
       ></textarea>
@@ -190,7 +188,7 @@ import Footer from '../../components/Footer.astro';
         type="submit"
         class="w-full rounded-xl bg-brand-blue py-4 font-semibold text-white transition-colors duration-300 hover:bg-blue-500"
       >
-        Nachricht senden
+        Send Message
       </button>
     </form>
   </section>
