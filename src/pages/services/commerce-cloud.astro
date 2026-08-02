@@ -1,1 +1,37 @@
+---
+import SalesforceServiceDetail from '../../components/SalesforceServiceDetail.astro';
 
+const principles = [
+  { title: 'Commerce model', text: 'Define B2B, B2C, and D2C requirements, account structures, product data, and commercial rules.' },
+  { title: 'Headless delivery', text: 'Separate storefront experience from commerce APIs where flexibility and performance require it.' },
+  { title: 'Integration', text: 'Connect ERP, inventory, pricing, tax, payments, fulfillment, and customer data through controlled interfaces.' },
+  { title: 'Operations', text: 'Provide release governance, observability, error handling, and support-ready documentation.' }
+];
+---
+
+<SalesforceServiceDetail
+  title="Salesforce Commerce Cloud Consulting"
+  eyebrow="Salesforce Enterprise Cloud"
+  heroTitle="Commerce Cloud architecture for connected B2B, B2C, and D2C revenue operations."
+  description="We build scalable commerce environments that connect storefronts, product catalogs, customer identity, inventory, pricing, payments, and order fulfillment."
+  suitableFor={[
+    'B2B organizations with account-specific pricing and purchase-order flows',
+    'Consumer brands requiring fast, personalized storefront experiences',
+    'D2C businesses managing subscriptions, loyalty, and direct fulfillment',
+    'Companies consolidating fragmented commerce and order-management systems'
+  ]}
+  scope={[
+    'B2B account hierarchies, buyer roles, contract pricing, quick order, and PO checkout',
+    'B2C and D2C storefront architecture, headless APIs, checkout, payment, and loyalty workflows',
+    'Catalog, pricing, promotion, cart, subscription, and order lifecycle design',
+    'ERP, inventory, fulfillment, tax, payment gateway, and CRM integrations',
+    'Performance, API resiliency, observability, and multi-channel order-management controls'
+  ]}
+  outcomes={[
+    { title: 'Connected', text: 'A commerce ecosystem that synchronizes customer, order, pricing, and inventory data.' },
+    { title: 'Scalable', text: 'Architecture that supports new channels, markets, and commercial models.' },
+    { title: 'Conversion-focused', text: 'A streamlined buyer journey built around the needs of the target purchasing model.' }
+  ]}
+  principles={principles}
+  whatsappMessage="Hello NexaForce Digital, I would like to discuss a Salesforce Commerce Cloud project."
+/>
