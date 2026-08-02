@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Leistungen — Salesforce, n8n & Agentische KI"
+  description="NexaForce Digital Leistungen: Salesforce Cloud Beratung, n8n Workflow-Automatisierung und Full-Stack Agentic AI Engineering für Unternehmen."
+>
+  <Navbar />
+
+  <main class="pt-32 max-w-7xl mx-auto px-6 pb-24">
+    <header class="max-w-3xl mb-20">
+      <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">
+        NexaForce Digital
+      </span>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Enterprise-Architektur für skalierbare digitale Systeme
+      </h1>
+      <p class="text-brand-steel text-lg leading-relaxed">
+        Salesforce Cloud, selbst gehostete n8n-Workflow-Automatisierung und
+        zustandsbehaftete KI-Agenten — für Datensouveränität, nachvollziehbare
+        Prozesse und verlässlichen Betrieb.
+      </p>
+    </header>
+
+    <section id="salesforce" class="mb-24 scroll-mt-28">
+      <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">
+        Kernbereich 1
+      </span>
+      <h2 class="text-4xl font-bold mb-6">Salesforce Enterprise Cloud</h2>
+      <p class="text-brand-steel text-lg max-w-3xl mb-10">
+        Konzeption, Implementierung und Optimierung geschäftskritischer
+        Salesforce-Umgebungen für Vertrieb, Commerce, Datenplattformen und
+        regulierte Branchen.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            name: 'Sales Cloud',
+            desc: 'Lead-to-Cash-Optimierung, Pipeline-Automatisierung, Apex- und LWR-Architektur sowie CPQ-Integration.'
+          },
+          {
+            name: 'B2B2C Commerce Cloud',
+            desc: 'Skalierbare Headless-Storefronts, einheitliche Warenkörbe und kanalübergreifende Customer Journeys.'
+          },
+          {
+            name: 'Data Cloud',
+            desc: 'Echtzeit-Profilauflösung, Zero-Copy-Architektur mit Snowflake oder BigQuery und nutzbare Kundeneinblicke.'
+          },
+          {
+            name: 'Health Cloud',
+            desc: 'Datenschutzorientierte Koordination von Versorgungsprozessen, Workflows und EHR/EMR-Integrationen.'
+          },
+          {
+            name: 'Financial Services Cloud',
+            desc: 'Automatisierte Kundenlebenszyklen, Financial-360-Sicht und kontrollierbare Compliance-Prozesse.'
+          }
+        ].map((service) => (
+          <article class="bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 transition-all">
+            <h3 class="font-bold text-lg mb-2">{service.name}</h3>
+            <p class="text-brand-steel text-sm leading-relaxed">{service.desc}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="n8n" class="mb-24 scroll-mt-28">
+      <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">
+        Kernbereich 2
+      </span>
+      <h2 class="text-4xl font-bold mb-6">n8n Workflow-Automatisierung</h2>
+      <p class="text-brand-steel text-lg max-w-3xl mb-10">
+        Ereignisgesteuerte Workflow-Engines auf clientkontrollierter Infrastruktur
+        statt unvorhersehbarer nutzungsbasierter Automatisierungsgebühren.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          {
+            name: 'Self-Hosted Betrieb',
+            desc: 'Hochverfügbares n8n auf privater Infrastruktur oder im Kunden-VPC, inklusive Datensouveränität und kontrollierbarer Betriebskosten.'
+          },
+          {
+            name: 'Eigene Nodes und APIs',
+            desc: 'TypeScript-Nodes und API-Adapter für Legacy-Datenbanken, proprietäre Systeme und branchenspezifische SaaS-Produkte.'
+          },
+          {
+            name: 'Event-Driven Orchestration',
+            desc: 'Webhooks, Warteschlangen, Payload-Transformation, Fehlerbehandlung und wiederholbare Ausführungslogik.'
+          },
+          {
+            name: 'Migration von Zapier, Make oder Workato',
+            desc: 'Strukturierte Überführung bestehender Automatisierungen in nachvollziehbare, selbst kontrollierte n8n-Workflows.'
+          }
+        ].map((service) => (
+          <article class="bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 transition-all">
+            <h3 class="font-bold text-lg mb-2">{service.name}</h3>
+            <p class="text-brand-steel text-sm leading-relaxed">{service.desc}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="ai" class="scroll-mt-28">
+      <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">
+        Kernbereich 3
+      </span>
+      <h2 class="text-4xl font-bold mb-6">Agentisches KI-Engineering</h2>
+      <p class="text-brand-steel text-lg max-w-3xl mb-10">
+        Zustandsbehaftete KI-Microservices mit LangChain und LangGraph,
+        kontrollierter Datenhaltung und vollständiger Observability.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          {
+            name: 'Stateful Agent Orchestration',
+            desc: 'LangChain und LangGraph für Zustandsmanagement, bedingte Verzweigungen, Retries, Checkpoints und Human-in-the-Loop-Freigaben.'
+          },
+          {
+            name: 'RAG und Wissenssysteme',
+            desc: 'PostgreSQL mit pgvector als Standard für portable, clientkontrollierte Vektorsuche und Knowledge Retrieval.'
+          },
+          {
+            name: 'API- und Microservice-Delivery',
+            desc: 'FastAPI oder Node.js/Express, REST- und WebSocket-Schnittstellen, OAuth2, JWT und Enterprise-SSO.'
+          },
+          {
+            name: 'Governance und Betrieb',
+            desc: 'Tracing mit LangSmith oder selbst gehostetem LangFuse, PII-Redaktion, Rate Limits, Tokenbudgets und Audit-Protokolle.'
+          }
+        ].map((service) => (
+          <article class="bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 transition-all">
+            <h3 class="font-bold text-lg mb-2">{service.name}</h3>
+            <p class="text-brand-steel text-sm leading-relaxed">{service.desc}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
