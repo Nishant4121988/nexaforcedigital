@@ -94,8 +94,39 @@ import Footer from '../components/Footer.astro';
           custom Apex, LWR architecture, and CPQ integration.
         </p>
 
-        <a href="/services#salesforce" class="text-sm font-medium text-brand-blue hover:underline">
-          Learn more →
+        <a
+          href="/services#salesforce"
+          class="group block rounded-2xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/10 to-white/[0.025] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/70 hover:shadow-xl hover:shadow-brand-blue/10"
+        >
+          <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-brand-blue/30 bg-brand-blue/15">
+            <svg class="h-7 w-7 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+            </svg>
+          </div>
+        
+          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            Enterprise CRM
+          </p>
+        
+          <h3 class="mb-4 text-2xl font-bold text-white">Salesforce Enterprise Cloud</h3>
+        
+          <p class="mb-6 text-sm leading-relaxed text-brand-steel">
+            Mission-critical CRM architecture for revenue operations, customer experience,
+            data activation, healthcare, and regulated financial services.
+          </p>
+        
+          <div class="mb-7 flex flex-wrap gap-2">
+            {['Sales', 'Commerce', 'Data', 'Health', 'Financial Services'].map((cloud) => (
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200">
+                {cloud}
+              </span>
+            ))}
+          </div>
+        
+          <span class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue">
+            Explore Salesforce services
+            <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </span>
         </a>
       </div>
 
