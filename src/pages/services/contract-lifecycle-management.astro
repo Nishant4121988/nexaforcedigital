@@ -1,0 +1,37 @@
+---
+import SalesforceServiceDetail from '../../components/SalesforceServiceDetail.astro';
+
+const principles = [
+  { title: 'Contract model', text: 'Define agreement types, templates, clause libraries, obligation structures, approval requirements, and commercial metadata.' },
+  { title: 'Workflow control', text: 'Configure drafting, review, negotiation, redlining, approvals, e-signature, and execution workflows with accountable ownership.' },
+  { title: 'System integration', text: 'Connect CRM, Revenue Cloud, document generation, e-signature, ERP, billing, and renewal processes through governed interfaces.' },
+  { title: 'Operational governance', text: 'Provide access controls, audit trails, obligation monitoring, renewal visibility, reporting, and support-ready operating procedures.' }
+];
+---
+
+<SalesforceServiceDetail
+  title="Salesforce Contract Lifecycle Management Consulting"
+  eyebrow="Salesforce Enterprise Cloud"
+  heroTitle="Contract lifecycle management for controlled agreements, approvals, obligations, and renewals."
+  description="We implement Salesforce-centric CLM operating models that connect commercial data, contract generation, legal review, approval workflows, e-signature, obligations, and renewal management."
+  suitableFor={[
+    'Organizations managing high volumes of commercial, supplier, partner, or customer agreements',
+    'Legal and sales teams relying on disconnected documents, email approvals, and manual contract tracking',
+    'Businesses requiring governed clause libraries, negotiation visibility, and contract auditability',
+    'Revenue operations teams linking contracts to quotes, subscriptions, billing, and renewals'
+  ]}
+  scope={[
+    'Contract-type, template, clause-library, metadata, and obligation data-model design',
+    'Document generation from account, opportunity, quote, product, and commercial data',
+    'Legal review, redlining, approvals, negotiation, and escalation workflow architecture',
+    'E-signature, CRM, Revenue Cloud, ERP, billing, document-management, and renewal integrations',
+    'Access controls, audit trails, expiry alerts, obligation tracking, reporting, and release governance'
+  ]}
+  outcomes={[
+    { title: 'Faster execution', text: 'Commercial teams generate and route agreements through consistent, repeatable workflows.' },
+    { title: 'Higher control', text: 'Legal and operational stakeholders gain traceability across clauses, approvals, obligations, and signatures.' },
+    { title: 'Renewal visibility', text: 'Contract expiry, obligations, and renewal opportunities become visible before revenue or compliance risk emerges.' }
+  ]}
+  principles={principles}
+  whatsappMessage="Hello NexaForce Digital, I would like to discuss a Salesforce contract lifecycle management project."
+/>

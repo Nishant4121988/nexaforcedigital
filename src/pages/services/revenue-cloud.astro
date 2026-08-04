@@ -1,0 +1,37 @@
+---
+import SalesforceServiceDetail from '../../components/SalesforceServiceDetail.astro';
+
+const principles = [
+  { title: 'Commercial model', text: 'Define product catalog structure, bundles, pricing logic, discount guardrails, approvals, and account-specific commercial rules.' },
+  { title: 'Quote-to-cash', text: 'Connect quoting, contract data, billing, order management, and ERP processes through clear ownership and controlled interfaces.' },
+  { title: 'Automation', text: 'Implement guided selling, renewal workflows, amendments, approvals, and exception handling with predictable process behavior.' },
+  { title: 'Governance', text: 'Establish release controls, auditability, role-based access, reporting, and operational ownership for revenue processes.' }
+];
+---
+
+<SalesforceServiceDetail
+  title="Salesforce Revenue Cloud Consulting"
+  eyebrow="Salesforce Enterprise Cloud"
+  heroTitle="Revenue Cloud architecture for accurate CPQ, billing, and controlled quote-to-cash execution."
+  description="We design Salesforce Revenue Cloud environments that bring products, pricing, quotes, contracts, subscriptions, billing, renewals, and ERP integration into one governed commercial operating model."
+  suitableFor={[
+    'B2B organizations managing complex products, bundles, pricing, and approval rules',
+    'Subscription businesses requiring renewals, amendments, recurring billing, and revenue controls',
+    'Sales and finance teams operating across disconnected CPQ, contract, billing, and ERP systems',
+    'Companies seeking predictable quote-to-cash execution and reduced commercial leakage'
+  ]}
+  scope={[
+    'Product catalog, bundle, attribute, pricing, discount, and approval-rule architecture',
+    'Guided selling, quote generation, document automation, and controlled exception workflows',
+    'Subscription lifecycle, amendments, renewals, usage-based models, and billing design',
+    'Contract, order, invoice, payment, tax, and ERP integration architecture',
+    'Role-based access, audit trails, operational reporting, release governance, and support documentation'
+  ]}
+  outcomes={[
+    { title: 'Accurate quoting', text: 'Sales teams create compliant, commercially correct quotes with less manual intervention.' },
+    { title: 'Controlled revenue operations', text: 'Pricing, discounting, renewals, billing, and handoffs operate through governed workflows.' },
+    { title: 'Reduced leakage', text: 'Commercial data moves consistently from quote through contract, order, invoice, and renewal.' }
+  ]}
+  principles={principles}
+  whatsappMessage="Hello NexaForce Digital, I would like to discuss a Salesforce Revenue Cloud, CPQ, and billing project."
+/>

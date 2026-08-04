@@ -1,0 +1,37 @@
+---
+import SalesforceServiceDetailDE from '../../../components/SalesforceServiceDetailDE.astro';
+
+const principles = [
+  { title: 'Kommerzielles Modell', text: 'Produktkatalog, Bundles, Preislogik, Rabattgrenzen, Freigaben und kundenspezifische Regeln klar definieren.' },
+  { title: 'Quote-to-Cash', text: 'Angebote, Verträge, Abrechnung, Auftragsmanagement und ERP-Prozesse über dokumentierte Verantwortlichkeiten und Schnittstellen verbinden.' },
+  { title: 'Automatisierung', text: 'Guided Selling, Verlängerungen, Amendments, Freigaben und Ausnahmebehandlung mit vorhersehbarem Prozessverhalten umsetzen.' },
+  { title: 'Governance', text: 'Release Controls, Auditierbarkeit, rollenbasierte Zugriffe, Reporting und operative Verantwortung für Revenue-Prozesse etablieren.' }
+];
+---
+
+<SalesforceServiceDetailDE
+  title="Salesforce Revenue Cloud Beratung"
+  eyebrow="Salesforce Enterprise Cloud"
+  heroTitle="Revenue Cloud Architektur für CPQ, Abrechnung und kontrollierte Quote-to-Cash-Prozesse."
+  description="Wir entwickeln Salesforce Revenue Cloud Umgebungen, die Produkte, Preise, Angebote, Verträge, Subscriptions, Abrechnung, Verlängerungen und ERP-Integration in einem kontrollierten kommerziellen Betriebsmodell zusammenführen."
+  suitableFor={[
+    'B2B-Unternehmen mit komplexen Produkten, Bundles, Preislogiken und Freigaberegeln',
+    'Subscription-Geschäfte mit Verlängerungen, Amendments, wiederkehrender Abrechnung und Revenue Controls',
+    'Sales- und Finance-Teams mit getrennten CPQ-, Vertrags-, Billing- und ERP-Systemen',
+    'Unternehmen mit Anforderungen an zuverlässige Quote-to-Cash-Ausführung und weniger kommerzielle Verluste'
+  ]}
+  scope={[
+    'Architektur für Produktkataloge, Bundles, Attribute, Preise, Rabatte und Freigaberegeln',
+    'Guided Selling, Angebotserstellung, Dokumentenautomatisierung und kontrollierte Ausnahmeprozesse',
+    'Subscription Lifecycle, Amendments, Verlängerungen, nutzungsbasierte Modelle und Billing-Design',
+    'Architektur für Verträge, Aufträge, Rechnungen, Payments, Steuern und ERP-Integration',
+    'Rollenbasierter Zugriff, Audit Trails, operatives Reporting, Release Governance und Support-Dokumentation'
+  ]}
+  outcomes={[
+    { title: 'Präzise Angebote', text: 'Vertriebsteams erstellen regelkonforme und kommerziell korrekte Angebote mit weniger manuellen Eingriffen.' },
+    { title: 'Kontrollierte Revenue Operations', text: 'Preise, Rabatte, Verlängerungen, Abrechnung und Übergaben laufen über kontrollierte Workflows.' },
+    { title: 'Weniger Leakage', text: 'Kommerzielle Daten bewegen sich konsistent vom Angebot über Vertrag und Auftrag bis Rechnung und Verlängerung.' }
+  ]}
+  principles={principles}
+  whatsappMessage="Hallo NexaForce Digital, ich möchte ein Salesforce Revenue Cloud, CPQ und Billing Projekt besprechen."
+/>
