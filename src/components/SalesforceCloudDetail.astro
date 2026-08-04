@@ -43,18 +43,18 @@ const {
 
 const isGerman = lang === 'de';
 
-const text = isGerman
+const content = isGerman
   ? {
       backLabel: 'Alle Salesforce-Leistungen',
       backHref: '/de/leistungen/',
       primaryCta: 'Architektur besprechen',
-      suitableFor: 'Geeignet für',
-      scope: 'Leistungsumfang',
+      suitableForLabel: 'Geeignet für',
+      scopeLabel: 'Leistungsumfang',
       scopeHeading: 'Architektur für Integration, Governance und zuverlässigen Betrieb.',
-      outcomes: 'Geschäftlicher Nutzen',
-      principles: 'Architekturprinzipien',
+      outcomesLabel: 'Geschäftlicher Nutzen',
+      principlesLabel: 'Architekturprinzipien',
       principlesHeading: 'Ein belastbares System statt einer isolierten CRM-Konfiguration.',
-      nextStep: 'Nächster Schritt',
+      nextLabel: 'Nächster Schritt',
       nextHeading: 'Besprechen wir Ihre Zielarchitektur.',
       finalCta: 'Strategiegespräch buchen',
       whatsappMessage: `Hallo NexaForce Digital, ich möchte ${title} besprechen.`
@@ -63,19 +63,19 @@ const text = isGerman
       backLabel: 'All Salesforce services',
       backHref: '/services/',
       primaryCta: 'Discuss your architecture',
-      suitableFor: 'Suitable for',
-      scope: 'Implementation scope',
+      suitableForLabel: 'Suitable for',
+      scopeLabel: 'Implementation scope',
       scopeHeading: 'Architecture for integration, governance, and dependable operations.',
-      outcomes: 'Business outcomes',
-      principles: 'Architecture principles',
+      outcomesLabel: 'Business outcomes',
+      principlesLabel: 'Architecture principles',
       principlesHeading: 'A dependable operating system, not an isolated CRM configuration.',
-      nextStep: 'Next step',
+      nextLabel: 'Next step',
       nextHeading: 'Discuss your target architecture with NexaForce Digital.',
       finalCta: 'Book a strategy call',
       whatsappMessage: `Hello NexaForce Digital, I would like to discuss ${title}.`
     };
 
-const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(text.whatsappMessage)}`;
+const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(content.whatsappMessage)}`;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -84,11 +84,11 @@ const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(text.
   <main class="pt-32 pb-24">
     <section class="mx-auto max-w-7xl px-6 pb-20">
       <a
-        href={text.backHref}
+        href={content.backHref}
         class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-brand-steel transition-colors hover:text-brand-blue"
       >
         <span aria-hidden="true">←</span>
-        {text.backLabel}
+        {content.backLabel}
       </a>
 
       <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
@@ -111,7 +111,7 @@ const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(text.
             rel="noopener noreferrer"
             class="mt-9 inline-flex rounded-full bg-brand-blue px-7 py-4 font-semibold text-white transition-colors hover:bg-blue-500"
           >
-            {text.primaryCta}
+            {content.primaryCta}
           </a>
         </div>
 
@@ -125,13 +125,12 @@ const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(text.
                 src={image}
                 alt={imageAlt}
                 class="max-h-56 w-full object-contain drop-shadow-2xl"
-                loading="eager"
               />
             </div>
 
             <div class="mt-7">
               <p class="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
-                {text.suitableFor}
+                {content.suitableForLabel}
               </p>
 
               <ul class="space-y-3 text-sm leading-relaxed text-brand-steel">
@@ -152,11 +151,11 @@ const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(text.
       <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
           <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-            {text.scope}
+            {content.scopeLabel}
           </p>
 
           <h2 class="mb-8 text-3xl font-bold">
-            {text.scopeHeading}
+            {content.scopeHeading}
           </h2>
 
           <ul class="space-y-4">
@@ -171,7 +170,7 @@ const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(text.
 
         <aside class="rounded-2xl border border-white/10 bg-brand-dark p-8">
           <p class="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-            {text.outcomes}
+            {content.outcomesLabel}
           </p>
 
           <div class="space-y-8">
@@ -190,11 +189,11 @@ const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(text.
 
     <section class="mx-auto max-w-7xl px-6 py-24">
       <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-        {text.principles}
+        {content.principlesLabel}
       </p>
 
       <h2 class="max-w-3xl text-3xl font-bold">
-        {text.principlesHeading}
+        {content.principlesHeading}
       </h2>
 
       <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -210,11 +209,11 @@ const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(text.
     <section class="mx-auto max-w-5xl px-6">
       <div class="rounded-3xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/15 to-violet-500/10 p-8 text-center md:p-12">
         <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-          {text.nextStep}
+          {content.nextLabel}
         </p>
 
         <h2 class="mx-auto max-w-3xl text-3xl font-bold md:text-4xl">
-          {text.nextHeading}
+          {content.nextHeading}
         </h2>
 
         <a
@@ -223,7 +222,7 @@ const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(text.
           rel="noopener noreferrer"
           class="mt-8 inline-flex rounded-full bg-brand-blue px-8 py-4 font-semibold text-white transition-colors hover:bg-blue-500"
         >
-          {text.finalCta}
+          {content.finalCta}
         </a>
       </div>
     </section>
