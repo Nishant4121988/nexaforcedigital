@@ -1,37 +1,37 @@
 ---
-import SalesforceCloudDetail from '../../components/SalesforceCloudDetail.astro';
+import SalesforceServiceDetail from '../../components/SalesforceServiceDetail.astro';
+
+const principles = [
+  { title: 'Commerce model', text: 'Define B2B, B2C, and D2C requirements, account structures, product data, and commercial rules.' },
+  { title: 'Headless delivery', text: 'Separate storefront experience from commerce APIs where flexibility and performance require it.' },
+  { title: 'Integration', text: 'Connect ERP, inventory, pricing, tax, payments, fulfillment, and customer data through controlled interfaces.' },
+  { title: 'Operations', text: 'Provide release governance, observability, error handling, and support-ready documentation.' }
+];
 ---
 
-<SalesforceCloudDetail
-  lang="en"
+<SalesforceServiceDetail
   title="Salesforce Commerce Cloud Consulting"
-  description="NexaForce Digital designs B2B, B2C, and D2C Commerce Cloud architecture connecting storefronts, pricing, payments, inventory, orders, and fulfillment."
   eyebrow="Salesforce Enterprise Cloud"
-  heroTitle="Commerce Cloud architecture for connected B2B, B2C, and D2C operations."
-  image="/assets/logos/crm/commerce-cloud.svg"
-  imageAlt="Salesforce Commerce Cloud"
+  heroTitle="Commerce Cloud architecture for connected B2B, B2C, and D2C revenue operations."
+  description="We build scalable commerce environments that connect storefronts, product catalogs, customer identity, inventory, pricing, payments, and order fulfillment."
   suitableFor={[
     'B2B organizations with account-specific pricing and purchase-order flows',
-    'Consumer brands requiring high-performance storefront experiences',
-    'D2C businesses operating subscription and loyalty journeys',
-    'Companies consolidating fragmented commerce and order systems'
+    'Consumer brands requiring fast, personalized storefront experiences',
+    'D2C businesses managing subscriptions, loyalty, and direct fulfillment',
+    'Companies consolidating fragmented commerce and order-management systems'
   ]}
   scope={[
     'B2B account hierarchies, buyer roles, contract pricing, quick order, and PO checkout',
-    'B2C and D2C storefront architecture, headless APIs, checkout, payments, and loyalty',
-    'Catalog, pricing, promotion, cart, subscription, and order-lifecycle design',
-    'ERP, inventory, fulfillment, tax, payment-gateway, and CRM integrations',
-    'API resilience, observability, and multi-channel order-management controls'
+    'B2C and D2C storefront architecture, headless APIs, checkout, payment, and loyalty workflows',
+    'Catalog, pricing, promotion, cart, subscription, and order lifecycle design',
+    'ERP, inventory, fulfillment, tax, payment gateway, and CRM integrations',
+    'Performance, API resiliency, observability, and multi-channel order-management controls'
   ]}
   outcomes={[
-    { title: 'Connected', text: 'Customer, order, pricing, and inventory data work through one controlled commerce ecosystem.' },
-    { title: 'Scalable', text: 'Architecture supports new channels, markets, and commercial models.' },
-    { title: 'Conversion-focused', text: 'Buyer journeys are optimized around the actual purchasing model.' }
+    { title: 'Connected', text: 'A commerce ecosystem that synchronizes customer, order, pricing, and inventory data.' },
+    { title: 'Scalable', text: 'Architecture that supports new channels, markets, and commercial models.' },
+    { title: 'Conversion-focused', text: 'A streamlined buyer journey built around the needs of the target purchasing model.' }
   ]}
-  architecture={[
-    { title: 'Commerce model', text: 'Define B2B, B2C, or D2C requirements, product data, and commercial rules.' },
-    { title: 'Headless delivery', text: 'Separate storefront experience from APIs where performance and flexibility require it.' },
-    { title: 'Integration', text: 'Connect ERP, inventory, tax, payments, fulfillment, and CRM through controlled interfaces.' },
-    { title: 'Operations', text: 'Provide monitoring, error handling, release governance, and support documentation.' }
-  ]}
+  principles={principles}
+  whatsappMessage="Hello NexaForce Digital, I would like to discuss a Salesforce Commerce Cloud project."
 />
