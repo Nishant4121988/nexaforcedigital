@@ -1,31 +1,81 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
+import Navbar from './Navbar.astro';
+import Footer from './Footer.astro';
+
+interface Outcome {
+  title: string;
+  text: string;
+}
+
+interface ArchitectureItem {
+  title: string;
+  text: string;
+}
 
 interface Props {
+  lang: 'en' | 'de';
   title: string;
+  description: string;
   eyebrow: string;
   heroTitle: string;
-  description: string;
+  image: string;
+  imageAlt: string;
   suitableFor: string[];
   scope: string[];
-  outcomes: { title: string; text: string }[];
-  principles: { title: string; text: string }[];
-  whatsappMessage: string;
+  outcomes: Outcome[];
+  architecture: ArchitectureItem[];
 }
 
 const {
+  lang,
   title,
+  description,
   eyebrow,
   heroTitle,
-  description,
+  image,
+  imageAlt,
   suitableFor,
   scope,
   outcomes,
-  principles,
-  whatsappMessage
+  architecture
 } = Astro.props;
+
+const isGerman = lang === 'de';
+
+const text = isGerman
+  ? {
+      backLabel: 'Alle Salesforce-Leistungen',
+      backHref: '/de/leistungen/',
+      primaryCta: 'Architektur besprechen',
+      suitableFor: 'Geeignet für',
+      scope: 'Leistungsumfang',
+      scopeHeading: 'Architektur für Integration, Governance und zuverlässigen Betrieb.',
+      outcomes: 'Geschäftlicher Nutzen',
+      principles: 'Architekturprinzipien',
+      principlesHeading: 'Ein belastbares System statt einer isolierten CRM-Konfiguration.',
+      nextStep: 'Nächster Schritt',
+      nextHeading: 'Besprechen wir Ihre Zielarchitektur.',
+      finalCta: 'Strategiegespräch buchen',
+      whatsappMessage: `Hallo NexaForce Digital, ich möchte ${title} besprechen.`
+    }
+  : {
+      backLabel: 'All Salesforce services',
+      backHref: '/services/',
+      primaryCta: 'Discuss your architecture',
+      suitableFor: 'Suitable for',
+      scope: 'Implementation scope',
+      scopeHeading: 'Architecture for integration, governance, and dependable operations.',
+      outcomes: 'Business outcomes',
+      principles: 'Architecture principles',
+      principlesHeading: 'A dependable operating system, not an isolated CRM configuration.',
+      nextStep: 'Next step',
+      nextHeading: 'Discuss your target architecture with NexaForce Digital.',
+      finalCta: 'Book a strategy call',
+      whatsappMessage: `Hello NexaForce Digital, I would like to discuss ${title}.`
+    };
+
+const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(text.whatsappMessage)}`;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -34,14 +84,14 @@ const {
   <main class="pt-32 pb-24">
     <section class="mx-auto max-w-7xl px-6 pb-20">
       <a
-        href="/services#salesforce"
+        href={text.backHref}
         class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-brand-steel transition-colors hover:text-brand-blue"
       >
-        <span>←</span>
-        All Salesforce services
+        <span aria-hidden="true">←</span>
+        {text.backLabel}
       </a>
 
-      <div class="grid items-end gap-12 lg:grid-cols-[1.3fr_0.7fr]">
+      <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
           <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
             {eyebrow}
@@ -55,46 +105,58 @@ const {
             {description}
           </p>
 
-          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href={`https://wa.me/4917632246090?text=${encodeURIComponent(whatsappMessage)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="rounded-full bg-brand-blue px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-blue-500"
-            >
-              Discuss your architecture
-            </a>
-
-            <a
-              href="#scope"
-              class="rounded-full border border-white/20 px-7 py-4 text-center font-semibold text-white transition-colors hover:border-brand-blue"
-            >
-              View service scope
-            </a>
-          </div>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-9 inline-flex rounded-full bg-brand-blue px-7 py-4 font-semibold text-white transition-colors hover:bg-blue-500"
+          >
+            {text.primaryCta}
+          </a>
         </div>
 
-        <aside class="rounded-2xl border border-brand-blue/25 bg-brand-blue/5 p-7">
-          <p class="mb-5 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
-            Suitable for
-          </p>
+        <aside class="relative overflow-hidden rounded-3xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/15 via-[#13213d] to-violet-500/10 p-6 sm:p-8">
+          <div class="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-brand-blue/20 blur-3xl"></div>
+          <div class="pointer-events-none absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-violet-500/20 blur-3xl"></div>
 
-          <ul class="space-y-4 text-sm leading-relaxed text-brand-steel">
-            {suitableFor.map((item) => <li>{item}</li>)}
-          </ul>
+          <div class="relative">
+            <div class="flex min-h-[280px] items-center justify-center rounded-2xl border border-white/10 bg-[#0b1220]/75 p-10">
+              <img
+                src={image}
+                alt={imageAlt}
+                class="max-h-56 w-full object-contain drop-shadow-2xl"
+                loading="eager"
+              />
+            </div>
+
+            <div class="mt-7">
+              <p class="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
+                {text.suitableFor}
+              </p>
+
+              <ul class="space-y-3 text-sm leading-relaxed text-brand-steel">
+                {suitableFor.map((item) => (
+                  <li class="flex gap-3">
+                    <span class="text-brand-blue">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section id="scope" class="border-y border-white/8 bg-white/[0.025] py-20">
-      <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2">
+    <section class="border-y border-white/8 bg-white/[0.025] py-20">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
           <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-            Implementation scope
+            {text.scope}
           </p>
 
-          <h2 class="mb-6 text-3xl font-bold">
-            Architecture designed for operations, integration, and governance.
+          <h2 class="mb-8 text-3xl font-bold">
+            {text.scopeHeading}
           </h2>
 
           <ul class="space-y-4">
@@ -107,34 +169,36 @@ const {
           </ul>
         </div>
 
-        <div class="rounded-2xl border border-white/10 bg-brand-dark p-8">
+        <aside class="rounded-2xl border border-white/10 bg-brand-dark p-8">
           <p class="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-            Business outcomes
+            {text.outcomes}
           </p>
 
           <div class="space-y-8">
             {outcomes.map((outcome) => (
               <div>
                 <p class="text-2xl font-bold text-white">{outcome.title}</p>
-                <p class="mt-2 text-sm leading-relaxed text-brand-steel">{outcome.text}</p>
+                <p class="mt-2 text-sm leading-relaxed text-brand-steel">
+                  {outcome.text}
+                </p>
               </div>
             ))}
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
     <section class="mx-auto max-w-7xl px-6 py-24">
       <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-        Delivery principles
+        {text.principles}
       </p>
 
       <h2 class="max-w-3xl text-3xl font-bold">
-        A controlled implementation model, not an isolated configuration exercise.
+        {text.principlesHeading}
       </h2>
 
       <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {principles.map((item) => (
+        {architecture.map((item) => (
           <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
             <h3 class="mb-3 text-lg font-bold text-white">{item.title}</h3>
             <p class="text-sm leading-relaxed text-brand-steel">{item.text}</p>
@@ -146,20 +210,20 @@ const {
     <section class="mx-auto max-w-5xl px-6">
       <div class="rounded-3xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/15 to-violet-500/10 p-8 text-center md:p-12">
         <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-          Next step
+          {text.nextStep}
         </p>
 
-        <h2 class="text-3xl font-bold md:text-4xl">
-          Turn the Salesforce roadmap into a dependable operating system.
+        <h2 class="mx-auto max-w-3xl text-3xl font-bold md:text-4xl">
+          {text.nextHeading}
         </h2>
 
         <a
-          href={`https://wa.me/4917632246090?text=${encodeURIComponent(whatsappMessage)}`}
+          href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           class="mt-8 inline-flex rounded-full bg-brand-blue px-8 py-4 font-semibold text-white transition-colors hover:bg-blue-500"
         >
-          Book a strategy call
+          {text.finalCta}
         </a>
       </div>
     </section>
