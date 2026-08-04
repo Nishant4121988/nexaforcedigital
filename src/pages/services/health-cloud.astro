@@ -2,6 +2,33 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
+
+const implementationScope = [
+  'Care-plan, case, referral, and patient-service workflow design',
+  'EHR/EMR interoperability through governed REST, FHIR, HL7, or integration middleware patterns',
+  'Role-based access controls, auditability, consent-aware process design, and retention policies',
+  'Patient and provider communications, task orchestration, and service-level escalation',
+  'Operational analytics for care coordination, service delivery, workload visibility, and patient journeys'
+];
+
+const deliveryModel = [
+  {
+    title: '1. Architecture assessment',
+    desc: 'Assess the Salesforce org, EHR/EMR interfaces, data flows, operating roles, and risks across the current care-delivery model.'
+  },
+  {
+    title: '2. Target architecture and governance',
+    desc: 'Define the data model, integration boundaries, permissions, audit requirements, and scalable process standards.'
+  },
+  {
+    title: '3. Implementation and integration',
+    desc: 'Configure Health Cloud, develop Apex and Flow automation, integrate APIs, validate behaviour, and migrate data in a controlled way.'
+  },
+  {
+    title: '4. Go-live and operational handover',
+    desc: 'Establish test strategy, release controls, monitoring, documentation, and structured enablement for internal teams.'
+  }
+];
 ---
 
 <BaseLayout
@@ -11,77 +38,239 @@ import Footer from '../../components/Footer.astro';
   <Navbar />
 
   <main class="pt-32 pb-24">
-    <section class="max-w-7xl mx-auto px-6 pb-20">
-      <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-        Salesforce Enterprise Cloud
-      </p>
+    <section class="mx-auto max-w-7xl px-6 pb-20">
+      <a
+        href="/services#salesforce"
+        class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-brand-steel transition-colors hover:text-brand-blue"
+      >
+        <span>←</span>
+        All Salesforce services
+      </a>
 
-      <h1 class="max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">
-        Health Cloud architecture for governed, connected care operations.
-      </h1>
+      <div class="grid items-end gap-12 lg:grid-cols-[1.3fr_0.7fr]">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            Salesforce Enterprise Cloud
+          </p>
 
-      <p class="mt-6 max-w-3xl text-lg leading-relaxed text-brand-steel">
-        We design Salesforce Health Cloud environments that connect care teams,
-        operational workflows, and EHR/EMR data flows while enforcing controlled
-        access, auditability, and dependable integration behavior.
-      </p>
+          <h1 class="max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">
+            Health Cloud architecture for governed, connected care operations.
+          </h1>
 
-      <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-        <a
-          href="https://wa.me/4917632246090?text=Hello%20NexaForce%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20Salesforce%20Health%20Cloud%20project."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="rounded-full bg-brand-blue px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-blue-500"
-        >
-          Discuss Health Cloud Architecture
-        </a>
+          <p class="mt-6 max-w-3xl text-lg leading-relaxed text-brand-steel">
+            We design Salesforce Health Cloud environments that connect care teams,
+            operational workflows, and EHR/EMR data flows while enforcing controlled
+            access, auditability, and dependable integration behaviour.
+          </p>
 
-        <a
-          href="/services"
-          class="rounded-full border border-white/20 px-7 py-4 text-center font-semibold text-white transition-colors hover:border-brand-blue"
-        >
-          View All Services
-        </a>
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="https://wa.me/4917632246090?text=Hello%20NexaForce%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20Salesforce%20Health%20Cloud%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full bg-brand-blue px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-blue-500"
+            >
+              Discuss Health Cloud architecture
+            </a>
+
+            <a
+              href="#scope"
+              class="rounded-full border border-white/20 px-7 py-4 text-center font-semibold text-white transition-colors hover:border-brand-blue"
+            >
+              View service scope
+            </a>
+          </div>
+        </div>
+
+        <aside class="rounded-2xl border border-brand-blue/25 bg-brand-blue/5 p-7">
+          <div class="relative mb-7 overflow-hidden rounded-xl border border-white/10 bg-[#080f1d] p-6 shadow-2xl">
+            <div class="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-brand-blue/25 blur-3xl"></div>
+            <div class="pointer-events-none absolute -bottom-16 -left-16 h-44 w-44 rounded-full bg-violet-500/20 blur-3xl"></div>
+
+            <div class="relative flex min-h-[230px] items-center justify-center">
+              <img
+                src="/assets/logos/crm/health-cloud.png"
+                alt="Salesforce Health Cloud"
+                class="max-h-52 w-full object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+          <p class="mb-5 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
+            Suitable for
+          </p>
+
+          <ul class="space-y-4 text-sm leading-relaxed text-brand-steel">
+            <li>Care delivery organisations and healthcare service providers</li>
+            <li>Patient-service, referral, and case-management teams</li>
+            <li>Organisations requiring EHR/EMR interoperability</li>
+            <li>Regulated operating models with high governance requirements</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section class="border-y border-white/8 bg-white/[0.025]">
-      <div class="max-w-7xl mx-auto grid gap-12 px-6 py-20 lg:grid-cols-2">
+    <section id="scope" class="border-y border-white/8 bg-white/[0.025] py-20">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2">
         <div>
           <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
             Implementation scope
           </p>
-          <h2 class="mb-6 text-3xl font-bold">Operational systems, not isolated CRM screens.</h2>
 
-          <ul class="space-y-4 text-brand-steel">
-            <li>Care-plan, case, referral, and patient-service workflow design</li>
-            <li>EHR/EMR interoperability through governed REST, FHIR, HL7, or integration middleware patterns</li>
-            <li>Role-based access controls, audit controls, consent-aware process design, and retention policies</li>
-            <li>Patient and provider communications, task orchestration, and service-level escalation</li>
-            <li>Operational analytics for care coordination, service delivery, and workload visibility</li>
+          <h2 class="mb-6 text-3xl font-bold">
+            Operational systems, not isolated CRM screens.
+          </h2>
+
+          <p class="mb-8 leading-relaxed text-brand-steel">
+            Health Cloud delivers value when processes, data models, integrations,
+            and governance are designed as one operating system. NexaForce Digital
+            connects these layers through clear ownership, controlled interfaces,
+            and a maintainable architecture.
+          </p>
+
+          <ul class="space-y-4">
+            {implementationScope.map((item) => (
+              <li class="flex gap-3 text-sm leading-relaxed text-brand-steel">
+                <span class="mt-0.5 text-brand-blue">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div class="rounded-2xl border border-white/10 bg-brand-dark p-8">
           <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-            Expected business outcomes
+            Business outcomes
           </p>
 
-          <div class="space-y-6">
+          <div class="space-y-8">
             <div>
               <p class="text-2xl font-bold text-white">Connected</p>
-              <p class="mt-1 text-sm text-brand-steel">Care-team workflows with fewer operational handoffs.</p>
+              <p class="mt-2 text-sm leading-relaxed text-brand-steel">
+                Care teams, case processes, and relevant system data operate through
+                a traceable, coordinated workflow.
+              </p>
             </div>
+
             <div>
               <p class="text-2xl font-bold text-white">Governed</p>
-              <p class="mt-1 text-sm text-brand-steel">Traceable access and integration behavior for sensitive workflows.</p>
+              <p class="mt-2 text-sm leading-relaxed text-brand-steel">
+                Access controls, integrations, and process steps are designed with
+                accountable governance, auditability, and clear operational boundaries.
+              </p>
             </div>
+
             <div>
               <p class="text-2xl font-bold text-white">Actionable</p>
-              <p class="mt-1 text-sm text-brand-steel">Operational visibility across referrals, cases, service levels, and patient journeys.</p>
+              <p class="mt-2 text-sm leading-relaxed text-brand-steel">
+                Operational metrics and escalation workflows improve visibility across
+                care delivery, service quality, workload, and patient journeys.
+              </p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-24">
+      <div class="max-w-3xl">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+          Architecture principles
+        </p>
+
+        <h2 class="mb-6 text-3xl font-bold">
+          Dependable integration and controlled data flows.
+        </h2>
+
+        <p class="leading-relaxed text-brand-steel">
+          We do not treat Health Cloud as an isolated front end. The architecture
+          connects Salesforce with EHR/EMR systems, identity services, and
+          communication platforms through documented APIs, controlled permissions,
+          and resilient integration behaviour.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {[
+          {
+            title: 'Data model',
+            desc: 'Patient, case, care, contact, and service objects with clear business ownership and controlled data responsibilities.'
+          },
+          {
+            title: 'Integration',
+            desc: 'API-led EHR/EMR connectivity with payload validation, error handling, and traceable system handovers.'
+          },
+          {
+            title: 'Security',
+            desc: 'Roles, permissions, audit trails, and data minimisation aligned to the organisation’s regulatory requirements.'
+          },
+          {
+            title: 'Operations',
+            desc: 'Release processes, monitoring, documentation, and support structures for stable long-term delivery.'
+          }
+        ].map((item) => (
+          <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <h3 class="mb-3 text-lg font-bold text-white">{item.title}</h3>
+            <p class="text-sm leading-relaxed text-brand-steel">{item.desc}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="border-y border-white/8 bg-white/[0.025] py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="max-w-3xl">
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            Delivery model
+          </p>
+
+          <h2 class="mb-6 text-3xl font-bold">
+            From current-state assessment to controlled go-live.
+          </h2>
+
+          <p class="mb-12 leading-relaxed text-brand-steel">
+            We reduce implementation risk through a defined architecture phase,
+            testable integrations, controlled releases, and a structured handover
+            into day-to-day operations.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {deliveryModel.map((step) => (
+            <article class="rounded-2xl border border-white/10 bg-brand-dark p-6">
+              <h3 class="mb-3 text-lg font-bold text-white">{step.title}</h3>
+              <p class="text-sm leading-relaxed text-brand-steel">{step.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-5xl px-6 pt-24">
+      <div class="rounded-3xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/15 to-violet-500/10 p-8 text-center md:p-12">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+          Next step
+        </p>
+
+        <h2 class="mx-auto max-w-3xl text-3xl font-bold md:text-4xl">
+          Discuss your Health Cloud target architecture.
+        </h2>
+
+        <p class="mx-auto mt-5 max-w-2xl leading-relaxed text-brand-steel">
+          In an initial architecture discussion, we clarify your system landscape,
+          data flows, governance requirements, and the operational processes that
+          should be prioritised.
+        </p>
+
+        <a
+          href="https://wa.me/4917632246090?text=Hello%20NexaForce%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20Salesforce%20Health%20Cloud%20project."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-flex rounded-full bg-brand-blue px-8 py-4 font-semibold text-white transition-colors hover:bg-blue-500"
+        >
+          Book a strategy call
+        </a>
       </div>
     </section>
   </main>
