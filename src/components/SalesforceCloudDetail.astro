@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from './Navbar.astro';
+import Footer from './Footer.astro';
+
+interface Outcome {
+  title: string;
+  text: string;
+}
+
+interface ArchitectureItem {
+  title: string;
+  text: string;
+}
+
+interface Props {
+  lang: 'en' | 'de';
+  title: string;
+  description: string;
+  eyebrow: string;
+  heroTitle: string;
+  image: string;
+  imageAlt: string;
+  suitableFor: string[];
+  scope: string[];
+  outcomes: Outcome[];
+  architecture: ArchitectureItem[];
+}
+
+const {
+  lang,
+  title,
+  description,
+  eyebrow,
+  heroTitle,
+  image,
+  imageAlt,
+  suitableFor,
+  scope,
+  outcomes,
+  architecture
+} = Astro.props;
+
+const isGerman = lang === 'de';
+
+const text = isGerman
+  ? {
+      backLabel: 'Alle Salesforce-Leistungen',
+      backHref: '/de/leistungen/',
+      primaryCta: 'Architektur besprechen',
+      suitableFor: 'Geeignet für',
+      scope: 'Leistungsumfang',
+      scopeHeading: 'Architektur für Integration, Governance und zuverlässigen Betrieb.',
+      outcomes: 'Geschäftlicher Nutzen',
+      principles: 'Architekturprinzipien',
+      principlesHeading: 'Ein belastbares System statt einer isolierten CRM-Konfiguration.',
+      nextStep: 'Nächster Schritt',
+      nextHeading: 'Besprechen wir Ihre Zielarchitektur.',
+      finalCta: 'Strategiegespräch buchen',
+      whatsappMessage: `Hallo NexaForce Digital, ich möchte ${title} besprechen.`
+    }
+  : {
+      backLabel: 'All Salesforce services',
+      backHref: '/services/',
+      primaryCta: 'Discuss your architecture',
+      suitableFor: 'Suitable for',
+      scope: 'Implementation scope',
+      scopeHeading: 'Architecture for integration, governance, and dependable operations.',
+      outcomes: 'Business outcomes',
+      principles: 'Architecture principles',
+      principlesHeading: 'A dependable operating system, not an isolated CRM configuration.',
+      nextStep: 'Next step',
+      nextHeading: 'Discuss your target architecture with NexaForce Digital.',
+      finalCta: 'Book a strategy call',
+      whatsappMessage: `Hello NexaForce Digital, I would like to discuss ${title}.`
+    };
+
+const whatsappUrl = `https://wa.me/4917632246090?text=${encodeURIComponent(text.whatsappMessage)}`;
+---
+
+<BaseLayout title={title} description={description}>
+  <Navbar />
+
+  <main class="pt-32 pb-24">
+    <section class="mx-auto max-w-7xl px-6 pb-20">
+      <a
+        href={text.backHref}
+        class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-brand-steel transition-colors hover:text-brand-blue"
+      >
+        <span aria-hidden="true">←</span>
+        {text.backLabel}
+      </a>
+
+      <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            {eyebrow}
+          </p>
+
+          <h1 class="max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">
+            {heroTitle}
+          </h1>
+
+          <p class="mt-6 max-w-3xl text-lg leading-relaxed text-brand-steel">
+            {description}
+          </p>
+
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-9 inline-flex rounded-full bg-brand-blue px-7 py-4 font-semibold text-white transition-colors hover:bg-blue-500"
+          >
+            {text.primaryCta}
+          </a>
+        </div>
+
+        <aside class="relative overflow-hidden rounded-3xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/15 via-[#13213d] to-violet-500/10 p-6 sm:p-8">
+          <div class="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-brand-blue/20 blur-3xl"></div>
+          <div class="pointer-events-none absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-violet-500/20 blur-3xl"></div>
+
+          <div class="relative">
+            <div class="flex min-h-[280px] items-center justify-center rounded-2xl border border-white/10 bg-[#0b1220]/75 p-10">
+              <img
+                src={image}
+                alt={imageAlt}
+                class="max-h-56 w-full object-contain drop-shadow-2xl"
+                loading="eager"
+              />
+            </div>
+
+            <div class="mt-7">
+              <p class="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
+                {text.suitableFor}
+              </p>
+
+              <ul class="space-y-3 text-sm leading-relaxed text-brand-steel">
+                {suitableFor.map((item) => (
+                  <li class="flex gap-3">
+                    <span class="text-brand-blue">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="border-y border-white/8 bg-white/[0.025] py-20">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.15fr_0.85fr]">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            {text.scope}
+          </p>
+
+          <h2 class="mb-8 text-3xl font-bold">
+            {text.scopeHeading}
+          </h2>
+
+          <ul class="space-y-4">
+            {scope.map((item) => (
+              <li class="flex gap-3 text-sm leading-relaxed text-brand-steel">
+                <span class="mt-0.5 text-brand-blue">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <aside class="rounded-2xl border border-white/10 bg-brand-dark p-8">
+          <p class="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            {text.outcomes}
+          </p>
+
+          <div class="space-y-8">
+            {outcomes.map((outcome) => (
+              <div>
+                <p class="text-2xl font-bold text-white">{outcome.title}</p>
+                <p class="mt-2 text-sm leading-relaxed text-brand-steel">
+                  {outcome.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-24">
+      <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+        {text.principles}
+      </p>
+
+      <h2 class="max-w-3xl text-3xl font-bold">
+        {text.principlesHeading}
+      </h2>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {architecture.map((item) => (
+          <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <h3 class="mb-3 text-lg font-bold text-white">{item.title}</h3>
+            <p class="text-sm leading-relaxed text-brand-steel">{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-5xl px-6">
+      <div class="rounded-3xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/15 to-violet-500/10 p-8 text-center md:p-12">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+          {text.nextStep}
+        </p>
+
+        <h2 class="mx-auto max-w-3xl text-3xl font-bold md:text-4xl">
+          {text.nextHeading}
+        </h2>
+
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-flex rounded-full bg-brand-blue px-8 py-4 font-semibold text-white transition-colors hover:bg-blue-500"
+        >
+          {text.finalCta}
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
