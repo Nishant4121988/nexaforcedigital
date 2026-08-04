@@ -13,6 +13,8 @@ interface Props {
   outcomes: { title: string; text: string }[];
   principles: { title: string; text: string }[];
   whatsappMessage: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 const {
@@ -24,7 +26,10 @@ const {
   scope,
   outcomes,
   principles,
-  whatsappMessage
+  whatsappMessage,
+  image,
+  imageAlt
+  
 } = Astro.props;
 ---
 
@@ -75,6 +80,21 @@ const {
         </div>
 
         <aside class="rounded-2xl border border-brand-blue/25 bg-brand-blue/5 p-7">
+        {image && (
+          <div class="relative mb-7 overflow-hidden rounded-xl border border-white/10 bg-[#080f1d] p-6 shadow-2xl">
+            <div class="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-brand-blue/25 blur-3xl"></div>
+            <div class="pointer-events-none absolute -bottom-16 -left-16 h-44 w-44 rounded-full bg-violet-500/20 blur-3xl"></div>
+        
+            <div class="relative flex min-h-[230px] items-center justify-center">
+              <img
+                src={image}
+                alt={imageAlt || title}
+                class="max-h-52 w-full object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105"
+                loading="eager"
+              />
+            </div>
+          </div>
+        )}
           <p class="mb-5 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
             Suitable for
           </p>
