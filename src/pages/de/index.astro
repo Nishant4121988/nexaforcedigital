@@ -68,7 +68,9 @@ import Footer from '../../components/Footer.astro';
       </div>
     </div>
   </section>
+
   <CoreCapabilities lang="de" />
+
   <!-- Core pillars -->
   <section class="mx-auto max-w-7xl px-6 py-24">
     <div class="mb-16 text-center">
@@ -79,95 +81,115 @@ import Footer from '../../components/Footer.astro';
     </div>
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
-        <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
-          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+      <a
+        href="/de/leistungen#salesforce"
+        class="group block rounded-2xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/10 to-white/[0.025] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/70 hover:shadow-xl hover:shadow-brand-blue/10"
+      >
+        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-brand-blue/30 bg-brand-blue/15">
+          <svg class="h-7 w-7 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
           </svg>
         </div>
 
-        <h3 class="mb-3 text-xl font-bold">Salesforce Cloud</h3>
-
-        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
-          Sales Cloud, Commerce Cloud, Data Cloud, Health Cloud und Financial Services Cloud —
-          Custom Apex, LWR-Architektur und CPQ-Integration.
+        <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+          Enterprise CRM
         </p>
 
-        <a
-          href="/de/leistungen#salesforce"
-          class="group block rounded-2xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/10 to-white/[0.025] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/70 hover:shadow-xl hover:shadow-brand-blue/10"
-        >
-          <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-brand-blue/30 bg-brand-blue/15">
-            <svg class="h-7 w-7 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
-            </svg>
-          </div>
-        
-          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-            Enterprise CRM
-          </p>
-        
-          <h3 class="mb-4 text-2xl font-bold text-white">
-            Salesforce Enterprise Cloud
-          </h3>
-        
-          <p class="mb-6 text-sm leading-relaxed text-brand-steel">
-            Geschäftskritische CRM-Architektur für Revenue Operations, Customer Experience,
-            Datenaktivierung, Gesundheitswesen und regulierte Finanzdienstleistungen.
-          </p>
-        
-          <div class="mb-7 flex flex-wrap gap-2">
-            {['Sales', 'Commerce', 'Data', 'Health', 'Financial Services'].map((cloud) => (
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200">
-                {cloud}
-              </span>
-            ))}
-          </div>
-        
-          <span class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue">
-            Salesforce-Leistungen entdecken
-            <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-          </span>
-        </a>
-      </div>
+        <h3 class="mb-4 text-2xl font-bold text-white">Salesforce Enterprise Cloud</h3>
 
-      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
-        <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
-          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <p class="mb-6 text-sm leading-relaxed text-brand-steel">
+          Geschäftskritische CRM-Architektur für Revenue Operations, Customer Experience,
+          Datenaktivierung, Gesundheitswesen und regulierte Finanzdienstleistungen —
+          mit Custom Apex, LWR-Storefronts und CPQ-Integration.
+        </p>
+
+        <div class="mb-7 flex flex-wrap gap-2">
+          {['Sales', 'Commerce', 'Data', 'Health', 'Financial Services'].map((cloud) => (
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200">
+              {cloud}
+            </span>
+          ))}
+        </div>
+
+        <span class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue">
+          Salesforce-Leistungen entdecken
+          <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </span>
+      </a>
+
+      <a
+        href="/de/leistungen#n8n"
+        class="group block rounded-2xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/10 to-white/[0.025] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/70 hover:shadow-xl hover:shadow-brand-blue/10"
+      >
+        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-brand-blue/30 bg-brand-blue/15">
+          <svg class="h-7 w-7 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
           </svg>
         </div>
 
-        <h3 class="mb-3 text-xl font-bold">n8n Workflow-Automatisierung</h3>
-
-        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
-          Selbst gehostete, ereignisgesteuerte Workflow-Engines mit eigenen TypeScript-Nodes.
-          Ersetzen Sie Zapier, Make oder Workato durch vorhersehbare, clienteigene Infrastruktur.
+        <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+          Workflow-Automatisierung
         </p>
 
-        <a href="/de/leistungen#n8n" class="text-sm font-medium text-brand-blue hover:underline">
-          Mehr erfahren →
-        </a>
-      </div>
+        <h3 class="mb-4 text-2xl font-bold text-white">Enterprise n8n Automatisierung</h3>
 
-      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
-        <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
-          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        <p class="mb-6 text-sm leading-relaxed text-brand-steel">
+          Sichere, selbst gehostete Workflow-Engines als Ersatz für kostenintensive
+          Plattformen wie Zapier, Make oder Workato. Ereignisgesteuerte Orchestrierung,
+          eigene TypeScript-Nodes für Altsysteme und Queue-Mode-Skalierung — auf
+          Infrastruktur, die vollständig Ihnen gehört.
+        </p>
+
+        <div class="mb-7 flex flex-wrap gap-2">
+          {['Self-Hosted HA', 'Custom Nodes', 'Event-Driven', 'Queue Mode', 'Zero Metering'].map((chip) => (
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200">
+              {chip}
+            </span>
+          ))}
+        </div>
+
+        <span class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue">
+          n8n-Leistungen entdecken
+          <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </span>
+      </a>
+
+      <a
+        href="/de/leistungen#ai"
+        class="group block rounded-2xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/10 to-white/[0.025] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/70 hover:shadow-xl hover:shadow-brand-blue/10"
+      >
+        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-brand-blue/30 bg-brand-blue/15">
+          <svg class="h-7 w-7 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
           </svg>
         </div>
 
-        <h3 class="mb-3 text-xl font-bold">Agentisches KI-Engineering</h3>
-
-        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
-          Zustandsbehaftete Multi-Agenten-Systeme auf Basis von LangChain und LangGraph.
-          Vollständig observierbar über LangSmith und auf Ihrer Infrastruktur betreibbar.
+        <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
+          Agentic AI Engineering
         </p>
 
-        <a href="/de/leistungen#ai" class="text-sm font-medium text-brand-blue hover:underline">
-          Mehr erfahren →
-        </a>
-      </div>
+        <h3 class="mb-4 text-2xl font-bold text-white">Full-Stack Agentische KI</h3>
+
+        <p class="mb-6 text-sm leading-relaxed text-brand-steel">
+          Zustandsbehaftete Multi-Agenten-Systeme mit LangChain und LangGraph —
+          RAG-Pipelines auf pgvector, vollständige Observierbarkeit über LangSmith,
+          Human-in-the-Loop-Absicherung und LLM-agnostisches Deployment in Ihrer
+          eigenen VPC. 100 % Dateneigentum.
+        </p>
+
+        <div class="mb-7 flex flex-wrap gap-2">
+          {['LangGraph', 'RAG / pgvector', 'LangSmith', 'Human-in-the-Loop', 'Cloud-Agnostic'].map((chip) => (
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200">
+              {chip}
+            </span>
+          ))}
+        </div>
+
+        <span class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue">
+          KI-Engineering entdecken
+          <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </span>
+      </a>
     </div>
   </section>
 
