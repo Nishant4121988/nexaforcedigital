@@ -37,6 +37,33 @@ const { title, description } = Astro.props;
   <link rel="alternate" hreflang={lang} href={canonicalHref} />
   <link rel="alternate" hreflang={altLang} href={altHref} />
   <link rel="alternate" hreflang="x-default" href="https://nexaforcedigital.com/" />
+  <!-- Open Graph (Facebook / LinkedIn / WhatsApp link previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NexaForce Digital" />
+  <meta property="og:url" content={canonicalHref} />
+  <meta property="og:title" content={`${title} | NexaForce Digital`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://nexaforcedigital.com/images/nexaforce-digital-logo.jpg" />
+  <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_US'} />
+  <!-- Twitter/X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${title} | NexaForce Digital`} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://nexaforcedigital.com/images/nexaforce-digital-logo.jpg" />
+  <!-- Structured data for search engines & AI -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "NexaForce Digital",
+    "url": "https://nexaforcedigital.com",
+    "logo": "https://nexaforcedigital.com/images/nexaforce-digital-logo.jpg",
+    "image": "https://nexaforcedigital.com/images/nexaforce-digital-logo.jpg",
+    "description": "Enterprise Salesforce Cloud, n8n workflow automation, and Agentic AI engineering consultancy. Berlin-based, 100% data ownership, zero vendor lock-in.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" },
+    "telephone": "+4917632246090",
+    "areaServed": ["DE", "EU"],
+    "priceRange": "€€"
+  })} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

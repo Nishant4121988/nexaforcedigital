@@ -1,0 +1,26 @@
+# NexaForce Digital
+
+> Berlin-based enterprise consultancy for Salesforce Cloud, n8n workflow automation, and Agentic AI engineering. 100% data ownership, zero vendor lock-in.
+
+## Services
+
+- [Services Overview](https://nexaforcedigital.com/services): All consultancy services
+- [Salesforce Sales Cloud](https://nexaforcedigital.com/services/sales-cloud): Lead-to-Cash optimization, custom Apex/LWR, CPQ integration
+- [B2B2C Commerce Cloud](https://nexaforcedigital.com/services/commerce-cloud): Headless commerce storefronts, unified cart workflows
+- [Salesforce Data Cloud](https://nexaforcedigital.com/services/data-cloud): Real-time customer profiles, zero-copy architecture
+- [Salesforce Health Cloud](https://nexaforcedigital.com/services/health-cloud): HIPAA-compliant patient care coordination
+- [Financial Services Cloud](https://nexaforcedigital.com/services/financial-services-cloud): Wealth management and banking lifecycle automation
+- [Revenue Cloud](https://nexaforcedigital.com/services/revenue-cloud): CPQ and revenue lifecycle automation
+- [Contract Lifecycle Management](https://nexaforcedigital.com/services/contract-lifecycle-management): CLM automation
+- [Enterprise n8n Automation](https://nexaforcedigital.com/services/n8n): Self-hosted workflow engines, custom TypeScript nodes, queue-mode scaling
+- [Agentic AI Engineering](https://nexaforcedigital.com/services/ai): LangChain/LangGraph multi-agent systems, RAG on pgvector, LangSmith observability
+
+## Deutsch
+
+- [Leistungen](https://nexaforcedigital.com/de/leistungen): Alle Services auf Deutsch
+
+## Contact
+
+- WhatsApp: +49 176 32246090
+- Location: Berlin, Germany
+- Web: https://nexaforcedigital.com
