@@ -1,104 +1,125 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/ui';
+const isGerman = Astro.url.pathname.startsWith('/de');
+const year = new Date().getFullYear();
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const base = lang === 'en' ? '' : '/de';
-
-const legalLinks = lang === 'de'
+const content = isGerman
   ? {
-      impressum: '/de/impressum',
-      privacy: '/de/datenschutz',
-      terms: '/de/nutzungsbedingungen',
-      disclaimer: '/de/haftungsausschluss',
+      tagline: 'Enterprise Salesforce, intelligente Automatisierung und Agentic AI – entwickelt für messbare Ergebnisse.',
+      explore: 'Navigation',
+      legal: 'Rechtliches',
+      contact: 'Kontakt',
+      home: 'Startseite',
+      services: 'Leistungen',
+      jobs: 'Stellenangebote',
+      openNow: '0 offen',
+      contactText: 'Haben Sie ein Projekt oder eine Frage? Sprechen Sie uns an.',
+      rights: 'Alle Rechte vorbehalten.',
+      language: 'English',
+      languageHref: '/',
     }
   : {
-      impressum: '/impressum',
-      privacy: '/privacy',
-      terms: '/terms',
-      disclaimer: '/disclaimer',
+      tagline: 'Enterprise Salesforce, intelligent automation, and agentic AI—engineered for measurable outcomes.',
+      explore: 'Explore',
+      legal: 'Legal',
+      contact: 'Contact',
+      home: 'Home',
+      services: 'Services',
+      jobs: 'Jobs',
+      openNow: '0 open',
+      contactText: 'Have a project or a question? Let’s talk.',
+      rights: 'All rights reserved.',
+      language: 'Deutsch',
+      languageHref: '/de',
     };
+
+const homeHref = isGerman ? '/de' : '/';
+const servicesHref = isGerman ? '/de/leistungen' : '/services';
+const jobsHref = isGerman ? '/de/stellenangebote' : '/jobs';
+const legalLinks = isGerman
+  ? [
+      { label: 'Impressum', href: '/de/impressum' },
+      { label: 'Datenschutz', href: '/de/datenschutz' },
+      { label: 'Nutzungsbedingungen', href: '/de/nutzungsbedingungen' },
+      { label: 'Haftungsausschluss', href: '/de/haftungsausschluss' },
+    ]
+  : [
+      { label: 'Legal Notice', href: '/impressum' },
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Use', href: '/terms' },
+      { label: 'Disclaimer', href: '/disclaimer' },
+    ];
 ---
 
-<footer class="bg-black/40 border-t border-white/5 mt-24">
-  <div class="max-w-7xl mx-auto px-6 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<footer class="relative overflow-hidden border-t border-white/10 bg-[#07111f] text-slate-300">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute left-1/2 top-0 h-64 w-[42rem] -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-600/10 blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-6 py-14 sm:px-8 lg:px-12 lg:py-16">
+    <div class="grid gap-10 lg:grid-cols-[1.35fr_0.7fr_0.75fr_1fr]">
       <div>
-        <p class="text-xl font-bold text-white mb-3">
-          Nexa<span class="text-brand-blue">Force</span>
-          <span class="text-brand-steel font-medium">Digital</span>
-        </p>
-        <p class="text-brand-steel text-sm leading-relaxed">
-          Enterprise Salesforce · n8n Automation · Agentic AI Engineering
-        </p>
-        <p class="text-brand-steel text-sm mt-2">Berlin, Germany</p>
+        <a href={homeHref} class="inline-flex items-center gap-3" aria-label="NexaForce Digital">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-300 to-blue-500 text-lg font-black text-slate-950 shadow-lg shadow-cyan-950/30">
+            N
+          </span>
+          <span class="text-xl font-black tracking-tight text-white">NexaForce Digital</span>
+        </a>
+        <p class="mt-5 max-w-md text-sm leading-7 text-slate-400">{content.tagline}</p>
+
+        <a
+          href={jobsHref}
+          class="group mt-7 inline-flex items-center gap-4 rounded-2xl border border-cyan-200/15 bg-cyan-300/10 px-5 py-4 transition hover:-translate-y-0.5 hover:border-cyan-200/35 hover:bg-cyan-300/15"
+        >
+          <span class="relative flex h-3 w-3">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-300 opacity-60"></span>
+            <span class="relative inline-flex h-3 w-3 rounded-full bg-cyan-200"></span>
+          </span>
+          <span>
+            <span class="block text-sm font-bold text-white">{content.jobs}</span>
+            <span class="block text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">{content.openNow}</span>
+          </span>
+        </a>
       </div>
 
-      <div>
-        <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wider">
-          Services
-        </p>
-        <ul class="space-y-2 text-sm text-brand-steel">
-          <li>
-            <a
-              href={lang === 'de' ? '/de/leistungen#salesforce' : '/services#salesforce'}
-              class="hover:text-white transition-colors"
-            >
-              Salesforce Cloud
-            </a>
-          </li>
-          
-          <li>
-            <a
-              href={lang === 'de' ? '/de/leistungen#n8n' : '/services#n8n'}
-              class="hover:text-white transition-colors"
-            >
-              n8n Automation
-            </a>
-          </li>
-          
-          <li>
-            <a
-              href={lang === 'de' ? '/de/leistungen#ai' : '/services#ai'}
-              class="hover:text-white transition-colors"
-            >
-              Agentic AI
-            </a>
-          </li>
+      <nav aria-label={content.explore}>
+        <h2 class="text-sm font-bold uppercase tracking-[0.25em] text-white">{content.explore}</h2>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a class="text-slate-400 transition hover:text-cyan-200" href={homeHref}>{content.home}</a></li>
+          <li><a class="text-slate-400 transition hover:text-cyan-200" href={servicesHref}>{content.services}</a></li>
+          <li><a class="font-semibold text-cyan-100 transition hover:text-cyan-200" href={jobsHref}>{content.jobs}</a></li>
         </ul>
-      </div>
+      </nav>
+
+      <nav aria-label={content.legal}>
+        <h2 class="text-sm font-bold uppercase tracking-[0.25em] text-white">{content.legal}</h2>
+        <ul class="mt-5 space-y-3 text-sm">
+          {legalLinks.map((link) => (
+            <li><a class="text-slate-400 transition hover:text-cyan-200" href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </nav>
 
       <div>
-        <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wider">
-          Legal
-        </p>
-        <ul class="space-y-2 text-sm text-brand-steel">
-          <li>
-            <a href={legalLinks.impressum} class="hover:text-white transition-colors">
-              {t('footer.impressum')}
-            </a>
-          </li>
-          <li>
-            <a href={legalLinks.privacy} class="hover:text-white transition-colors">
-              {t('footer.privacy')}
-            </a>
-          </li>
-          <li>
-            <a href={legalLinks.terms} class="hover:text-white transition-colors">
-              {t('footer.terms')}
-            </a>
-          </li>
-          <li>
-            <a href={legalLinks.disclaimer} class="hover:text-white transition-colors">
-              {t('footer.disclaimer')}
-            </a>
-          </li>
-        </ul>
+        <h2 class="text-sm font-bold uppercase tracking-[0.25em] text-white">{content.contact}</h2>
+        <p class="mt-5 text-sm leading-7 text-slate-400">{content.contactText}</p>
+        <a
+          href="mailto:contact@nexaforcedigital.com"
+          class="mt-4 inline-flex items-center gap-2 rounded-xl bg-white/5 px-4 py-3 text-sm font-bold text-white ring-1 ring-white/10 transition hover:bg-white/10 hover:text-cyan-100"
+        >
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+          </svg>
+          contact@nexaforcedigital.com
+        </a>
       </div>
     </div>
 
-    <div class="border-t border-white/5 mt-10 pt-6 text-center text-xs text-brand-steel">
-      {t('footer.rights')}
+    <div class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-7 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+      <p>© {year} NexaForce Digital. {content.rights}</p>
+      <a href={content.languageHref} class="font-semibold text-slate-400 transition hover:text-cyan-200">
+        {content.language}
+      </a>
     </div>
   </div>
 </footer>
