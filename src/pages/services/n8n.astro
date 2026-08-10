@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="n8n Workflow Automation Services — Self-Hosted Enterprise Automation"
+  description="NexaForce Digital n8n services: self-hosted deployment, custom TypeScript nodes, event-driven orchestration, and Zapier/Make/Workato migration. Berlin-based enterprise consultancy."
+>
+  <Navbar />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden pt-32 pb-20">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-[#0d1a3a] to-brand-dark"></div>
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_45%,rgba(30,111,255,0.15),transparent_55%)]"></div>
+
+    <div class="relative mx-auto max-w-7xl px-6">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div>
+          <span class="mb-4 inline-block rounded-full border border-brand-blue/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-brand-blue">
+            Pillar 2 · Workflow Automation
+          </span>
+
+          <h1 class="mb-6 text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
+            Enterprise <span class="text-brand-blue">n8n</span> Automation
+          </h1>
+
+          <p class="mb-8 max-w-2xl text-lg leading-relaxed text-brand-steel md:text-xl">
+            Replace unpredictable SaaS metering with self-hosted, event-driven workflow engines
+            that you fully own. We design, deploy, and maintain production-grade n8n infrastructure
+            for enterprises that demand data sovereignty and cost predictability.
+          </p>
+
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <a
+              href="https://wa.me/4917632246090?text=Hello%20NexaForce%20Digital%2C%20I%20would%20like%20to%20discuss%20n8n%20automation%20for%20our%20enterprise."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full bg-brand-blue px-8 py-4 text-center font-semibold text-white shadow-lg shadow-brand-blue/25 transition-all duration-300 hover:bg-blue-500"
+            >
+              Discuss Your n8n Project
+            </a>
+
+            <a
+              href="/services"
+              class="rounded-full border border-white/20 px-8 py-4 text-center font-semibold text-white transition-all duration-300 hover:border-brand-blue"
+            >
+              ← Back to Services
+            </a>
+          </div>
+        </div>
+
+        <div class="relative flex justify-center lg:justify-end">
+          <div class="absolute h-64 w-64 rounded-full bg-brand-blue/20 blur-3xl"></div>
+          <div class="relative flex h-48 w-48 items-center justify-center rounded-3xl border border-brand-blue/20 bg-white/5 md:h-64 md:w-64">
+            <!-- n8n Logo -->
+            <svg class="h-24 w-24 text-brand-blue md:h-32 md:w-32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.4c5.302 0 9.6 4.298 9.6 9.6s-4.298 9.6-9.6 9.6-9.6-4.298-9.6-9.6 4.298-9.6 9.6-9.6zm-3.6 4.8a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zm7.2 0a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM8.4 12a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zm7.2 0a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zm-3.6 3.6a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services -->
+  <section class="mx-auto max-w-7xl px-6 py-20">
+    <div class="mb-12">
+      <h2 class="mb-4 text-3xl font-bold md:text-4xl">What We Deliver</h2>
+      <p class="max-w-2xl text-lg text-brand-steel">
+        End-to-end n8n automation — from initial architecture to ongoing operations.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-bold">Self-Hosted Deployment</h3>
+        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
+          High-availability n8n clusters on your private VPS, on-premises hardware, or client VPC.
+          Docker/Kubernetes orchestration with automated backups, SSL termination, and zero external
+          data exposure. Full GDPR compliance by design.
+        </p>
+        <ul class="space-y-2 text-sm text-brand-steel">
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Queue-mode scaling for high-throughput workflows</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Multi-environment setup (dev/staging/prod)</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Automated health checks and alerting</li>
+        </ul>
+      </div>
+
+      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-bold">Custom Node Development</h3>
+        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
+          TypeScript custom nodes for proprietary legacy systems, niche databases, internal SaaS APIs,
+          and hardware integrations that standard nodes don't cover. Full type safety, error handling,
+          and documentation.
+        </p>
+        <ul class="space-y-2 text-sm text-brand-steel">
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Legacy ERP/CRM connectors</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> IoT and hardware device integration</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Custom authentication flows (OAuth2, mTLS)</li>
+        </ul>
+      </div>
+
+      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-bold">Event-Driven Orchestration</h3>
+        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
+          Asynchronous webhook processing, message queue integration (RabbitMQ, Redis, Kafka),
+          payload transformation pipelines, and production-grade error handling with retry logic
+          and dead-letter queues.
+        </p>
+        <ul class="space-y-2 text-sm text-brand-steel">
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Real-time webhook processing at scale</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Complex data transformation (JSON, XML, CSV, EDI)</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Circuit breakers and graceful degradation</li>
+        </ul>
+      </div>
+
+      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-bold">Platform Migration</h3>
+        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
+          Structured migration from Zapier, Make (Integromat), Workato, or Tray.io to self-hosted n8n.
+          Full workflow parity, data mapping, and cutover planning with zero downtime.
+        </p>
+        <ul class="space-y-2 text-sm text-brand-steel">
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Workflow audit and dependency mapping</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Parallel run and validation phase</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Team training and documentation handover</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Self-Hosted -->
+  <section class="mx-auto max-w-7xl px-6 py-20">
+    <div class="rounded-2xl border border-brand-blue/20 bg-gradient-to-br from-brand-blue/10 to-white/[0.02] p-8 md:p-12">
+      <div class="grid items-center gap-8 lg:grid-cols-2">
+        <div>
+          <h2 class="mb-4 text-3xl font-bold">Why Self-Hosted n8n?</h2>
+          <p class="mb-6 text-brand-steel leading-relaxed">
+            SaaS automation platforms charge per task, per user, or per workflow — creating
+            unpredictable costs that scale with your success. Self-hosted n8n eliminates metering
+            entirely while giving you complete control over your data and infrastructure.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+              <div class="text-2xl font-bold text-brand-blue">0€</div>
+              <div class="text-xs text-brand-steel">per-task fees</div>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+              <div class="text-2xl font-bold text-brand-blue">100%</div>
+              <div class="text-xs text-brand-steel">data ownership</div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-blue/15">
+              <svg class="h-5 w-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">GDPR & Data Sovereignty</h4>
+              <p class="text-sm text-brand-steel">All workflow data stays within your infrastructure. No third-party processors.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-blue/15">
+              <svg class="h-5 w-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">Predictable Costs</h4>
+              <p class="text-sm text-brand-steel">Fixed infrastructure costs regardless of workflow volume or complexity.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-blue/15">
+              <svg class="h-5 w-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">Unlimited Customization</h4>
+              <p class="text-sm text-brand-steel">Custom nodes, private npm packages, and full source code access.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-3xl px-6 py-20 text-center">
+    <h2 class="mb-4 text-3xl font-bold">Ready to Own Your Automation?</h2>
+    <p class="mb-8 text-lg text-brand-steel">
+      Let's discuss how self-hosted n8n can replace your current automation stack
+      with predictable costs and full data control.
+    </p>
+    <a
+      href="https://wa.me/4917632246090?text=Hello%20NexaForce%20Digital%2C%20I%20would%20like%20to%20discuss%20n8n%20automation%20for%20our%20enterprise."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block rounded-full bg-brand-blue px-8 py-4 font-semibold text-white shadow-lg shadow-brand-blue/25 transition-all duration-300 hover:bg-blue-500"
+    >
+      Book a Strategy Call
+    </a>
+  </section>
+
+  <Footer />
+</BaseLayout>

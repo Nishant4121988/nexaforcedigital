@@ -16,55 +16,19 @@ import Footer from '../components/Footer.astro';
       <h2 class="text-4xl font-bold mb-6">Salesforce Enterprise Cloud</h2>
       <p class="text-brand-steel text-lg max-w-2xl mb-10">We design, implement, and optimize mission-critical Salesforce environments across five specialized domain clouds.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {[
-        {
-          name: 'Sales Cloud',
-          desc: 'Lead-to-Cash optimization, automated pipeline execution, custom Apex/LWR architecture, and CPQ integration.',
-          href: '/services/sales-cloud/'
-        },
-        {
-          name: 'Revenue Cloud (CPQ & Billing)',
-          desc: 'Quote-to-cash architecture for products, pricing, subscriptions, billing, renewals, and ERP integration.',
-          href: '/services/revenue-cloud/'
-        },
-        {
-          name: 'Contract Lifecycle Management',
-          desc: 'Controlled agreement generation, approvals, e-signature, obligations, renewals, and contract auditability.',
-          href: '/services/contract-lifecycle-management/'
-        },
-        {
-          name: 'Commerce Cloud',
-          desc: 'Scalable headless storefronts, unified cart workflows, and multi-channel B2B2C customer journeys.',
-          href: '/services/commerce-cloud/'
-        },
-        {
-          name: 'Data Cloud',
-          desc: 'Real-time customer profile resolution, zero-copy Snowflake/BigQuery architecture, and actionable insights at scale.',
-          href: '/services/data-cloud/'
-        },
-        {
-          name: 'Health Cloud',
-          desc: 'HIPAA-compliant patient care coordination, operational workflows, and EHR/EMR interoperability.',
-          href: '/services/health-cloud/'
-        },
-        {
-          name: 'Financial Services Cloud',
-          desc: 'Wealth management, banking lifecycle automation, unified Financial 360 view, and regulatory compliance.',
-          href: '/services/financial-services-cloud/'
-        }
-      ].map((service) => (
-        <a
-          href={service.href}
-          class="block rounded-2xl border border-white/8 bg-white/3 p-6 transition-all hover:border-brand-blue/40 hover:bg-white/5"
-        >
-          <h3 class="mb-2 text-lg font-bold">{service.name}</h3>
-          <p class="text-sm leading-relaxed text-brand-steel">{service.desc}</p>
-          <span class="mt-5 inline-flex text-sm font-semibold text-brand-blue">
-            View service →
-          </span>
-        </a>
-      ))}
-    </div>
+        {[
+          { name: 'Sales Cloud', desc: 'Lead-to-Cash optimization, automated pipeline execution, custom Apex/LWR architecture, and CPQ integration.', href: '/services/sales-cloud' },
+          { name: 'Commerce Cloud', desc: 'Scalable headless storefronts, unified cart workflows, and multi-channel B2B2C customer journeys.', href: '/services/commerce-cloud' },
+          { name: 'Data Cloud', desc: 'Real-time customer profile resolution, zero-copy Snowflake/BigQuery architecture, and actionable insights at scale.', href: '/services/data-cloud' },
+          { name: 'Health Cloud', desc: 'HIPAA-compliant patient care coordination, operational workflows, and EHR/EMR interoperability.', href: '/services/health-cloud' },
+          { name: 'Financial Services Cloud', desc: 'Wealth management, banking lifecycle automation, unified Financial 360 view, and regulatory compliance.', href: '/services/financial-services-cloud' },
+        ].map(s => (
+          <a href={s.href} class="block bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 hover:bg-white/5 transition-all group">
+            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-blue transition-colors">{s.name}</h3>
+            <p class="text-brand-steel text-sm leading-relaxed">{s.desc}</p>
+          </a>
+        ))}
+      </div>
     </section>
 
     <!-- n8n -->
@@ -74,10 +38,10 @@ import Footer from '../components/Footer.astro';
       <p class="text-brand-steel text-lg max-w-2xl mb-10">Self-hosted, cost-predictable workflow automation replacing high-metering SaaS platforms with client-owned infrastructure.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {[
-          { name: 'Self-Hosted Deployment', desc: 'High-availability n8n on private VPS or client VPC with full data sovereignty and zero metering costs.', href: '/services#n8n' },
-          { name: 'Custom Node Development', desc: 'TypeScript custom nodes for proprietary legacy systems, niche databases, and internal SaaS APIs.', href: '/services#n8n' },
-          { name: 'Event-Driven Orchestration', desc: 'Asynchronous webhooks, message queues, payload transformation, and production-grade error handling.', href: '/services#n8n' },
-          { name: 'Platform Migration', desc: 'Structured migration from Zapier, Make, or Workato to predictable self-hosted n8n with full workflow parity.', href: '/services#n8n' },
+          { name: 'Self-Hosted Deployment', desc: 'High-availability n8n on private VPS or client VPC with full data sovereignty and zero metering costs.', href: '/services/n8n' },
+          { name: 'Custom Node Development', desc: 'TypeScript custom nodes for proprietary legacy systems, niche databases, and internal SaaS APIs.', href: '/services/n8n' },
+          { name: 'Event-Driven Orchestration', desc: 'Asynchronous webhooks, message queues, payload transformation, and production-grade error handling.', href: '/services/n8n' },
+          { name: 'Platform Migration', desc: 'Structured migration from Zapier, Make, or Workato to predictable self-hosted n8n with full workflow parity.', href: '/services/n8n' },
         ].map(s => (
           <a href={s.href} class="block bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 hover:bg-white/5 transition-all group">
             <h3 class="font-bold text-lg mb-2 group-hover:text-brand-blue transition-colors">{s.name}</h3>
@@ -94,10 +58,10 @@ import Footer from '../components/Footer.astro';
       <p class="text-brand-steel text-lg max-w-2xl mb-10">Stateful multi-agent architectures built on LangChain + LangGraph, deployed on your infrastructure with full observability via LangSmith.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {[
-          { name: 'Orchestration Layer', desc: 'LangChain + LangGraph for stateful multi-agent graphs, conditional branching, retries, and Human-in-the-Loop checkpointing.', href: '/services#ai' },
-          { name: 'RAG & Knowledge Pipelines', desc: 'pgvector on PostgreSQL for zero lock-in vector storage. Vendor-agnostic embedding abstractions via LangChain.', href: '/services#ai' },
-          { name: 'API & Microservice Delivery', desc: 'FastAPI or Node.js/Express backends with LangServe, REST, or WebSocket protocols. OAuth2/JWT enterprise auth.', href: '/services#ai' },
-          { name: 'Observability & Governance', desc: 'LangSmith tracing, token budgets, PII redaction, rate limiting, and full audit logs on every agent interaction.', href: '/services#ai' },
+          { name: 'Orchestration Layer', desc: 'LangChain + LangGraph for stateful multi-agent graphs, conditional branching, retries, and Human-in-the-Loop checkpointing.', href: '/services/ai' },
+          { name: 'RAG & Knowledge Pipelines', desc: 'pgvector on PostgreSQL for zero lock-in vector storage. Vendor-agnostic embedding abstractions via LangChain.', href: '/services/ai' },
+          { name: 'API & Microservice Delivery', desc: 'FastAPI or Node.js/Express backends with LangServe, REST, or WebSocket protocols. OAuth2/JWT enterprise auth.', href: '/services/ai' },
+          { name: 'Observability & Governance', desc: 'LangSmith tracing, token budgets, PII redaction, rate limiting, and full audit logs on every agent interaction.', href: '/services/ai' },
         ].map(s => (
           <a href={s.href} class="block bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 hover:bg-white/5 transition-all group">
             <h3 class="font-bold text-lg mb-2 group-hover:text-brand-blue transition-colors">{s.name}</h3>
