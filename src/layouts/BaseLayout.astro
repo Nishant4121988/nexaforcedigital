@@ -14,6 +14,21 @@ const { title, description } = Astro.props;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0F1E" />
+  <!-- Theme init: runs before first paint to avoid any flash of the wrong theme -->
+  <script is:inline>
+    (function () {
+      try {
+        var saved = localStorage.getItem('nf-theme');
+        var light = saved
+          ? saved === 'light'
+          : window.matchMedia('(prefers-color-scheme: light)').matches;
+        if (light) document.documentElement.classList.add('light');
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', light ? '#F2F8FF' : '#0A0F1E');
+      } catch (e) {}
+    })();
+  </script>
   <meta name="description" content={description} />
   <meta name="robots" content="index, follow" />
   <title>{title} | NexaForce Digital</title>
@@ -29,6 +44,28 @@ const { title, description } = Astro.props;
 </head>
 <body class="bg-brand-dark text-white font-sans antialiased">
   <slot />
+
+  <!-- Theme toggle logic (shared by EN + DE, button lives in Navbar) -->
+  <script is:inline>
+    (function () {
+      function initThemeToggle() {
+        var btn = document.getElementById('theme-toggle');
+        if (!btn || btn.dataset.themeInit) return;
+        btn.dataset.themeInit = 'true';
+        btn.addEventListener('click', function () {
+          var root = document.documentElement;
+          root.classList.add('theme-anim');
+          var isLight = root.classList.toggle('light');
+          try { localStorage.setItem('nf-theme', isLight ? 'light' : 'dark'); } catch (e) {}
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', isLight ? '#F2F8FF' : '#0A0F1E');
+          window.setTimeout(function () { root.classList.remove('theme-anim'); }, 450);
+        });
+      }
+      initThemeToggle();
+      document.addEventListener('astro:page-load', initThemeToggle);
+    })();
+  </script>
 
   <!-- WhatsApp Floating Widget -->
   <a

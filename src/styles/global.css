@@ -5,6 +5,10 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  html.light {
+    color-scheme: light;
   }
   body {
     background-color: #0A0F1E;
@@ -29,4 +33,107 @@
   .animate-logo-float {
     animation: none;
   }
+}
+
+/* ==========================================================================
+   LIGHT THEME  ("sky & white" professional palette)
+   Applied when <html> has the .light class (toggled via Navbar button).
+   Dark theme remains the untouched default above.
+   ========================================================================== */
+
+/* ---- Theme toggle icon swap ------------------------------------------- */
+html:not(.light) .theme-icon-moon { display: none; }
+html.light .theme-icon-sun { display: none; }
+
+/* ---- Smooth cross-fade while switching --------------------------------- */
+html.theme-anim body,
+html.theme-anim body * {
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease !important;
+}
+
+/* ---- Base page surface --------------------------------------------------- */
+html.light body {
+  background-color: #F2F8FF; /* very light sky */
+  color: #0B1220;
+}
+
+/* ---- Surfaces ------------------------------------------------------------ */
+html.light .bg-brand-dark { background-color: #F2F8FF !important; }
+html.light .bg-brand-dark\/90 { background-color: rgba(255, 255, 255, 0.85) !important; } /* navbar */
+html.light footer { background-color: #E3F0FE !important; } /* footer sky band */
+html.light .bg-\[\#0f172a\] { background-color: #FFFFFF !important; } /* CoreCapabilities section */
+html.light .bg-\[\#101b2e\] { background-color: #F0F8FF !important; } /* tab panels */
+html.light .bg-white\/3,
+html.light .bg-white\/5,
+html.light .bg-white\/\[0\.025\],
+html.light .bg-white\/\[0\.03\] {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+html.light .bg-slate-800\/60 { background-color: #DBEAFE !important; } /* metric cards */
+
+/* Card hover lift in light mode */
+html.light .hover\:bg-white\/5:hover { background-color: #EAF4FF !important; }
+
+/* ---- Typography ------------------------------------------------------------ */
+html.light .text-white { color: #0B1220 !important; }
+html.light .text-brand-steel { color: #4A5D78 !important; } /* readable steel on white */
+html.light .text-slate-400 { color: #55677F !important; }
+html.light .text-slate-200 { color: #33415C !important; }
+html.light .text-violet-400 { color: #7C3AED !important; }
+html.light .text-blue-400 { color: #1D4ED8 !important; }
+html.light .hover\:text-white:hover { color: #0B1220 !important; }
+
+/* Keep CTA button text white on brand blue (must stay after .text-white rule) */
+html.light .bg-brand-blue { color: #FFFFFF !important; }
+
+/* ---- Borders ----------------------------------------------------------------- */
+html.light .border-white\/5,
+html.light .border-white\/8,
+html.light .border-white\/10,
+html.light .border-white\/20 {
+  border-color: rgba(11, 18, 32, 0.12) !important;
+}
+html.light .border-slate-800 { border-color: #D9E7F7 !important; }
+html.light .border-slate-700 { border-color: #C7D8EC !important; }
+
+/* ---- Hero gradient: dark navy -> light sky ------------------------------------ */
+html.light .from-brand-dark {
+  --tw-gradient-from: #E4F1FF var(--tw-gradient-from-position,);
+  --tw-gradient-to: rgb(228 241 255 / 0) var(--tw-gradient-to-position,);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+html.light .via-\[\#0d1a3a\] {
+  --tw-gradient-to: rgb(191 222 255 / 0) var(--tw-gradient-to-position,);
+  --tw-gradient-stops: var(--tw-gradient-from), #BFDEFF var(--tw-gradient-via-position,), var(--tw-gradient-to);
+}
+
+/* ---- Form fields ---------------------------------------------------------------- */
+html.light .placeholder-brand-steel::placeholder { color: #7C8DA6 !important; }
+
+/* ---- CoreCapabilities tabs (overrides its scoped <style>) ------------------------- */
+html.light .top-tab,
+html.light .cloud-tab {
+  border-color: #C9DAEE !important;
+  background: #FFFFFF !important;
+  color: #4A5D78 !important;
+}
+html.light .top-tab:hover,
+html.light .cloud-tab:hover {
+  border-color: #8FB8E8 !important;
+  background: #EAF4FF !important;
+  color: #0B1220 !important;
+}
+html.light .active-top-tab {
+  border-color: #1E6FFF !important;
+  background: linear-gradient(135deg, rgba(30, 111, 255, 0.12), rgba(124, 58, 237, 0.10)) !important;
+  color: #0B1220 !important;
+}
+html.light .active-cloud-tab {
+  border-color: #1E6FFF !important;
+  background: #DBEAFE !important;
+  color: #0B1220 !important;
 }
