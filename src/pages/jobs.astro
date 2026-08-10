@@ -8,83 +8,73 @@ const openJobs = 0;
   title="Jobs | NexaForce Digital"
   description="Explore career opportunities at NexaForce Digital. There are currently 0 open jobs, but future roles in Salesforce, AI automation, and engineering are planned."
 >
-  <div class="relative isolate overflow-hidden bg-[#F2F8FF] text-slate-950 transition-colors duration-300 dark:bg-[#07111f] dark:text-white">
-    <div class="pointer-events-none absolute inset-0 -z-10">
-      <div class="absolute left-1/2 top-0 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-cyan-500/15 blur-3xl dark:bg-cyan-400/15"></div>
-      <div class="absolute bottom-0 right-0 h-[30rem] w-[30rem] rounded-full bg-blue-500/10 blur-3xl dark:bg-blue-600/20"></div>
-      <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.06)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_35%,transparent_75%)] dark:bg-[linear-gradient(to_right,rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.08)_1px,transparent_1px)]"></div>
+  <div class="jobs-theme">
+    <div class="jobs-background" aria-hidden="true">
+      <div class="jobs-glow jobs-glow-a"></div>
+      <div class="jobs-glow jobs-glow-b"></div>
+      <div class="jobs-grid"></div>
     </div>
 
     <section class="relative px-6 pb-20 pt-28 sm:px-8 lg:px-12 lg:pb-28 lg:pt-36">
       <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div>
-          <div class="mb-6 inline-flex items-center gap-3 rounded-full border border-cyan-700/20 bg-cyan-700/10 px-4 py-2 text-sm font-semibold text-cyan-900 shadow-lg shadow-blue-900/5 backdrop-blur dark:border-cyan-300/20 dark:bg-cyan-300/10 dark:text-cyan-100 dark:shadow-cyan-950/20">
-            <span class="relative flex h-2.5 w-2.5">
-              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-500 opacity-50 dark:bg-cyan-300"></span>
-              <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-cyan-600 dark:bg-cyan-200"></span>
-            </span>
+          <div class="jobs-pill">
+            <span class="pulse-dot"></span>
             Careers at NexaForce Digital
           </div>
 
-          <h1 class="max-w-4xl text-4xl font-black tracking-tight text-slate-950 sm:text-6xl lg:text-7xl dark:text-white">
+          <h1 class="mt-6 max-w-4xl text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl">
             Build the future of
-            <span class="bg-gradient-to-r from-blue-700 via-cyan-600 to-sky-500 bg-clip-text text-transparent dark:from-cyan-200 dark:via-sky-300 dark:to-blue-400">
-              intelligent enterprise.
-            </span>
+            <span class="gradient-text">intelligent enterprise.</span>
           </h1>
 
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl dark:text-slate-300">
+          <p class="muted mt-6 max-w-2xl text-lg leading-8 sm:text-xl">
             We work where Salesforce architecture, agentic AI, and automation create measurable business outcomes. There are no open positions today, but the next mission is already taking shape.
           </p>
 
           <div class="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="mailto:contact@nexaforcedigital.com?subject=Speculative%20Application%20%E2%80%94%20NexaForce%20Digital"
-              class="group inline-flex items-center justify-center rounded-2xl bg-blue-700 px-6 py-4 text-sm font-bold text-white shadow-xl shadow-blue-900/10 transition hover:-translate-y-0.5 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#F2F8FF] dark:bg-cyan-300 dark:text-slate-950 dark:shadow-cyan-950/30 dark:hover:bg-cyan-200 dark:focus:ring-cyan-200 dark:focus:ring-offset-slate-950"
+              class="jobs-button jobs-button-primary group"
             >
               Share your profile
               <svg class="ml-2 h-4 w-4 transition group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" />
               </svg>
             </a>
-            <a
-              href="/services"
-              class="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white/75 px-6 py-4 text-sm font-bold text-slate-900 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-blue-500/40 hover:bg-white dark:border-white/15 dark:bg-white/5 dark:text-white dark:shadow-none dark:hover:border-cyan-200/40 dark:hover:bg-white/10"
-            >
+            <a href="/services" class="jobs-button jobs-button-secondary">
               Explore our services
             </a>
           </div>
         </div>
 
         <div class="relative">
-          <div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-cyan-500/15 via-blue-500/10 to-transparent blur-2xl dark:from-cyan-300/25 dark:via-blue-500/15"></div>
-          <div class="relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white/80 p-6 shadow-2xl shadow-slate-900/10 backdrop-blur-xl sm:p-8 dark:border-white/10 dark:bg-white/[0.07] dark:shadow-slate-950/40">
+          <div class="card-halo" aria-hidden="true"></div>
+          <div class="status-card relative overflow-hidden rounded-[2rem] p-6 sm:p-8">
             <div class="flex items-center justify-between gap-4">
               <div>
-                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700 dark:text-cyan-200">Live status</p>
-                <h2 class="mt-2 text-2xl font-bold text-slate-950 dark:text-white">Open Jobs</h2>
+                <p class="eyebrow">Live status</p>
+                <h2 class="mt-2 text-2xl font-bold">Open Jobs</h2>
               </div>
-              <span class="rounded-full border border-emerald-600/20 bg-emerald-600/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-emerald-700 dark:border-emerald-300/20 dark:bg-emerald-300/10 dark:text-emerald-200">
-                Updated now
-              </span>
+              <span class="status-badge">Updated now</span>
             </div>
 
-            <div class="my-8 rounded-[1.5rem] border border-blue-700/10 bg-slate-950/[0.03] px-6 py-10 text-center dark:border-cyan-200/10 dark:bg-slate-950/50">
-              <div class="text-[7rem] font-black leading-none tracking-tighter text-slate-950 sm:text-[10rem] dark:text-white">
+            <div class="counter-card my-8 rounded-[1.5rem] px-6 py-10 text-center">
+              <div class="text-[7rem] font-black leading-none tracking-tighter sm:text-[10rem]">
                 {openJobs}
               </div>
-              <p class="mt-3 text-lg font-semibold text-slate-600 dark:text-slate-300">positions currently available</p>
+              <p class="muted mt-3 text-lg font-semibold">positions currently available</p>
             </div>
 
-            <div class="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white/75 p-5 dark:border-white/10 dark:bg-white/5">
-              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-700/10 text-blue-700 dark:bg-cyan-300/15 dark:text-cyan-200">
+            <div class="info-card flex items-start gap-4 rounded-2xl p-5">
+              <div class="icon-badge flex h-12 w-12 shrink-0 items-center justify-center rounded-xl">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v-2.4a2.25 2.25 0 0 0-2.25-2.25h-12a2.25 2.25 0 0 0-2.25 2.25v6A2.25 2.25 0 0 0 6 20h12a2.25 2.25 0 0 0 2.25-2.25v-1.5M16 6.75V4.5A2.25 2.25 0 0 0 13.75 2.25h-3.5A2.25 2.25 0 0 0 8 4.5v2.25m8 0H8m8 0h1.5A2.25 2.25 0 0 1 19.75 9v3.75m-15.5 0V9A2.25 2.25 0 0 1 6.5 6.75H8" />
                 </svg>
               </div>
               <div>
-                <h3 class="font-bold text-slate-950 dark:text-white">No openings today. Real opportunities tomorrow.</h3>
-                <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                <h3 class="font-bold">No openings today. Real opportunities tomorrow.</h3>
+                <p class="muted mt-2 text-sm leading-6">
                   We are preparing future roles for people who enjoy ownership, elegant systems, and solving meaningful business problems.
                 </p>
               </div>
@@ -94,54 +84,54 @@ const openJobs = 0;
       </div>
     </section>
 
-    <section class="relative border-t border-slate-200 px-6 py-16 sm:px-8 lg:px-12 lg:py-24 dark:border-white/10">
+    <section class="section-border relative px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
       <div class="mx-auto max-w-7xl">
         <div class="max-w-3xl">
-          <p class="text-sm font-bold uppercase tracking-[0.3em] text-blue-700 dark:text-cyan-200">Future missions</p>
-          <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-5xl dark:text-white">
+          <p class="eyebrow">Future missions</p>
+          <h2 class="mt-4 text-3xl font-black tracking-tight sm:text-5xl">
             The kind of work we are building toward.
           </h2>
-          <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+          <p class="muted mt-5 text-lg leading-8">
             When new roles open, they will be connected to complex enterprise challenges—not routine ticket queues.
           </p>
         </div>
 
         <div class="mt-12 grid gap-6 md:grid-cols-3">
-          <article class="rounded-[1.75rem] border border-slate-200 bg-white/80 p-7 shadow-sm transition hover:-translate-y-1 hover:border-cyan-600/30 hover:shadow-xl hover:shadow-blue-900/10 dark:border-white/10 dark:bg-white/[0.05] dark:shadow-none dark:hover:border-cyan-200/30 dark:hover:bg-white/[0.08]">
-            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-700/10 text-cyan-700 dark:bg-cyan-300/15 dark:text-cyan-200">
+          <article class="feature-card rounded-[1.75rem] p-7">
+            <div class="icon-badge icon-cyan mb-6 flex h-14 w-14 items-center justify-center rounded-2xl">
               <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 1-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
               </svg>
             </div>
-            <p class="text-xs font-bold uppercase tracking-[0.25em] text-cyan-700 dark:text-cyan-200">Future opportunity</p>
-            <h3 class="mt-3 text-xl font-bold text-slate-950 dark:text-white">Salesforce & Revenue Cloud</h3>
-            <p class="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
+            <p class="feature-label label-cyan">Future opportunity</p>
+            <h3 class="mt-3 text-xl font-bold">Salesforce & Revenue Cloud</h3>
+            <p class="muted mt-4 text-sm leading-7">
               Enterprise architecture, CPQ, billing, integrations, and governed Quote-to-Cash systems for complex organizations.
             </p>
           </article>
 
-          <article class="rounded-[1.75rem] border border-slate-200 bg-white/80 p-7 shadow-sm transition hover:-translate-y-1 hover:border-violet-600/30 hover:shadow-xl hover:shadow-blue-900/10 dark:border-white/10 dark:bg-white/[0.05] dark:shadow-none dark:hover:border-cyan-200/30 dark:hover:bg-white/[0.08]">
-            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-700/10 text-violet-700 dark:bg-violet-300/15 dark:text-violet-200">
+          <article class="feature-card rounded-[1.75rem] p-7">
+            <div class="icon-badge icon-violet mb-6 flex h-14 w-14 items-center justify-center rounded-2xl">
               <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
               </svg>
             </div>
-            <p class="text-xs font-bold uppercase tracking-[0.25em] text-violet-700 dark:text-violet-200">Future opportunity</p>
-            <h3 class="mt-3 text-xl font-bold text-slate-950 dark:text-white">Agentic AI & Automation</h3>
-            <p class="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
+            <p class="feature-label label-violet">Future opportunity</p>
+            <h3 class="mt-3 text-xl font-bold">Agentic AI & Automation</h3>
+            <p class="muted mt-4 text-sm leading-7">
               AI-assisted workflows, autonomous business processes, data pipelines, and human-in-the-loop automation.
             </p>
           </article>
 
-          <article class="rounded-[1.75rem] border border-slate-200 bg-white/80 p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-600/30 hover:shadow-xl hover:shadow-blue-900/10 dark:border-white/10 dark:bg-white/[0.05] dark:shadow-none dark:hover:border-cyan-200/30 dark:hover:bg-white/[0.08]">
-            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-700/10 text-blue-700 dark:bg-blue-300/15 dark:text-blue-200">
+          <article class="feature-card rounded-[1.75rem] p-7">
+            <div class="icon-badge icon-blue mb-6 flex h-14 w-14 items-center justify-center rounded-2xl">
               <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
               </svg>
             </div>
-            <p class="text-xs font-bold uppercase tracking-[0.25em] text-blue-700 dark:text-blue-200">Future opportunity</p>
-            <h3 class="mt-3 text-xl font-bold text-slate-950 dark:text-white">Full-Stack Engineering</h3>
-            <p class="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
+            <p class="feature-label label-blue">Future opportunity</p>
+            <h3 class="mt-3 text-xl font-bold">Full-Stack Engineering</h3>
+            <p class="muted mt-4 text-sm leading-7">
               Modern web applications, APIs, integrations, cloud deployment, and maintainable systems built for scale.
             </p>
           </article>
@@ -150,20 +140,20 @@ const openJobs = 0;
     </section>
 
     <section class="relative px-6 pb-24 sm:px-8 lg:px-12">
-      <div class="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-blue-200 bg-gradient-to-br from-blue-100 via-white to-cyan-50 p-8 shadow-2xl shadow-blue-900/10 sm:p-12 dark:border-cyan-200/15 dark:from-cyan-300/15 dark:via-blue-500/10 dark:to-white/[0.04] dark:shadow-slate-950/30">
+      <div class="final-card mx-auto max-w-7xl overflow-hidden rounded-[2rem] p-8 sm:p-12">
         <div class="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
           <div>
-            <p class="text-sm font-bold uppercase tracking-[0.3em] text-blue-700 dark:text-cyan-100">Stay ready</p>
-            <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl dark:text-white">
+            <p class="eyebrow">Stay ready</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
               The mission board is clear—for now.
             </h2>
-            <p class="mt-4 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300">
+            <p class="muted mt-4 max-w-2xl text-base leading-7">
               If your experience fits Salesforce architecture, intelligent automation, or full-stack engineering, send us a concise profile and tell us what kind of problem you love solving.
             </p>
           </div>
           <a
             href="mailto:contact@nexaforcedigital.com?subject=Speculative%20Application%20%E2%80%94%20NexaForce%20Digital"
-            class="inline-flex items-center justify-center rounded-2xl bg-slate-950 px-6 py-4 text-sm font-black text-white shadow-xl shadow-slate-900/15 transition hover:-translate-y-0.5 hover:bg-blue-800 dark:bg-white dark:text-slate-950 dark:hover:bg-cyan-100"
+            class="jobs-button contact-button"
           >
             contact@nexaforcedigital.com
           </a>
@@ -171,4 +161,138 @@ const openJobs = 0;
       </div>
     </section>
   </div>
+
+  <style>
+    .jobs-theme {
+      --page-bg: #07111f;
+      --text: #ffffff;
+      --muted: #cbd5e1;
+      --accent: #67e8f9;
+      --accent-strong: #22d3ee;
+      --gradient-a: #a5f3fc;
+      --gradient-b: #60a5fa;
+      --surface: rgba(255, 255, 255, 0.07);
+      --surface-soft: rgba(255, 255, 255, 0.05);
+      --surface-strong: rgba(2, 6, 23, 0.5);
+      --border: rgba(255, 255, 255, 0.1);
+      --pill-bg: rgba(103, 232, 249, 0.1);
+      --pill-border: rgba(103, 232, 249, 0.2);
+      --badge-bg: rgba(110, 231, 183, 0.1);
+      --badge-border: rgba(110, 231, 183, 0.2);
+      --badge-text: #a7f3d0;
+      --button-bg: #67e8f9;
+      --button-bg-hover: #a5f3fc;
+      --button-text: #020617;
+      --secondary-bg: rgba(255, 255, 255, 0.05);
+      --secondary-text: #ffffff;
+      --card-shadow: 0 25px 70px rgba(2, 6, 23, 0.4);
+      --glow-a: rgba(34, 211, 238, 0.15);
+      --glow-b: rgba(37, 99, 235, 0.2);
+      --grid-line: rgba(148, 163, 184, 0.08);
+      --final-bg: linear-gradient(135deg, rgba(103, 232, 249, 0.16), rgba(59, 130, 246, 0.1), rgba(255, 255, 255, 0.04));
+      position: relative;
+      isolation: isolate;
+      min-height: 100vh;
+      overflow: hidden;
+      background: var(--page-bg);
+      color: var(--text);
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+
+    :global(html.light .jobs-theme) {
+      --page-bg: #f2f8ff;
+      --text: #0b1220;
+      --muted: #55677f;
+      --accent: #1d4ed8;
+      --accent-strong: #0891b2;
+      --gradient-a: #1d4ed8;
+      --gradient-b: #0891b2;
+      --surface: rgba(255, 255, 255, 0.88);
+      --surface-soft: #ffffff;
+      --surface-strong: #f8fbff;
+      --border: rgba(11, 18, 32, 0.12);
+      --pill-bg: rgba(29, 78, 216, 0.08);
+      --pill-border: rgba(29, 78, 216, 0.18);
+      --badge-bg: rgba(5, 150, 105, 0.08);
+      --badge-border: rgba(5, 150, 105, 0.18);
+      --badge-text: #047857;
+      --button-bg: #1d4ed8;
+      --button-bg-hover: #2563eb;
+      --button-text: #ffffff;
+      --secondary-bg: #ffffff;
+      --secondary-text: #0b1220;
+      --card-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+      --glow-a: rgba(14, 165, 233, 0.14);
+      --glow-b: rgba(59, 130, 246, 0.1);
+      --grid-line: rgba(15, 23, 42, 0.06);
+      --final-bg: linear-gradient(135deg, #dbeafe, #ffffff, #ecfeff);
+    }
+
+    .jobs-background { pointer-events: none; position: absolute; inset: 0; z-index: -1; }
+    .jobs-glow { position: absolute; border-radius: 9999px; filter: blur(72px); }
+    .jobs-glow-a { left: 50%; top: 0; height: 36rem; width: 36rem; transform: translateX(-50%); background: var(--glow-a); }
+    .jobs-glow-b { bottom: 0; right: 0; height: 30rem; width: 30rem; background: var(--glow-b); }
+    .jobs-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 4rem 4rem;
+      mask-image: radial-gradient(ellipse at center, black 35%, transparent 75%);
+    }
+
+    .jobs-pill {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      border: 1px solid var(--pill-border); border-radius: 9999px;
+      background: var(--pill-bg); color: var(--accent);
+      padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 700;
+      backdrop-filter: blur(12px); transition: inherit;
+    }
+    .pulse-dot { position: relative; display: inline-flex; height: 0.625rem; width: 0.625rem; border-radius: 9999px; background: var(--accent); }
+    .pulse-dot::before { content: ''; position: absolute; inset: 0; border-radius: inherit; background: var(--accent); opacity: 0.45; animation: jobs-ping 1.4s cubic-bezier(0, 0, 0.2, 1) infinite; }
+    @keyframes jobs-ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+
+    .gradient-text { background: linear-gradient(90deg, var(--gradient-a), var(--gradient-b)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .muted { color: var(--muted); }
+    .eyebrow { color: var(--accent); font-size: 0.875rem; font-weight: 800; letter-spacing: 0.25em; text-transform: uppercase; }
+
+    .jobs-button {
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 1rem; padding: 1rem 1.5rem;
+      font-size: 0.875rem; font-weight: 800; text-decoration: none;
+      transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .jobs-button:hover { transform: translateY(-2px); }
+    .jobs-button-primary { background: var(--button-bg); color: var(--button-text); box-shadow: 0 18px 35px rgba(2, 6, 23, 0.18); }
+    .jobs-button-primary:hover { background: var(--button-bg-hover); }
+    .jobs-button-secondary { border: 1px solid var(--border); background: var(--secondary-bg); color: var(--secondary-text); backdrop-filter: blur(12px); }
+
+    .card-halo { position: absolute; inset: -1rem; border-radius: 2.5rem; background: linear-gradient(135deg, var(--glow-a), transparent); filter: blur(28px); }
+    .status-card, .feature-card, .final-card {
+      border: 1px solid var(--border); background: var(--surface);
+      box-shadow: var(--card-shadow); backdrop-filter: blur(20px);
+      transition: transform 0.2s ease, background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.2s ease;
+    }
+    .status-badge {
+      border: 1px solid var(--badge-border); border-radius: 9999px; background: var(--badge-bg);
+      color: var(--badge-text); padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: 800;
+      letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;
+    }
+    .counter-card, .info-card { border: 1px solid var(--border); background: var(--surface-strong); transition: inherit; }
+    .info-card { background: var(--surface-soft); }
+    .icon-badge { background: var(--pill-bg); color: var(--accent); }
+    .section-border { border-top: 1px solid var(--border); }
+    .feature-card:hover { transform: translateY(-4px); border-color: var(--pill-border); background: var(--surface-soft); }
+    .feature-label { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.25em; text-transform: uppercase; }
+    .label-cyan, .icon-cyan { color: var(--accent); }
+    .label-violet, .icon-violet { color: #c4b5fd; }
+    .label-blue, .icon-blue { color: #93c5fd; }
+    :global(html.light .jobs-theme .label-violet), :global(html.light .jobs-theme .icon-violet) { color: #7c3aed; }
+    :global(html.light .jobs-theme .label-blue), :global(html.light .jobs-theme .icon-blue) { color: #1d4ed8; }
+    .icon-cyan, .icon-violet, .icon-blue { background: var(--pill-bg); }
+    .final-card { background: var(--final-bg); }
+    .contact-button { background: var(--text); color: var(--page-bg); box-shadow: var(--card-shadow); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .jobs-theme, .jobs-theme *, .pulse-dot::before { animation: none !important; transition: none !important; }
+    }
+  </style>
 </BaseLayout>
