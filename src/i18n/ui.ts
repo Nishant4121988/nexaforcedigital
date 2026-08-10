@@ -9,6 +9,7 @@ export const ui = {
   en: {
     'nav.home': 'Home',
     'nav.services': 'Services',
+    'nav.who': 'Who are We?',
     'nav.contact': 'Contact',
     'nav.impressum': 'Legal Notice',
     'hero.tagline': 'Enterprise Salesforce. Intelligent Automation. Agentic AI.',
@@ -31,6 +32,7 @@ export const ui = {
   de: {
     'nav.home': 'Startseite',
     'nav.services': 'Leistungen',
+    'nav.who': 'Wer sind wir?',
     'nav.contact': 'Kontakt',
     'nav.impressum': 'Impressum',
     'hero.tagline': 'Enterprise Salesforce. Intelligente Automatisierung. Agentische KI.',

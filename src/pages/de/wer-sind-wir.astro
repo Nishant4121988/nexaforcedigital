@@ -1,0 +1,325 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Wer sind wir?"
+  description="Lernen Sie NexaForce Digital kennen: ein Berliner Partner für ethisches Engineering, bei dem Kundenzufriedenheit, Transparenz, Dateneigentum und verantwortungsvolle KI höchste Priorität haben."
+>
+  <Navbar />
+
+  <div class="about-theme">
+    <div class="about-background" aria-hidden="true">
+      <div class="about-glow about-glow-a"></div>
+      <div class="about-glow about-glow-b"></div>
+      <div class="about-grid"></div>
+    </div>
+
+    <section class="relative px-6 pb-20 pt-32 sm:px-8 lg:px-12 lg:pb-24 lg:pt-40">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+        <div>
+          <div class="about-pill">
+            <span class="pulse-dot"></span>
+            Wer sind wir?
+          </div>
+
+          <h1 class="mt-6 max-w-4xl text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl">
+            Ethisches Engineering.
+            <span class="gradient-text">Kundenzufriedenheit steht über allem.</span>
+          </h1>
+
+          <p class="muted mt-6 max-w-2xl text-lg leading-8 sm:text-xl">
+            NexaForce Digital ist eine Berliner Unternehmensberatung für Salesforce, Workflow-Automatisierung und Agentic AI – ohne Kompromisse bei Eigentum, Transparenz oder Vertrauen.
+          </p>
+
+          <div class="priority-card mt-10 rounded-[1.75rem] p-6 sm:p-8">
+            <p class="eyebrow">Unsere höchste Priorität</p>
+            <h2 class="mt-3 text-2xl font-black tracking-tight sm:text-3xl">
+              Kundenzufriedenheit ist unsere höchste Priorität.
+            </h2>
+            <p class="muted mt-4 text-sm leading-7 sm:text-base">
+              Wir messen Erfolg daran, wie viel Vertrauen unsere Kunden vor, während und lange nach der Umsetzung haben – nicht nur am technischen Ergebnis.
+            </p>
+          </div>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a href="/de/#contact" class="about-button about-button-primary">
+              Gespräch starten
+            </a>
+            <a href="/de/leistungen/" class="about-button about-button-secondary">
+              Leistungen entdecken
+            </a>
+          </div>
+        </div>
+
+        <figure class="image-card relative overflow-hidden rounded-[2rem]">
+          <img
+            src="/images/company.svg"
+            alt="NexaForce Digital Unternehmensillustration für Zusammenarbeit, Technologie und Kundenpartnerschaft"
+            class="company-image"
+            loading="eager"
+          />
+          <figcaption class="image-caption">
+            <span>Aus Berlin</span>
+            <span>Enterprise-Niveau</span>
+            <span>Kundeneigentum</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section-border relative px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <p class="eyebrow">Unsere ethischen Werte</p>
+          <h2 class="mt-4 text-3xl font-black tracking-tight sm:text-5xl">
+            Prinzipien, die jedes Projekt prägen.
+          </h2>
+          <p class="muted mt-5 text-lg leading-8">
+            Von Salesforce-Architektur über n8n-Automatisierung bis Agentic AI bleiben unsere Werte gleich: ehrlich beraten, Kundeneigentum schützen und das bauen, was dem Unternehmen wirklich dient.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="value-card rounded-[1.75rem] p-7">
+            <span class="value-number">01</span>
+            <h3 class="mt-5 text-xl font-bold">Integrität vor Umsatz</h3>
+            <p class="muted mt-4 text-sm leading-7">
+              Wir empfehlen, was für Ihre Organisation richtig ist – auch wenn das einen kleineren Umfang, eine einfachere Architektur oder kein neues Tool bedeutet.
+            </p>
+          </article>
+
+          <article class="value-card rounded-[1.75rem] p-7">
+            <span class="value-number">02</span>
+            <h3 class="mt-5 text-xl font-bold">Transparenz als Standard</h3>
+            <p class="muted mt-4 text-sm leading-7">
+              Klare Ziele, ehrliche Risiken, sichtbarer Fortschritt und direkte Kommunikation. Keine versteckten Abhängigkeiten oder unklaren Ergebnisse.
+            </p>
+          </article>
+
+          <article class="value-card rounded-[1.75rem] p-7">
+            <span class="value-number">03</span>
+            <h3 class="mt-5 text-xl font-bold">Datenschutz & Dateneigentum</h3>
+            <p class="muted mt-4 text-sm leading-7">
+              Wir entwerfen DSGVO-bewusste Systeme, bei denen die Kontrolle in Ihrer Organisation bleibt und unnötiger Vendor Lock-in vermieden wird.
+            </p>
+          </article>
+
+          <article class="value-card rounded-[1.75rem] p-7">
+            <span class="value-number">04</span>
+            <h3 class="mt-5 text-xl font-bold">Verantwortungsvolle KI</h3>
+            <p class="muted mt-4 text-sm leading-7">
+              KI-Systeme entstehen mit menschlicher Kontrolle, Observability, Zugriffsschutz und praktischer Governance – nicht als experimentelle Blackbox.
+            </p>
+          </article>
+
+          <article class="value-card rounded-[1.75rem] p-7">
+            <span class="value-number">05</span>
+            <h3 class="mt-5 text-xl font-bold">Technische Handwerkskunst</h3>
+            <p class="muted mt-4 text-sm leading-7">
+              Wir schätzen wartbare Architektur, klare Dokumentation, saubere Integrationen und Lösungen, die Ihr Team sicher betreiben kann.
+            </p>
+          </article>
+
+          <article class="value-card rounded-[1.75rem] p-7">
+            <span class="value-number">06</span>
+            <h3 class="mt-5 text-xl font-bold">Langfristige Partnerschaft</h3>
+            <p class="muted mt-4 text-sm leading-7">
+              Unsere Verantwortung endet nicht mit dem Deployment. Wir bleiben für Einführung, Stabilität und messbaren Geschäftsnutzen erreichbar.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <div class="promise-panel mx-auto max-w-7xl overflow-hidden rounded-[2rem] p-8 sm:p-12">
+        <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+          <div>
+            <p class="eyebrow">Unser Kundenversprechen</p>
+            <h2 class="mt-4 text-3xl font-black tracking-tight sm:text-5xl">
+              Zufriedenheit ist ein Prozess – kein Slogan.
+            </h2>
+            <p class="muted mt-5 text-lg leading-8">
+              Wir schaffen Vertrauen durch sorgfältige Analyse, transparente Umsetzung und verlässliche Unterstützung nach dem Start.
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="promise-step rounded-2xl p-5">
+              <span>01</span>
+              <h3>Zuerst zuhören</h3>
+              <p>Wir beginnen mit Ihrem Geschäftsziel, den Anwendern, Rahmenbedingungen und Erfolgskriterien.</p>
+            </div>
+            <div class="promise-step rounded-2xl p-5">
+              <span>02</span>
+              <h3>Transparent planen</h3>
+              <p>Umfang, Risiken, Architektur und Kommunikation sind klar, bevor die Umsetzung beginnt.</p>
+            </div>
+            <div class="promise-step rounded-2xl p-5">
+              <span>03</span>
+              <h3>Messbar liefern</h3>
+              <p>Jeder Workflow, jede Integration und jede KI-Fähigkeit wird mit einem praktischen Ergebnis verbunden.</p>
+            </div>
+            <div class="promise-step rounded-2xl p-5">
+              <span>04</span>
+              <h3>Nach dem Start begleiten</h3>
+              <p>Wir bleiben für Einführung, Optimierung, Wissenstransfer und zukünftiges Wachstum erreichbar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative px-6 pb-24 sm:px-8 lg:px-12">
+      <div class="final-card mx-auto max-w-7xl rounded-[2rem] p-8 text-center sm:p-12">
+        <p class="eyebrow">Auf Vertrauen gebaut</p>
+        <h2 class="mx-auto mt-4 max-w-3xl text-3xl font-black tracking-tight sm:text-4xl">
+          Technologie funktioniert am besten, wenn Ethik, Engineering und Kundenerfolg zusammenarbeiten.
+        </h2>
+        <p class="muted mx-auto mt-5 max-w-2xl text-base leading-7">
+          Wenn Sie Transparenz, Eigentum und einen Partner schätzen, der Ihre Zufriedenheit an erste Stelle setzt, sprechen wir gern über Ihr nächstes Projekt.
+        </p>
+        <a href="/de/#contact" class="about-button contact-button mt-8">
+          NexaForce Digital kontaktieren
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <Footer />
+
+  <style>
+    .about-theme {
+      --page-bg: #07111f;
+      --text: #ffffff;
+      --muted: #cbd5e1;
+      --accent: #67e8f9;
+      --gradient-a: #a5f3fc;
+      --gradient-b: #60a5fa;
+      --surface: rgba(255, 255, 255, 0.07);
+      --surface-soft: rgba(255, 255, 255, 0.05);
+      --surface-strong: rgba(2, 6, 23, 0.48);
+      --border: rgba(255, 255, 255, 0.1);
+      --pill-bg: rgba(103, 232, 249, 0.1);
+      --pill-border: rgba(103, 232, 249, 0.2);
+      --button-bg: #67e8f9;
+      --button-bg-hover: #a5f3fc;
+      --button-text: #020617;
+      --secondary-bg: rgba(255, 255, 255, 0.05);
+      --secondary-text: #ffffff;
+      --card-shadow: 0 25px 70px rgba(2, 6, 23, 0.38);
+      --glow-a: rgba(34, 211, 238, 0.14);
+      --glow-b: rgba(37, 99, 235, 0.2);
+      --grid-line: rgba(148, 163, 184, 0.08);
+      --final-bg: linear-gradient(135deg, rgba(103, 232, 249, 0.16), rgba(59, 130, 246, 0.1), rgba(255, 255, 255, 0.04));
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: var(--page-bg);
+      color: var(--text);
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+
+    :global(html.light .about-theme) {
+      --page-bg: #f2f8ff;
+      --text: #0b1220;
+      --muted: #55677f;
+      --accent: #1d4ed8;
+      --gradient-a: #1d4ed8;
+      --gradient-b: #0891b2;
+      --surface: rgba(255, 255, 255, 0.9);
+      --surface-soft: #ffffff;
+      --surface-strong: #f8fbff;
+      --border: rgba(11, 18, 32, 0.12);
+      --pill-bg: rgba(29, 78, 216, 0.08);
+      --pill-border: rgba(29, 78, 216, 0.18);
+      --button-bg: #1d4ed8;
+      --button-bg-hover: #2563eb;
+      --button-text: #ffffff;
+      --secondary-bg: #ffffff;
+      --secondary-text: #0b1220;
+      --card-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+      --glow-a: rgba(14, 165, 233, 0.14);
+      --glow-b: rgba(59, 130, 246, 0.1);
+      --grid-line: rgba(15, 23, 42, 0.06);
+      --final-bg: linear-gradient(135deg, #dbeafe, #ffffff, #ecfeff);
+    }
+
+    .about-background { pointer-events: none; position: absolute; inset: 0; z-index: -1; }
+    .about-glow { position: absolute; border-radius: 9999px; filter: blur(72px); }
+    .about-glow-a { left: 45%; top: 0; height: 36rem; width: 36rem; transform: translateX(-50%); background: var(--glow-a); }
+    .about-glow-b { bottom: 0; right: 0; height: 30rem; width: 30rem; background: var(--glow-b); }
+    .about-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 4rem 4rem;
+      mask-image: radial-gradient(ellipse at center, black 35%, transparent 75%);
+    }
+
+    .about-pill {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      border: 1px solid var(--pill-border); border-radius: 9999px;
+      background: var(--pill-bg); color: var(--accent);
+      padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 800;
+      backdrop-filter: blur(12px);
+    }
+    .pulse-dot { position: relative; display: inline-flex; height: 0.625rem; width: 0.625rem; border-radius: 9999px; background: var(--accent); }
+    .pulse-dot::before { content: ''; position: absolute; inset: 0; border-radius: inherit; background: var(--accent); opacity: 0.45; animation: about-ping 1.4s cubic-bezier(0, 0, 0.2, 1) infinite; }
+    @keyframes about-ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+
+    .gradient-text { background: linear-gradient(90deg, var(--gradient-a), var(--gradient-b)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .muted { color: var(--muted); }
+    .eyebrow { color: var(--accent); font-size: 0.875rem; font-weight: 800; letter-spacing: 0.25em; text-transform: uppercase; }
+
+    .priority-card, .image-card, .value-card, .promise-panel, .final-card {
+      border: 1px solid var(--border); background: var(--surface);
+      box-shadow: var(--card-shadow); backdrop-filter: blur(18px);
+      transition: transform 0.2s ease, background-color 0.35s ease, border-color 0.35s ease;
+    }
+    .priority-card { background: linear-gradient(135deg, var(--surface), var(--surface-soft)); }
+    .image-card { min-height: 26rem; }
+    .company-image { display: block; width: 100%; height: 100%; min-height: 26rem; object-fit: cover; }
+    .image-caption {
+      position: absolute; left: 1rem; right: 1rem; bottom: 1rem;
+      display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;
+    }
+    .image-caption span {
+      border: 1px solid var(--border); border-radius: 9999px;
+      background: var(--surface-strong); color: var(--text);
+      padding: 0.5rem 0.875rem; font-size: 0.75rem; font-weight: 800;
+      backdrop-filter: blur(12px);
+    }
+
+    .section-border { border-top: 1px solid var(--border); }
+    .value-card:hover { transform: translateY(-4px); border-color: var(--pill-border); background: var(--surface-soft); }
+    .value-number { color: var(--accent); font-size: 0.8rem; font-weight: 900; letter-spacing: 0.25em; }
+    .promise-panel { background: var(--final-bg); }
+    .promise-step { border: 1px solid var(--border); background: var(--surface-strong); }
+    .promise-step span { color: var(--accent); font-size: 0.75rem; font-weight: 900; letter-spacing: 0.2em; }
+    .promise-step h3 { margin-top: 0.75rem; font-size: 1.05rem; font-weight: 800; }
+    .promise-step p { color: var(--muted); margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.65; }
+    .final-card { background: var(--final-bg); }
+
+    .about-button {
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 1rem; padding: 1rem 1.5rem;
+      font-size: 0.875rem; font-weight: 850; text-decoration: none;
+      transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    }
+    .about-button:hover { transform: translateY(-2px); }
+    .about-button-primary { background: var(--button-bg); color: var(--button-text); }
+    .about-button-primary:hover { background: var(--button-bg-hover); }
+    .about-button-secondary { border: 1px solid var(--border); background: var(--secondary-bg); color: var(--secondary-text); }
+    .contact-button { background: var(--text); color: var(--page-bg); }
+
+    @media (max-width: 640px) {
+      .image-card, .company-image { min-height: 20rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .about-theme, .about-theme *, .pulse-dot::before { animation: none !important; transition: none !important; }
+    }
+  </style>
+</BaseLayout>
