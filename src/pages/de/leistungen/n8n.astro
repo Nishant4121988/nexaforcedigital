@@ -11,9 +11,9 @@ import Footer from '../../../components/Footer.astro';
   <Navbar />
 
   <!-- Hero -->
-  <section class="relative overflow-hidden pt-32 pb-20">
+  <section class="relative overflow-hidden pt-32 pb-24">
     <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-[#0d1a3a] to-brand-dark"></div>
-    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_45%,rgba(30,111,255,0.15),transparent_55%)]"></div>
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_45%,rgba(30,111,255,0.2),transparent_55%)]"></div>
 
     <div class="relative mx-auto max-w-7xl px-6">
       <div class="grid items-center gap-12 lg:grid-cols-2">
@@ -53,12 +53,26 @@ import Footer from '../../../components/Footer.astro';
         </div>
 
         <div class="relative flex justify-center lg:justify-end">
-          <div class="absolute h-64 w-64 rounded-full bg-[#EA4B71]/20 blur-3xl"></div>
-          <div class="relative flex h-48 w-48 items-center justify-center rounded-3xl border border-[#EA4B71]/20 bg-white/5 md:h-64 md:w-64">
-            <!-- n8n Logo -->
-            <svg class="h-24 w-24 md:h-32 md:w-32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="#EA4B71"/>
-            </svg>
+          <div class="absolute h-72 w-72 rounded-full bg-[#EA4B71]/25 blur-3xl"></div>
+          <div class="relative w-full max-w-sm rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-brand-blue/20 backdrop-blur-sm lg:rotate-2 lg:hover:-rotate-1 transition-transform duration-300">
+            <div class="mb-4 flex items-center justify-between gap-4">
+              <span class="rounded-full bg-[#EA4B71]/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#EA4B71]">
+                n8n Automation
+              </span>
+              <span class="text-xs text-brand-steel">Self-hosted · Queue Mode · HA</span>
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+              <img
+                src="/assets/logos/n8n/n8n-logo.svg"
+                alt="n8n Workflow-Automatisierung Logo"
+                class="mx-auto h-28 w-auto translate-y-1/2 transform object-contain opacity-90"
+                loading="lazy"
+              />
+              <div class="h-20 bg-gradient-to-t from-black/70 to-transparent"></div>
+            </div>
+            <p class="mt-6 text-xs uppercase tracking-[0.2em] text-brand-steel">
+              Self-hosted · Event-driven · Keine Task-Gebühren
+            </p>
           </div>
         </div>
       </div>
