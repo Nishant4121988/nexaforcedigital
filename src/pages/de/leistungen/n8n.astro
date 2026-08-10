@@ -1,12 +1,12 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
 ---
 
 <BaseLayout
-  title="n8n Workflow Automation Services — Self-Hosted Enterprise Automation"
-  description="NexaForce Digital n8n services: self-hosted deployment, custom TypeScript nodes, event-driven orchestration, and Zapier/Make/Workato migration. Berlin-based enterprise consultancy."
+  title="n8n Workflow-Automatisierung — Selbst gehostete Enterprise-Automatisierung"
+  description="NexaForce Digital n8n Leistungen: Self-Hosted Deployment, Custom TypeScript Nodes, Event-Driven Orchestration und Zapier/Make/Workato Migration. Berliner Unternehmensberatung."
 >
   <Navbar />
 
@@ -19,34 +19,35 @@ import Footer from '../../components/Footer.astro';
       <div class="grid items-center gap-12 lg:grid-cols-2">
         <div>
           <span class="mb-4 inline-block rounded-full border border-brand-blue/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-brand-blue">
-            Pillar 2 · Workflow Automation
+            Kernbereich 2 · Workflow-Automatisierung
           </span>
 
           <h1 class="mb-6 text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
-            Enterprise <span class="text-brand-blue">n8n</span> Automation
+            Enterprise <span class="text-brand-blue">n8n</span> Automatisierung
           </h1>
 
           <p class="mb-8 max-w-2xl text-lg leading-relaxed text-brand-steel md:text-xl">
-            Replace unpredictable SaaS metering with self-hosted, event-driven workflow engines
-            that you fully own. We design, deploy, and maintain production-grade n8n infrastructure
-            for enterprises that demand data sovereignty and cost predictability.
+            Ersetzen Sie unvorhersehbare SaaS-Abrechnung durch selbst gehostete,
+            ereignisgesteuerte Workflow-Engines, die vollständig Ihnen gehören.
+            Wir konzipieren, deployen und betreiben produktionsreife n8n-Infrastruktur
+            für Unternehmen mit höchsten Ansprüchen an Datensouveränität und Kostentransparenz.
           </p>
 
           <div class="flex flex-col gap-4 sm:flex-row">
             <a
-              href="https://wa.me/4917632246090?text=Hello%20NexaForce%20Digital%2C%20I%20would%20like%20to%20discuss%20n8n%20automation%20for%20our%20enterprise."
+              href="https://wa.me/4917632246090?text=Hallo%20NexaForce%20Digital%2C%20ich%20möchte%20n8n-Automatisierung%20für%20unser%20Unternehmen%20besprechen."
               target="_blank"
               rel="noopener noreferrer"
               class="rounded-full bg-brand-blue px-8 py-4 text-center font-semibold text-white shadow-lg shadow-brand-blue/25 transition-all duration-300 hover:bg-blue-500"
             >
-              Discuss Your n8n Project
+              n8n-Projekt besprechen
             </a>
 
             <a
-              href="/services"
+              href="/de/leistungen"
               class="rounded-full border border-white/20 px-8 py-4 text-center font-semibold text-white transition-all duration-300 hover:border-brand-blue"
             >
-              ← Back to Services
+              ← Zurück zu Leistungen
             </a>
           </div>
         </div>
@@ -67,9 +68,9 @@ import Footer from '../../components/Footer.astro';
   <!-- Core Services -->
   <section class="mx-auto max-w-7xl px-6 py-20">
     <div class="mb-12">
-      <h2 class="mb-4 text-3xl font-bold md:text-4xl">What We Deliver</h2>
+      <h2 class="mb-4 text-3xl font-bold md:text-4xl">Unsere Leistungen</h2>
       <p class="max-w-2xl text-lg text-brand-steel">
-        End-to-end n8n automation — from initial architecture to ongoing operations.
+        End-to-End n8n-Automatisierung — von der initialen Architektur bis zum laufenden Betrieb.
       </p>
     </div>
 
@@ -82,14 +83,14 @@ import Footer from '../../components/Footer.astro';
         </div>
         <h3 class="mb-3 text-xl font-bold">Self-Hosted Deployment</h3>
         <p class="mb-4 text-sm leading-relaxed text-brand-steel">
-          High-availability n8n clusters on your private VPS, on-premises hardware, or client VPC.
-          Docker/Kubernetes orchestration with automated backups, SSL termination, and zero external
-          data exposure. Full GDPR compliance by design.
+          Hochverfügbare n8n-Cluster auf Ihrem privaten VPS, On-Premises-Hardware oder Kunden-VPC.
+          Docker/Kubernetes-Orchestrierung mit automatisierten Backups, SSL-Terminierung und
+          null externer Datenexposition. Vollständige DSGVO-Compliance by Design.
         </p>
         <ul class="space-y-2 text-sm text-brand-steel">
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Queue-mode scaling for high-throughput workflows</li>
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Multi-environment setup (dev/staging/prod)</li>
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Automated health checks and alerting</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Queue-Mode-Skalierung für hohe Durchsatzraten</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Multi-Environment-Setup (Dev/Staging/Prod)</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Automatisierte Health Checks und Alerting</li>
         </ul>
       </div>
 
@@ -101,14 +102,14 @@ import Footer from '../../components/Footer.astro';
         </div>
         <h3 class="mb-3 text-xl font-bold">Custom Node Development</h3>
         <p class="mb-4 text-sm leading-relaxed text-brand-steel">
-          TypeScript custom nodes for proprietary legacy systems, niche databases, internal SaaS APIs,
-          and hardware integrations that standard nodes don't cover. Full type safety, error handling,
-          and documentation.
+          TypeScript Custom Nodes für proprietäre Legacy-Systeme, Nischendatenbanken, interne SaaS-APIs
+          und Hardware-Integrationen, die Standard-Nodes nicht abdecken. Vollständige Typsicherheit,
+          Fehlerbehandlung und Dokumentation.
         </p>
         <ul class="space-y-2 text-sm text-brand-steel">
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Legacy ERP/CRM connectors</li>
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> IoT and hardware device integration</li>
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Custom authentication flows (OAuth2, mTLS)</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Legacy ERP/CRM-Konnektoren</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> IoT- und Hardware-Device-Integration</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Custom Authentication Flows (OAuth2, mTLS)</li>
         </ul>
       </div>
 
@@ -120,14 +121,14 @@ import Footer from '../../components/Footer.astro';
         </div>
         <h3 class="mb-3 text-xl font-bold">Event-Driven Orchestration</h3>
         <p class="mb-4 text-sm leading-relaxed text-brand-steel">
-          Asynchronous webhook processing, message queue integration (RabbitMQ, Redis, Kafka),
-          payload transformation pipelines, and production-grade error handling with retry logic
-          and dead-letter queues.
+          Asynchrone Webhook-Verarbeitung, Message-Queue-Integration (RabbitMQ, Redis, Kafka),
+          Payload-Transformation-Pipelines und produktionsreife Fehlerbehandlung mit Retry-Logik
+          und Dead-Letter-Queues.
         </p>
         <ul class="space-y-2 text-sm text-brand-steel">
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Real-time webhook processing at scale</li>
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Complex data transformation (JSON, XML, CSV, EDI)</li>
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Circuit breakers and graceful degradation</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Echtzeit-Webhook-Verarbeitung bei Skalierung</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Komplexe Datentransformation (JSON, XML, CSV, EDI)</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Circuit Breaker und Graceful Degradation</li>
         </ul>
       </div>
 
@@ -137,15 +138,15 @@ import Footer from '../../components/Footer.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
           </svg>
         </div>
-        <h3 class="mb-3 text-xl font-bold">Platform Migration</h3>
+        <h3 class="mb-3 text-xl font-bold">Plattform-Migration</h3>
         <p class="mb-4 text-sm leading-relaxed text-brand-steel">
-          Structured migration from Zapier, Make (Integromat), Workato, or Tray.io to self-hosted n8n.
-          Full workflow parity, data mapping, and cutover planning with zero downtime.
+          Strukturierte Migration von Zapier, Make (Integromat), Workato oder Tray.io zu selbst gehostetem n8n.
+          Vollständige Workflow-Parität, Datenmapping und Cutover-Planung mit null Downtime.
         </p>
         <ul class="space-y-2 text-sm text-brand-steel">
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Workflow audit and dependency mapping</li>
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Parallel run and validation phase</li>
-          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Team training and documentation handover</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Workflow-Audit und Dependency-Mapping</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Parallelbetrieb und Validierungsphase</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Team-Schulung und Dokumentationsübergabe</li>
         </ul>
       </div>
     </div>
@@ -156,20 +157,20 @@ import Footer from '../../components/Footer.astro';
     <div class="rounded-2xl border border-[#EA4B71]/20 bg-gradient-to-br from-[#EA4B71]/10 to-white/[0.02] p-8 md:p-12">
       <div class="grid items-center gap-8 lg:grid-cols-2">
         <div>
-          <h2 class="mb-4 text-3xl font-bold">Why Self-Hosted n8n?</h2>
+          <h2 class="mb-4 text-3xl font-bold">Warum Self-Hosted n8n?</h2>
           <p class="mb-6 text-brand-steel leading-relaxed">
-            SaaS automation platforms charge per task, per user, or per workflow — creating
-            unpredictable costs that scale with your success. Self-hosted n8n eliminates metering
-            entirely while giving you complete control over your data and infrastructure.
+            SaaS-Automatisierungsplattformen berechnen pro Task, pro Nutzer oder pro Workflow —
+            was zu unvorhersehbaren Kosten führt, die mit Ihrem Erfolg skalieren. Self-Hosted n8n
+            eliminiert Metering vollständig und gibt Ihnen volle Kontrolle über Daten und Infrastruktur.
           </p>
           <div class="grid grid-cols-2 gap-4">
             <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
               <div class="text-2xl font-bold text-[#EA4B71]">0€</div>
-              <div class="text-xs text-brand-steel">per-task fees</div>
+              <div class="text-xs text-brand-steel">pro-Task Gebühren</div>
             </div>
             <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
               <div class="text-2xl font-bold text-[#EA4B71]">100%</div>
-              <div class="text-xs text-brand-steel">data ownership</div>
+              <div class="text-xs text-brand-steel">Dateneigentum</div>
             </div>
           </div>
         </div>
@@ -181,8 +182,8 @@ import Footer from '../../components/Footer.astro';
               </svg>
             </div>
             <div>
-              <h4 class="font-semibold">GDPR & Data Sovereignty</h4>
-              <p class="text-sm text-brand-steel">All workflow data stays within your infrastructure. No third-party processors.</p>
+              <h4 class="font-semibold">DSGVO & Datensouveränität</h4>
+              <p class="text-sm text-brand-steel">Alle Workflow-Daten bleiben in Ihrer Infrastruktur. Keine Drittprozessoren.</p>
             </div>
           </div>
           <div class="flex items-start gap-4">
@@ -192,8 +193,8 @@ import Footer from '../../components/Footer.astro';
               </svg>
             </div>
             <div>
-              <h4 class="font-semibold">Predictable Costs</h4>
-              <p class="text-sm text-brand-steel">Fixed infrastructure costs regardless of workflow volume or complexity.</p>
+              <h4 class="font-semibold">Vorhersehbare Kosten</h4>
+              <p class="text-sm text-brand-steel">Feste Infrastrukturkosten unabhängig von Workflow-Volumen oder Komplexität.</p>
             </div>
           </div>
           <div class="flex items-start gap-4">
@@ -204,8 +205,8 @@ import Footer from '../../components/Footer.astro';
               </svg>
             </div>
             <div>
-              <h4 class="font-semibold">Unlimited Customization</h4>
-              <p class="text-sm text-brand-steel">Custom nodes, private npm packages, and full source code access.</p>
+              <h4 class="font-semibold">Unbegrenzte Anpassung</h4>
+              <p class="text-sm text-brand-steel">Custom Nodes, private npm-Pakete und voller Source-Code-Zugriff.</p>
             </div>
           </div>
         </div>
@@ -215,18 +216,18 @@ import Footer from '../../components/Footer.astro';
 
   <!-- CTA -->
   <section class="mx-auto max-w-3xl px-6 py-20 text-center">
-    <h2 class="mb-4 text-3xl font-bold">Ready to Own Your Automation?</h2>
+    <h2 class="mb-4 text-3xl font-bold">Bereit für eigene Automatisierung?</h2>
     <p class="mb-8 text-lg text-brand-steel">
-      Let's discuss how self-hosted n8n can replace your current automation stack
-      with predictable costs and full data control.
+      Lassen Sie uns besprechen, wie selbst gehostetes n8n Ihren aktuellen Automatisierungs-Stack
+      mit vorhersehbaren Kosten und voller Datenkontrolle ersetzen kann.
     </p>
     <a
-      href="https://wa.me/4917632246090?text=Hello%20NexaForce%20Digital%2C%20I%20would%20like%20to%20discuss%20n8n%20automation%20for%20our%20enterprise."
+      href="https://wa.me/4917632246090?text=Hallo%20NexaForce%20Digital%2C%20ich%20möchte%20n8n-Automatisierung%20für%20unser%20Unternehmen%20besprechen."
       target="_blank"
       rel="noopener noreferrer"
       class="inline-block rounded-full bg-brand-blue px-8 py-4 font-semibold text-white shadow-lg shadow-brand-blue/25 transition-all duration-300 hover:bg-blue-500"
     >
-      Book a Strategy Call
+      Strategiegespräch buchen
     </a>
   </section>
 
