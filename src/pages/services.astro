@@ -74,15 +74,15 @@ import Footer from '../components/Footer.astro';
       <p class="text-brand-steel text-lg max-w-2xl mb-10">Self-hosted, cost-predictable workflow automation replacing high-metering SaaS platforms with client-owned infrastructure.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {[
-          { name: 'Self-Hosted Deployment', desc: 'High-availability n8n on private VPS or client VPC with full data sovereignty and zero metering costs.' },
-          { name: 'Custom Node Development', desc: 'TypeScript custom nodes for proprietary legacy systems, niche databases, and internal SaaS APIs.' },
-          { name: 'Event-Driven Orchestration', desc: 'Asynchronous webhooks, message queues, payload transformation, and production-grade error handling.' },
-          { name: 'Platform Migration', desc: 'Structured migration from Zapier, Make, or Workato to predictable self-hosted n8n with full workflow parity.' },
+          { name: 'Self-Hosted Deployment', desc: 'High-availability n8n on private VPS or client VPC with full data sovereignty and zero metering costs.', href: '/services#n8n' },
+          { name: 'Custom Node Development', desc: 'TypeScript custom nodes for proprietary legacy systems, niche databases, and internal SaaS APIs.', href: '/services#n8n' },
+          { name: 'Event-Driven Orchestration', desc: 'Asynchronous webhooks, message queues, payload transformation, and production-grade error handling.', href: '/services#n8n' },
+          { name: 'Platform Migration', desc: 'Structured migration from Zapier, Make, or Workato to predictable self-hosted n8n with full workflow parity.', href: '/services#n8n' },
         ].map(s => (
-          <div class="bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 transition-all">
-            <h3 class="font-bold text-lg mb-2">{s.name}</h3>
+          <a href={s.href} class="block bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 hover:bg-white/5 transition-all group">
+            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-blue transition-colors">{s.name}</h3>
             <p class="text-brand-steel text-sm leading-relaxed">{s.desc}</p>
-          </div>
+          </a>
         ))}
       </div>
     </section>
@@ -94,15 +94,15 @@ import Footer from '../components/Footer.astro';
       <p class="text-brand-steel text-lg max-w-2xl mb-10">Stateful multi-agent architectures built on LangChain + LangGraph, deployed on your infrastructure with full observability via LangSmith.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {[
-          { name: 'Orchestration Layer', desc: 'LangChain + LangGraph for stateful multi-agent graphs, conditional branching, retries, and Human-in-the-Loop checkpointing.' },
-          { name: 'RAG & Knowledge Pipelines', desc: 'pgvector on PostgreSQL for zero lock-in vector storage. Vendor-agnostic embedding abstractions via LangChain.' },
-          { name: 'API & Microservice Delivery', desc: 'FastAPI or Node.js/Express backends with LangServe, REST, or WebSocket protocols. OAuth2/JWT enterprise auth.' },
-          { name: 'Observability & Governance', desc: 'LangSmith tracing, token budgets, PII redaction, rate limiting, and full audit logs on every agent interaction.' },
+          { name: 'Orchestration Layer', desc: 'LangChain + LangGraph for stateful multi-agent graphs, conditional branching, retries, and Human-in-the-Loop checkpointing.', href: '/services#ai' },
+          { name: 'RAG & Knowledge Pipelines', desc: 'pgvector on PostgreSQL for zero lock-in vector storage. Vendor-agnostic embedding abstractions via LangChain.', href: '/services#ai' },
+          { name: 'API & Microservice Delivery', desc: 'FastAPI or Node.js/Express backends with LangServe, REST, or WebSocket protocols. OAuth2/JWT enterprise auth.', href: '/services#ai' },
+          { name: 'Observability & Governance', desc: 'LangSmith tracing, token budgets, PII redaction, rate limiting, and full audit logs on every agent interaction.', href: '/services#ai' },
         ].map(s => (
-          <div class="bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 transition-all">
-            <h3 class="font-bold text-lg mb-2">{s.name}</h3>
+          <a href={s.href} class="block bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 hover:bg-white/5 transition-all group">
+            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-blue transition-colors">{s.name}</h3>
             <p class="text-brand-steel text-sm leading-relaxed">{s.desc}</p>
-          </div>
+          </a>
         ))}
       </div>
     </section>
