@@ -14,14 +14,16 @@ import Footer from '../components/Footer.astro';
     <section id="salesforce" class="mb-24">
       <span class="text-xs font-semibold text-brand-blue uppercase tracking-widest mb-4 block">Pillar 1</span>
       <h2 class="text-4xl font-bold mb-6">Salesforce Enterprise Cloud</h2>
-      <p class="text-brand-steel text-lg max-w-2xl mb-10">We design, implement, and optimize mission-critical Salesforce environments across five specialized domain clouds.</p>
+      <p class="text-brand-steel text-lg max-w-2xl mb-10">We design, implement, and optimize mission-critical Salesforce environments across specialized domain clouds.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
           { name: 'Salesforce Consulting & Integration', desc: 'End-to-end implementation, Flow/Apex optimization, Salesforce–n8n integration, and AI-assisted CRM operations with Docker/Kubernetes managed services.', href: '/services/salesforce-consulting' },
           { name: 'Sales Cloud', desc: 'Lead-to-Cash optimization, automated pipeline execution, custom Apex/LWR architecture, and CPQ integration.', href: '/services/sales-cloud' },
+          { name: 'Revenue Cloud', desc: 'CPQ, billing, and subscription automation with governed ERP synchronization and quote-to-cash control.', href: '/services/revenue-cloud' },
+          { name: 'Contract Lifecycle Management', desc: 'Controlled contract generation, clause libraries, approvals, e-signature, and renewal operations.', href: '/services/contract-lifecycle-management' },
           { name: 'Commerce Cloud', desc: 'Scalable headless storefronts, unified cart workflows, and multi-channel B2B2C customer journeys.', href: '/services/commerce-cloud' },
           { name: 'Data Cloud', desc: 'Real-time customer profile resolution, zero-copy Snowflake/BigQuery architecture, and actionable insights at scale.', href: '/services/data-cloud' },
-          { name: 'Health Cloud', desc: 'HIPAA-compliant patient care coordination, operational workflows, and EHR/EMR interoperability.', href: '/services/health-cloud' },
+          { name: 'Health Cloud', desc: 'Care coordination, patient-service workflows, and EHR/EMR interoperability — architectures designed to support regulated healthcare environments.', href: '/services/health-cloud' },
           { name: 'Financial Services Cloud', desc: 'Wealth management, banking lifecycle automation, unified Financial 360 view, and regulatory compliance.', href: '/services/financial-services-cloud' },
         ].map(s => (
           <a href={s.href} class="block bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 hover:bg-white/5 transition-all group">
