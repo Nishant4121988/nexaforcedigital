@@ -1,0 +1,294 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Salesforce Consulting & Integration — Implementation, n8n Automation, AI"
+  description="NexaForce Digital Salesforce consulting: implementation, optimization, Salesforce–n8n integration, AI-assisted CRM workflows with LangChain/LangGraph, and Docker/Kubernetes managed services. Berlin-based independent consultancy."
+>
+  <Navbar />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden pt-32 pb-24">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-[#0d1a3a] to-brand-dark"></div>
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_45%,rgba(30,111,255,0.2),transparent_55%)]"></div>
+
+    <div class="relative mx-auto max-w-7xl px-6">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div>
+          <span class="mb-4 inline-block rounded-full border border-brand-blue/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-brand-blue">
+            Salesforce Consulting & Integration
+          </span>
+
+          <h1 class="mb-6 text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
+            Salesforce, <span class="text-brand-blue">Engineered</span> End-to-End
+          </h1>
+
+          <p class="mb-8 max-w-2xl text-lg leading-relaxed text-brand-steel md:text-xl">
+            From org design and Flow/Apex automation to Salesforce–n8n integration and
+            AI-assisted CRM operations — we build Salesforce environments that are stable,
+            maintainable, and connected to the rest of your stack.
+          </p>
+
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <a
+              href="/#contact"
+              class="rounded-full bg-brand-blue px-8 py-4 text-center font-semibold text-white shadow-lg shadow-brand-blue/25 transition-all duration-300 hover:bg-blue-500"
+            >
+              Discuss Your Salesforce Project
+            </a>
+
+            <a
+              href="/services"
+              class="rounded-full border border-white/20 px-8 py-4 text-center font-semibold text-white transition-all duration-300 hover:border-brand-blue"
+            >
+              ← Back to Services
+            </a>
+          </div>
+        </div>
+
+        <div class="relative flex justify-center lg:justify-end">
+          <div class="absolute h-72 w-72 rounded-full bg-brand-blue/25 blur-3xl"></div>
+          <div class="relative w-full max-w-sm rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-brand-blue/20 backdrop-blur-sm lg:rotate-2 lg:hover:-rotate-1 transition-transform duration-300">
+            <div class="mb-4 flex items-center justify-between gap-4">
+              <span class="rounded-full bg-brand-blue/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-brand-blue">
+                Salesforce Practice
+              </span>
+              <span class="text-xs text-brand-steel">Berlin · EN/DE</span>
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+              <img
+                src="/assets/logos/crm/sales-cloud.svg"
+                alt="Salesforce Sales Cloud"
+                class="mx-auto h-28 w-auto translate-y-1/2 transform object-contain opacity-90"
+                loading="lazy"
+              />
+              <div class="h-20 bg-gradient-to-t from-black/70 to-transparent"></div>
+            </div>
+            <p class="mt-6 text-xs uppercase tracking-[0.2em] text-brand-steel">
+              Implementation · Integration · Managed Services
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services -->
+  <section class="mx-auto max-w-7xl px-6 py-20">
+    <div class="mb-12">
+      <h2 class="mb-4 text-3xl font-bold md:text-4xl">What We Deliver</h2>
+      <p class="max-w-2xl text-lg text-brand-steel">
+        Full-lifecycle Salesforce services — from initial org design to connected, automated operations.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c-.94 1.543-.826 3.31 2.37 2.37a1.724 1.724 0 002.572 1.065c.426 1.756 2.924 1.756 3.35 0a1.724 1.724 0 002.573-1.066c1.543.94 3.31-.826 2.37-2.37a1.724 1.724 0 00-1.065-2.572c1.756-.426 1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 00-2.572-1.065c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c-.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c.996-.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-bold">Implementation & Optimization</h3>
+        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
+          Org design, data model, Flow and Apex automation, validation rules, approval
+          processes, reports and dashboards — built for maintainability. We also restructure
+          legacy Process Builder automations into future-proof Flow architectures.
+        </p>
+        <ul class="space-y-2 text-sm text-brand-steel">
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Sales, Service, Revenue & Experience Cloud configuration</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Apex triggers, batch and queueable jobs, test coverage</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Flow migration, debugging and performance optimization</li>
+        </ul>
+      </div>
+
+      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-bold">Salesforce–n8n Integration</h3>
+        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
+          Self-hosted n8n as the orchestration layer around your CRM: lead capture,
+          enrichment, routing, notifications, and bidirectional sync with external
+          systems — REST APIs, webhooks, and event-driven automation without
+          per-task SaaS metering.
+        </p>
+        <ul class="space-y-2 text-sm text-brand-steel">
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Lead-to-CRM pipelines with validation and deduplication</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Webhook, queue and retry handling at production scale</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Data sync between Salesforce, ERP, CMS and marketing tools</li>
+        </ul>
+      </div>
+
+      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-bold">AI-Assisted CRM Operations</h3>
+        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
+          Agentic workflows around Salesforce built with LangChain and LangGraph:
+          lead qualification, summarization, classification, and RAG over your CRM
+          data — with human-in-the-loop approval for destructive actions.
+        </p>
+        <ul class="space-y-2 text-sm text-brand-steel">
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> AI lead scoring and enrichment pipelines</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Context-aware tool calling across Salesforce and external APIs</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Audit logging, PII safeguards and rate limits by design</li>
+        </ul>
+      </div>
+
+      <div class="group rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:border-brand-blue/40 hover:bg-white/5">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-bold">DevOps & Managed Services</h3>
+        <p class="mb-4 text-sm leading-relaxed text-brand-steel">
+          Git-based deployment pipelines, Docker and Kubernetes infrastructure for
+          integration services, monitoring and alerting, and ongoing administration —
+          data cleanup, user management, and change management included.
+        </p>
+        <ul class="space-y-2 text-sm text-brand-steel">
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> CI/CD with GitHub Actions and containerized services</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Multi-environment setup (dev/staging/prod)</li>
+          <li class="flex items-start gap-2"><span class="mt-1 text-brand-blue">•</span> Ongoing admin support and documentation handover</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cloud Coverage -->
+  <section class="mx-auto max-w-7xl px-6 py-20">
+    <div class="mb-12">
+      <h2 class="mb-4 text-3xl font-bold md:text-4xl">Salesforce Cloud Coverage</h2>
+      <p class="max-w-2xl text-lg text-brand-steel">
+        Explore our detailed service pages for each Salesforce cloud.
+      </p>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <a href="/services/sales-cloud/" class="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue/10">Sales Cloud</a>
+      <a href="/services/revenue-cloud/" class="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue/10">Revenue Cloud</a>
+      <a href="/services/contract-lifecycle-management/" class="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue/10">Contract Lifecycle Management</a>
+      <a href="/services/data-cloud/" class="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue/10">Data Cloud</a>
+      <a href="/services/commerce-cloud/" class="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue/10">Commerce Cloud</a>
+      <a href="/services/health-cloud/" class="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue/10">Health Cloud</a>
+      <a href="/services/financial-services-cloud/" class="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue/10">Financial Services Cloud</a>
+    </div>
+  </section>
+
+  <!-- Reference Architecture -->
+  <section class="mx-auto max-w-7xl px-6 py-20">
+    <div class="rounded-2xl border border-brand-blue/20 bg-gradient-to-br from-brand-blue/10 to-white/[0.02] p-8 md:p-12">
+      <div class="mb-8">
+        <h2 class="mb-4 text-3xl font-bold">Reference Architecture: Website → n8n → Salesforce</h2>
+        <p class="max-w-3xl text-brand-steel leading-relaxed">
+          Our standard lead-routing pattern. Every component runs in client-owned
+          infrastructure, with full audit logging and human-in-the-loop controls.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-5">
+        <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+          <div class="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-blue">Step 1</div>
+          <h4 class="mb-2 font-semibold">Website Form</h4>
+          <p class="text-xs leading-relaxed text-brand-steel">Contact form submission with spam protection and consent capture.</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+          <div class="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-blue">Step 2</div>
+          <h4 class="mb-2 font-semibold">n8n Webhook</h4>
+          <p class="text-xs leading-relaxed text-brand-steel">Protected HTTPS endpoint validates, normalizes and deduplicates the payload.</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+          <div class="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-blue">Step 3</div>
+          <h4 class="mb-2 font-semibold">Salesforce Lead</h4>
+          <p class="text-xs leading-relaxed text-brand-steel">Lead created via REST API with source, language and qualification fields mapped.</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+          <div class="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-blue">Step 4</div>
+          <h4 class="mb-2 font-semibold">Notification</h4>
+          <p class="text-xs leading-relaxed text-brand-steel">Instant email alert to the sales team with full context and next actions.</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+          <div class="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-blue">Step 5</div>
+          <h4 class="mb-2 font-semibold">Audit Trail</h4>
+          <p class="text-xs leading-relaxed text-brand-steel">Every execution logged with retries, error handling and dead-letter queue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery Approach -->
+  <section class="mx-auto max-w-7xl px-6 py-20">
+    <div class="mb-12">
+      <h2 class="mb-4 text-3xl font-bold md:text-4xl">How We Work</h2>
+      <p class="max-w-2xl text-lg text-brand-steel">
+        A transparent, fixed-scope delivery process for every engagement.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-5">
+      <div class="rounded-2xl border border-white/8 bg-white/3 p-6">
+        <div class="mb-3 text-2xl font-bold text-brand-blue">01</div>
+        <h4 class="mb-2 font-semibold">Discovery</h4>
+        <p class="text-xs leading-relaxed text-brand-steel">Requirements workshop, current-state analysis and prioritization of automation potential.</p>
+      </div>
+      <div class="rounded-2xl border border-white/8 bg-white/3 p-6">
+        <div class="mb-3 text-2xl font-bold text-brand-blue">02</div>
+        <h4 class="mb-2 font-semibold">Architecture</h4>
+        <p class="text-xs leading-relaxed text-brand-steel">Solution design with data model, integration map, security concept and effort estimate.</p>
+      </div>
+      <div class="rounded-2xl border border-white/8 bg-white/3 p-6">
+        <div class="mb-3 text-2xl font-bold text-brand-blue">03</div>
+        <h4 class="mb-2 font-semibold">Implementation</h4>
+        <p class="text-xs leading-relaxed text-brand-steel">Iterative build in a sandbox with regular demos and stakeholder feedback loops.</p>
+      </div>
+      <div class="rounded-2xl border border-white/8 bg-white/3 p-6">
+        <div class="mb-3 text-2xl font-bold text-brand-blue">04</div>
+        <h4 class="mb-2 font-semibold">Testing & Go-Live</h4>
+        <p class="text-xs leading-relaxed text-brand-steel">UAT, data validation, cutover planning and zero-downtime production deployment.</p>
+      </div>
+      <div class="rounded-2xl border border-white/8 bg-white/3 p-6">
+        <div class="mb-3 text-2xl font-bold text-brand-blue">05</div>
+        <h4 class="mb-2 font-semibold">Handover</h4>
+        <p class="text-xs leading-relaxed text-brand-steel">Full documentation, admin training and optional ongoing managed services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Independence Notice -->
+  <section class="mx-auto max-w-7xl px-6 pb-8">
+    <div class="rounded-xl border border-white/10 bg-white/[0.02] p-6">
+      <p class="text-xs leading-relaxed text-brand-steel">
+        NexaForce Digital is an independent consultancy and is not affiliated with, endorsed by,
+        or sponsored by Salesforce, Inc. Salesforce, Sales Cloud, Revenue Cloud, Data Cloud,
+        Commerce Cloud, Health Cloud and Financial Services Cloud are trademarks of Salesforce, Inc.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-3xl px-6 py-20 text-center">
+    <h2 class="mb-4 text-3xl font-bold">Ready to Connect Your CRM?</h2>
+    <p class="mb-8 text-lg text-brand-steel">
+      Let's discuss how Salesforce implementation, n8n integration and AI-assisted
+      automation can work together in your environment.
+    </p>
+    <a
+      href="/#contact"
+      class="inline-block rounded-full bg-brand-blue px-8 py-4 font-semibold text-white shadow-lg shadow-brand-blue/25 transition-all duration-300 hover:bg-blue-500"
+    >
+      Book a Strategy Call
+    </a>
+  </section>
+
+  <Footer />
+</BaseLayout>
