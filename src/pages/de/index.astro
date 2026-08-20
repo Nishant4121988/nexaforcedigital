@@ -28,10 +28,14 @@ import Footer from '../../components/Footer.astro';
           <span class="text-brand-steel">Agentische KI.</span>
         </h1>
 
-        <p class="mb-10 max-w-2xl text-lg leading-relaxed text-brand-steel md:text-xl">
-          Wir entwickeln unternehmenskritische digitale Systeme — Salesforce Cloud,
-          n8n Workflow-Engines und zustandsbehaftete KI-Agenten — konzipiert für
-          100 % Dateneigentum und ohne Vendor Lock-in.
+        <p class="mb-6 max-w-2xl text-lg leading-relaxed text-brand-steel md:text-xl">
+          Ihre Teams kopieren Daten zwischen Systemen, Angebote dauern Tage, und KI wirkt
+          unerreichbar, weil Ihre Daten Ihre Umgebung nicht verlassen dürfen. Wir lösen das —
+          mit Salesforce-, n8n- und KI-Systemen, die vollständig Ihnen gehören.
+        </p>
+
+        <p class="mb-10 max-w-2xl text-base leading-relaxed text-brand-steel/80">
+          Unternehmenskritische digitale Systeme — konzipiert für 100 % Dateneigentum und ohne Vendor Lock-in.
         </p>
 
         <div class="flex flex-col gap-4 sm:flex-row">
@@ -68,6 +72,124 @@ import Footer from '../../components/Footer.astro';
   </section>
 
   <CoreCapabilities lang="de" />
+
+  <!-- We Run What We Build -->
+  <section class="border-y border-white/8 bg-white/[0.02] py-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="mb-6 text-center">
+        <span class="mb-4 inline-block rounded-full border border-brand-blue/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-brand-blue">
+          Praxisbeweis · Live-Systeme, die wir betreiben
+        </span>
+        <h2 class="mb-4 text-3xl font-bold md:text-4xl">Wir betreiben, was wir bauen</h2>
+        <p class="mx-auto max-w-2xl text-lg text-brand-steel">
+          Das sind keine Demos. Wir betreiben diese automatisierten Systeme selbst —
+          dieselben Pipelines, die wir auch für Sie entwerfen und bauen.
+        </p>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <!-- MacroMicroNews -->
+        <a
+          href="https://www.macromicronews.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/60 hover:shadow-xl hover:shadow-brand-blue/10"
+        >
+          <div class="mb-5 flex items-center justify-between">
+            <span class="rounded-full bg-[#EA4B71]/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#EA4B71]">n8n · Live</span>
+            <span class="text-xs text-brand-steel transition-colors group-hover:text-brand-blue">macromicronews.com ↗</span>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-white">MacroMicroNews</h3>
+          <p class="mb-5 text-sm leading-relaxed text-brand-steel">
+            Eine mehrsprachige Nachrichtenplattform, die sich selbst betreibt. Selbst gehostetes n8n
+            erfasst Quellen, orchestriert die Pipeline und veröffentlicht nach Zeitplan in Ghost CMS —
+            KI wird ausschließlich zum Umschreiben von Inhalten eingesetzt.
+          </p>
+          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Automatisierung: Erfassung → Orchestrierung → Publishing · KI: nur Umschreiben</p>
+          <div class="flex flex-wrap gap-2">
+            {['Quellen-Erfassung', 'Orchestrierung', 'Auto-Publishing', 'Ghost CMS'].map((chip) => (
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">{chip}</span>
+            ))}
+          </div>
+        </a>
+
+        <!-- Real-World Horror Stories -->
+        <a
+          href="https://youtube.com/@horrorstories-f6y"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/60 hover:shadow-xl hover:shadow-brand-blue/10"
+        >
+          <div class="mb-5 flex items-center justify-between">
+            <span class="rounded-full bg-[#EA4B71]/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#EA4B71]">n8n · Live</span>
+            <span class="text-xs text-brand-steel transition-colors group-hover:text-brand-blue">YouTube ↗</span>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-white">Real-World Horror Stories</h3>
+          <p class="mb-5 text-sm leading-relaxed text-brand-steel">
+            Ein narrativer YouTube-Kanal, der vollständig von n8n produziert wird — komplette
+            Videoerstellung, Zusammenstellung, Scheduling und Veröffentlichung, alles automatisiert.
+          </p>
+          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Automatisierung: komplette Videoerstellung + Posting · KI: gezielt</p>
+          <div class="flex flex-wrap gap-2">
+            {['Videoerstellung', 'Zusammenstellung', 'Auto-Scheduling', 'Posting'].map((chip) => (
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">{chip}</span>
+            ))}
+          </div>
+        </a>
+
+        <!-- Yog Philosophy -->
+        <a
+          href="https://youtube.com/@yogphilosphy"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/60 hover:shadow-xl hover:shadow-brand-blue/10"
+        >
+          <div class="mb-5 flex items-center justify-between">
+            <span class="rounded-full bg-[#EA4B71]/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#EA4B71]">n8n · Live</span>
+            <span class="text-xs text-brand-steel transition-colors group-hover:text-brand-blue">YouTube ↗</span>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-white">Yog Philosophy</h3>
+          <p class="mb-5 text-sm leading-relaxed text-brand-steel">
+            Ein Wellness- und Philosophie-Kanal, betrieben von derselben n8n-Engine — komplette
+            Videoerstellung und Publishing-Pipeline, durchgehend automatisiert.
+          </p>
+          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Automatisierung: komplette Videoerstellung + Posting · KI: gezielt</p>
+          <div class="flex flex-wrap gap-2">
+            {['Videoerstellung', 'Zusammenstellung', 'Publishing-Pipeline', 'Scheduling'].map((chip) => (
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">{chip}</span>
+            ))}
+          </div>
+        </a>
+      </div>
+
+      <!-- Automation vs AI differentiation -->
+      <div class="mx-auto mt-14 max-w-4xl rounded-2xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/10 to-white/[0.025] p-8 md:p-10">
+        <h3 class="mb-3 text-center text-2xl font-bold text-white">Automatisierung ist nicht dasselbe wie KI — und genau das zu unterscheiden ist unsere Aufgabe.</h3>
+        <p class="mx-auto mb-8 max-w-2xl text-center text-sm leading-relaxed text-brand-steel">
+          Jeder kann ein LLM mit einem Workflow verbinden. Der Wert liegt im Urteilsvermögen:
+          was deterministisch automatisiert wird und wo KI ihren Preis wirklich rechtfertigt.
+        </p>
+        <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <li class="flex gap-3 rounded-xl border border-white/8 bg-white/3 p-5">
+            <span class="mt-0.5 text-brand-blue">▹</span>
+            <span class="text-sm leading-relaxed text-brand-steel"><span class="font-semibold text-white">Deterministische Automatisierung</span> für Orchestrierung, Scheduling, Retries und Publishing — ohne Halluzinationsrisiko, ohne Kosten pro Aufruf.</span>
+          </li>
+          <li class="flex gap-3 rounded-xl border border-white/8 bg-white/3 p-5">
+            <span class="mt-0.5 text-brand-blue">▹</span>
+            <span class="text-sm leading-relaxed text-brand-steel"><span class="font-semibold text-white">KI gezielt eingesetzt</span> — nur dort, wo Urteilsvermögen einen Mehrwert schafft: Umschreiben, Zusammenfassen, Klassifizieren.</span>
+          </li>
+          <li class="flex gap-3 rounded-xl border border-white/8 bg-white/3 p-5">
+            <span class="mt-0.5 text-brand-blue">▹</span>
+            <span class="text-sm leading-relaxed text-brand-steel"><span class="font-semibold text-white">Backend für den Produktivbetrieb</span> — Queue-Modus, Worker, Fehlerbehandlung und Observability.</span>
+          </li>
+          <li class="flex gap-3 rounded-xl border border-white/8 bg-white/3 p-5">
+            <span class="mt-0.5 text-brand-blue">▹</span>
+            <span class="text-sm leading-relaxed text-brand-steel"><span class="font-semibold text-white">Kostenkontrolle by Design</span> — selbst gehostete Automatisierung läuft ohne Metering; KI-Aufrufe bleiben minimal und messbar.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- Why NexaForce -->
   <section class="mx-auto max-w-7xl px-6 py-24">
