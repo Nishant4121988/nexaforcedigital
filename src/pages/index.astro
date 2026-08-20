@@ -101,18 +101,19 @@ import Footer from '../components/Footer.astro';
           </div>
           <h3 class="mb-3 text-xl font-bold text-white">MacroMicroNews</h3>
           <p class="mb-5 text-sm leading-relaxed text-brand-steel">
-            A multilingual news platform that runs itself. Our n8n pipeline ingests sources,
-            translates and enriches articles, then publishes automatically to a Ghost CMS backend.
+            A multilingual news platform that runs itself. Self-hosted n8n ingests sources,
+            orchestrates the pipeline, and publishes to Ghost CMS on schedule — AI is used only
+            for rewriting content, nothing else.
           </p>
-          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Problem it solves: manual content operations at scale</p>
+          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Automation: ingestion → orchestration → publishing · AI: rewriting only</p>
           <div class="flex flex-wrap gap-2">
-            {['Source ingestion', 'AI translation', 'Auto-publish', 'Ghost CMS'].map((chip) => (
+            {['Source ingestion', 'Orchestration', 'Auto-publish', 'Ghost CMS'].map((chip) => (
               <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">{chip}</span>
             ))}
           </div>
         </a>
 
-        <!-- Horror Stories -->
+        <!-- Real-World Horror Stories -->
         <a
           href="https://youtube.com/@horrorstories-f6y"
           target="_blank"
@@ -123,14 +124,14 @@ import Footer from '../components/Footer.astro';
             <span class="rounded-full bg-[#EA4B71]/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#EA4B71]">n8n · Live</span>
             <span class="text-xs text-brand-steel transition-colors group-hover:text-brand-blue">YouTube ↗</span>
           </div>
-          <h3 class="mb-3 text-xl font-bold text-white">Horror Stories</h3>
+          <h3 class="mb-3 text-xl font-bold text-white">Real-World Horror Stories</h3>
           <p class="mb-5 text-sm leading-relaxed text-brand-steel">
-            An automated narrative YouTube channel. Our n8n workflow generates scripts, voiceover,
-            and metadata, then schedules and publishes episodes without manual editing.
+            A narrative YouTube channel produced end to end by n8n — complete video creation,
+            assembly, scheduling, and posting, all automated.
           </p>
-          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Problem it solves: consistent content output without a production team</p>
+          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Automation: full video creation + posting · AI: surgical</p>
           <div class="flex flex-wrap gap-2">
-            {['Script generation', 'Voiceover', 'Auto-scheduling', 'Metadata SEO'].map((chip) => (
+            {['Video creation', 'Assembly', 'Auto-scheduling', 'Posting'].map((chip) => (
               <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">{chip}</span>
             ))}
           </div>
@@ -149,22 +150,44 @@ import Footer from '../components/Footer.astro';
           </div>
           <h3 class="mb-3 text-xl font-bold text-white">Yog Philosophy</h3>
           <p class="mb-5 text-sm leading-relaxed text-brand-steel">
-            An automated wellness and philosophy channel. The same n8n engine researches topics,
-            produces narration, and publishes on a schedule — end to end.
+            A wellness and philosophy channel run by the same n8n engine — full video creation
+            and posting pipeline, automated end to end.
           </p>
-          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Problem it solves: a repeatable content engine for a niche audience</p>
+          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Automation: full video creation + posting · AI: surgical</p>
           <div class="flex flex-wrap gap-2">
-            {['Topic research', 'Narration', 'Publishing pipeline', 'Scheduling'].map((chip) => (
+            {['Video creation', 'Assembly', 'Publishing pipeline', 'Scheduling'].map((chip) => (
               <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">{chip}</span>
             ))}
           </div>
         </a>
       </div>
 
-      <p class="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-brand-steel">
-        Every one of these runs on self-hosted n8n — the same architecture we deploy for clients.
-        If we can automate our own products this reliably, we can automate your operations.
-      </p>
+      <!-- Automation vs AI differentiation -->
+      <div class="mx-auto mt-14 max-w-4xl rounded-2xl border border-brand-blue/25 bg-gradient-to-br from-brand-blue/10 to-white/[0.025] p-8 md:p-10">
+        <h3 class="mb-3 text-center text-2xl font-bold text-white">Automation is not the same as AI — and knowing the difference is the job.</h3>
+        <p class="mx-auto mb-8 max-w-2xl text-center text-sm leading-relaxed text-brand-steel">
+          Anyone can wire an LLM to a workflow. The value is in the judgment: what to automate
+          deterministically, and where AI genuinely earns its cost.
+        </p>
+        <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <li class="flex gap-3 rounded-xl border border-white/8 bg-white/3 p-5">
+            <span class="mt-0.5 text-brand-blue">▹</span>
+            <span class="text-sm leading-relaxed text-brand-steel"><span class="font-semibold text-white">Deterministic automation</span> for orchestration, scheduling, retries, and publishing — no hallucination risk, no per-call cost.</span>
+          </li>
+          <li class="flex gap-3 rounded-xl border border-white/8 bg-white/3 p-5">
+            <span class="mt-0.5 text-brand-blue">▹</span>
+            <span class="text-sm leading-relaxed text-brand-steel"><span class="font-semibold text-white">AI applied surgically</span> — only where judgment adds value: rewriting, summarization, classification.</span>
+          </li>
+          <li class="flex gap-3 rounded-xl border border-white/8 bg-white/3 p-5">
+            <span class="mt-0.5 text-brand-blue">▹</span>
+            <span class="text-sm leading-relaxed text-brand-steel"><span class="font-semibold text-white">Backend built for production</span> — queue mode, workers, error handling, and observability.</span>
+          </li>
+          <li class="flex gap-3 rounded-xl border border-white/8 bg-white/3 p-5">
+            <span class="mt-0.5 text-brand-blue">▹</span>
+            <span class="text-sm leading-relaxed text-brand-steel"><span class="font-semibold text-white">Cost control by design</span> — self-hosted automation runs unmetered; AI calls stay minimal and metered.</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
