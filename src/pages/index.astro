@@ -28,9 +28,14 @@ import Footer from '../components/Footer.astro';
           <span class="text-brand-steel">Agentic AI.</span>
         </h1>
 
-        <p class="mb-10 max-w-2xl text-lg leading-relaxed text-brand-steel md:text-xl">
-          We architect mission-critical digital systems — Salesforce Cloud, n8n Workflow Engines,
-          and stateful AI agents engineered for 100% data ownership and zero vendor lock-in.
+        <p class="mb-6 max-w-2xl text-lg leading-relaxed text-brand-steel md:text-xl">
+          Your teams copy data between systems, quotes take days to assemble, and AI feels
+          out of reach because your data can't leave your environment. We fix that — with
+          Salesforce, n8n, and AI systems you fully own.
+        </p>
+
+        <p class="mb-10 max-w-2xl text-base leading-relaxed text-brand-steel/80">
+          Mission-critical digital systems engineered for 100% data ownership and zero vendor lock-in.
         </p>
 
         <div class="flex flex-col gap-4 sm:flex-row">
@@ -67,6 +72,101 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <CoreCapabilities />
+
+  <!-- We Run What We Build -->
+  <section class="border-y border-white/8 bg-white/[0.02] py-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="mb-6 text-center">
+        <span class="mb-4 inline-block rounded-full border border-brand-blue/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-brand-blue">
+          Production proof · Live systems we operate
+        </span>
+        <h2 class="mb-4 text-3xl font-bold md:text-4xl">We Run What We Build</h2>
+        <p class="mx-auto max-w-2xl text-lg text-brand-steel">
+          These aren't demos. We operate these automated systems ourselves —
+          the same pipelines we'd design and build for you.
+        </p>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <!-- MacroMicroNews -->
+        <a
+          href="https://www.macromicronews.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/60 hover:shadow-xl hover:shadow-brand-blue/10"
+        >
+          <div class="mb-5 flex items-center justify-between">
+            <span class="rounded-full bg-[#EA4B71]/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#EA4B71]">n8n · Live</span>
+            <span class="text-xs text-brand-steel transition-colors group-hover:text-brand-blue">macromicronews.com ↗</span>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-white">MacroMicroNews</h3>
+          <p class="mb-5 text-sm leading-relaxed text-brand-steel">
+            A multilingual news platform that runs itself. Our n8n pipeline ingests sources,
+            translates and enriches articles, then publishes automatically to a Ghost CMS backend.
+          </p>
+          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Problem it solves: manual content operations at scale</p>
+          <div class="flex flex-wrap gap-2">
+            {['Source ingestion', 'AI translation', 'Auto-publish', 'Ghost CMS'].map((chip) => (
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">{chip}</span>
+            ))}
+          </div>
+        </a>
+
+        <!-- Horror Stories -->
+        <a
+          href="https://youtube.com/@horrorstories-f6y"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/60 hover:shadow-xl hover:shadow-brand-blue/10"
+        >
+          <div class="mb-5 flex items-center justify-between">
+            <span class="rounded-full bg-[#EA4B71]/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#EA4B71]">n8n · Live</span>
+            <span class="text-xs text-brand-steel transition-colors group-hover:text-brand-blue">YouTube ↗</span>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-white">Horror Stories</h3>
+          <p class="mb-5 text-sm leading-relaxed text-brand-steel">
+            An automated narrative YouTube channel. Our n8n workflow generates scripts, voiceover,
+            and metadata, then schedules and publishes episodes without manual editing.
+          </p>
+          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Problem it solves: consistent content output without a production team</p>
+          <div class="flex flex-wrap gap-2">
+            {['Script generation', 'Voiceover', 'Auto-scheduling', 'Metadata SEO'].map((chip) => (
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">{chip}</span>
+            ))}
+          </div>
+        </a>
+
+        <!-- Yog Philosophy -->
+        <a
+          href="https://youtube.com/@yogphilosphy"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block rounded-2xl border border-white/8 bg-white/3 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/60 hover:shadow-xl hover:shadow-brand-blue/10"
+        >
+          <div class="mb-5 flex items-center justify-between">
+            <span class="rounded-full bg-[#EA4B71]/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#EA4B71]">n8n · Live</span>
+            <span class="text-xs text-brand-steel transition-colors group-hover:text-brand-blue">YouTube ↗</span>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-white">Yog Philosophy</h3>
+          <p class="mb-5 text-sm leading-relaxed text-brand-steel">
+            An automated wellness and philosophy channel. The same n8n engine researches topics,
+            produces narration, and publishes on a schedule — end to end.
+          </p>
+          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-brand-blue">Problem it solves: a repeatable content engine for a niche audience</p>
+          <div class="flex flex-wrap gap-2">
+            {['Topic research', 'Narration', 'Publishing pipeline', 'Scheduling'].map((chip) => (
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">{chip}</span>
+            ))}
+          </div>
+        </a>
+      </div>
+
+      <p class="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-brand-steel">
+        Every one of these runs on self-hosted n8n — the same architecture we deploy for clients.
+        If we can automate our own products this reliably, we can automate your operations.
+      </p>
+    </div>
+  </section>
 
   <!-- Why NexaForce -->
   <section class="mx-auto max-w-7xl px-6 py-24">
