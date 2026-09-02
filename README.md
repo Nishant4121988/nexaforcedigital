@@ -1,8 +1,8 @@
-# NexaForce Digital
+# NexaMatrix Digital
 
 Enterprise Salesforce Cloud · n8n Workflow Automation · Agentic AI Engineering
 
-**Website:** https://nexaforcedigital.com  
+**Website:** https://nexamatrixdigital.com  
 **Stack:** Astro 4 + Tailwind CSS + GitHub Pages  
 **CI/CD:** GitHub Actions (`.github/workflows/deploy.yml`)  
 **Localization:** EN (default `/`) + DE (`/de/`)  
@@ -17,7 +17,7 @@ npm run dev
 
 ## Deployment
 
-Push to `main` → GitHub Actions builds Astro → auto-deploys to GitHub Pages → served at `nexaforcedigital.com` via Porkbun CNAME.
+Push to `main` → GitHub Actions builds Astro → auto-deploys to GitHub Pages → served at `nexamatrixdigital.com` via Porkbun CNAME.
 
 ## Contact Form
 

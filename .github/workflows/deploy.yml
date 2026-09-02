@@ -1,4 +1,4 @@
-name: Deploy NexaForce Digital to GitHub Pages
+name: Deploy NexaMatrix Digital to GitHub Pages
 
 on:
   push:

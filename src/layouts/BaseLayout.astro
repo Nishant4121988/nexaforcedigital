@@ -5,8 +5,8 @@ import { getLangFromUrl, useTranslations } from '../i18n/ui';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const altLang = lang === 'en' ? 'de' : 'en';
-const altHref = lang === 'en' ? `https://nexaforcedigital.com/de/` : `https://nexaforcedigital.com/`;
-const canonicalHref = lang === 'en' ? `https://nexaforcedigital.com${Astro.url.pathname}` : `https://nexaforcedigital.com${Astro.url.pathname}`;
+const altHref = lang === 'en' ? `https://nexamatrixdigital.com/de/` : `https://nexamatrixdigital.com/`;
+const canonicalHref = lang === 'en' ? `https://nexamatrixdigital.com${Astro.url.pathname}` : `https://nexamatrixdigital.com${Astro.url.pathname}`;
 
 const { title, description } = Astro.props;
 ---
@@ -32,32 +32,32 @@ const { title, description } = Astro.props;
   </script>
   <meta name="description" content={description} />
   <meta name="robots" content="index, follow" />
-  <title>{title} | NexaForce Digital</title>
+  <title>{title} | NexaMatrix Digital</title>
   <link rel="canonical" href={canonicalHref} />
   <link rel="alternate" hreflang={lang} href={canonicalHref} />
   <link rel="alternate" hreflang={altLang} href={altHref} />
-  <link rel="alternate" hreflang="x-default" href="https://nexaforcedigital.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://nexamatrixdigital.com/" />
   <!-- Open Graph (Facebook / LinkedIn / WhatsApp link previews) -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="NexaForce Digital" />
+  <meta property="og:site_name" content="NexaMatrix Digital" />
   <meta property="og:url" content={canonicalHref} />
-  <meta property="og:title" content={`${title} | NexaForce Digital`} />
+  <meta property="og:title" content={`${title} | NexaMatrix Digital`} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content="https://nexaforcedigital.com/images/nexaforce-digital-logo.jpg" />
+  <meta property="og:image" content="https://nexamatrixdigital.com/images/nexaforce-digital-logo.jpg" />
   <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_US'} />
   <!-- Twitter/X card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={`${title} | NexaForce Digital`} />
+  <meta name="twitter:title" content={`${title} | NexaMatrix Digital`} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="https://nexaforcedigital.com/images/nexaforce-digital-logo.jpg" />
+  <meta name="twitter:image" content="https://nexamatrixdigital.com/images/nexaforce-digital-logo.jpg" />
   <!-- Structured data for search engines & AI -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "NexaForce Digital",
-    "url": "https://nexaforcedigital.com",
-    "logo": "https://nexaforcedigital.com/images/nexaforce-digital-logo.jpg",
-    "image": "https://nexaforcedigital.com/images/nexaforce-digital-logo.jpg",
+    "name": "NexaMatrix Digital",
+    "url": "https://nexamatrixdigital.com",
+    "logo": "https://nexamatrixdigital.com/images/nexaforce-digital-logo.jpg",
+    "image": "https://nexamatrixdigital.com/images/nexaforce-digital-logo.jpg",
     "description": "Enterprise Salesforce Cloud, n8n workflow automation, and Agentic AI engineering consultancy. Berlin-based, 100% data ownership, zero vendor lock-in.",
     "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" },
     "telephone": "+4917632246090",
@@ -97,10 +97,10 @@ const { title, description } = Astro.props;
 
   <!-- WhatsApp Floating Widget -->
   <a
-    href="https://wa.me/4917632246090?text=Hello%20NexaForce%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20project."
+    href="https://wa.me/4917632246090?text=Hello%20NexaMatrix%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20project."
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Contact NexaForce Digital on WhatsApp"
+    aria-label="Contact NexaMatrix Digital on WhatsApp"
     class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-400 rounded-full shadow-2xl transition-all duration-300 hover:scale-110"
   >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-7 h-7">
