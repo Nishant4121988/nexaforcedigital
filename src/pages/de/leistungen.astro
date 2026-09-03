@@ -67,7 +67,7 @@ import Footer from '../../components/Footer.astro';
             name: 'Data Cloud',
             desc: 'Echtzeit-Profilauflösung, Zero-Copy-Architektur mit Snowflake oder BigQuery und nutzbare Kundeneinblicke.',
             href: '/de/leistungen/data-cloud'
-          },
+          } /* Temporarily hidden,
           {
             name: 'Health Cloud',
             desc: 'Datenschutzorientierte Koordination von Versorgungsprozessen, Workflows und EHR/EMR-Integrationen.',
@@ -77,7 +77,7 @@ import Footer from '../../components/Footer.astro';
             name: 'Financial Services Cloud',
             desc: 'Automatisierte Kundenlebenszyklen, Financial-360-Sicht und kontrollierbare Compliance-Prozesse.',
             href: '/de/leistungen/financial-services-cloud'
-          }
+          } */
         ].map((service) => (
           <a href={service.href} class="block bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 hover:bg-white/5 transition-all group">
             <h3 class="font-bold text-lg mb-2 group-hover:text-brand-blue transition-colors">{service.name}</h3>
