@@ -23,8 +23,10 @@ import Footer from '../components/Footer.astro';
           { name: 'Contract Lifecycle Management', desc: 'Controlled contract generation, clause libraries, approvals, e-signature, and renewal operations.', href: '/services/contract-lifecycle-management' },
           { name: 'Commerce Cloud', desc: 'Scalable headless storefronts, unified cart workflows, and multi-channel B2B2C customer journeys.', href: '/services/commerce-cloud' },
           { name: 'Data Cloud', desc: 'Real-time customer profile resolution, zero-copy Snowflake/BigQuery architecture, and actionable insights at scale.', href: '/services/data-cloud' },
+/* Temporarily hidden
           { name: 'Health Cloud', desc: 'Care coordination, patient-service workflows, and EHR/EMR interoperability — architectures designed to support regulated healthcare environments.', href: '/services/health-cloud' },
           { name: 'Financial Services Cloud', desc: 'Wealth management, banking lifecycle automation, unified Financial 360 view, and regulatory compliance.', href: '/services/financial-services-cloud' },
+*/
         ].map(s => (
           <a href={s.href} class="block bg-white/3 border border-white/8 rounded-2xl p-6 hover:border-brand-blue/40 hover:bg-white/5 transition-all group">
             <h3 class="font-bold text-lg mb-2 group-hover:text-brand-blue transition-colors">{s.name}</h3>
