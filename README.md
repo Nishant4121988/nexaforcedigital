@@ -1,6 +1,6 @@
 # NexaMatrix Digital
 
-Enterprise Salesforce Cloud · n8n Workflow Automation · Agentic AI Engineering
+Enterprise Salesforce Cloud · n8n Workflow Automation · Agentic AI Engineering 
 
 **Website:** https://nexamatrixdigital.com  
 **Stack:** Astro 4 + Tailwind CSS + GitHub Pages  
